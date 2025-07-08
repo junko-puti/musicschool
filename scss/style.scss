@@ -1,0 +1,32 @@
+@use 'foundation/reset' as *;
+@use 'foundation/base' as *;
+
+
+@use "layout/l-header" as *;
+// @use "layout/l-footer" as *;
+
+// @use "object/component/c-headline" as *;
+@use "object/component/c-btn-trigger" as *;
+// @use "object/component/c-more-btn" as *;
+// @use "object/component/c-button" as *;
+// @use "object/component/c-top-btn" as *;
+
+@use "object/project/header" as *;
+// @use "object/project/p-fv" as *;
+// @use "object/project/p-about" as *;
+// @use "object/project/p-section" as *;
+// @use "object/project/p-service" as *;
+// @use "object/project/p-works" as *;
+// @use "object/project/p-card" as *;
+// @use "object/project/p-modal" as *;
+// @use "object/project/p-news" as *;
+// @use "object/project/p-company" as *;
+// @use "object/project/p-contact" as *;
+// @use "object/project/p-form" as *;
+// @use "object/project/p-footer" as *;
+// @use "object/project/p-fade-in" as *;
+
+@use "object/utility/u-pc" as *;
+@use "object/utility/u-sp" as *;
+// @use "object/utility/u-mb0" as *;
+// @use "object/utility/u-spacer" as *;

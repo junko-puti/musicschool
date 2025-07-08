@@ -1,0 +1,39 @@
+// // SPのみ（〜767px）
+// @mixin sp {
+//   @media (max-width: 767px) {
+//     @content;
+//   }
+// }
+
+// // pc（768px〜）
+// @mixin pc {
+//   @media (min-width: 768px) {
+//     @content;
+//   }
+//   // @media (min-width: 768px) and (max-width: 979px) {
+//   //   @content;
+//   // }
+// }
+
+
+$bp_pc: 768px; //pc（768px以上）
+$bp_sp: 767px; //SP（767px以下）
+
+@mixin pc {
+  @media (min-width: $bp_pc) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: $bp_sp) {
+    @content;
+  }
+}
+
+//微調整
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

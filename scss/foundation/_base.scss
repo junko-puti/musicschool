@@ -1,0 +1,59 @@
+
+@use 'mixin' as *;  // mixin.scss を使用
+@use './function' as *; // function.scss を使用
+
+//リキッドコーディング
+html {
+    font-size: 62.5%;
+    //768~920(inner)
+    @media(min-width: 768px) and (max-width: 920px){
+      font-size: calc(10 / 920 * 100vw);
+    }
+    @media(max-width:375px) {
+      font-size: calc(10 /375 * 100vw);
+    }
+}
+// html {
+//   //375px~767px
+//   font-size: 16px;
+//   //768~980px
+//   @include pc {
+//     font-size: calc(16 / 980 * 100vw);
+//   }
+//   //980px~
+//   @media (min-width: 980px) {
+//     font-size: 16px;
+//   }
+//   @media (max-width: 375px) {
+//     font-size: calc(16 / 375 * 100vw);
+//   }
+// }
+// * {
+//   outline: 1px solid rgb(210, 159, 238);
+// }
+//ソリッドコーディング
+// html {
+//   scroll-behavior: smooth;
+//   font-size: 62.5%; /* 1rem = 10px に統一 */
+//   font-weight: 400;
+// }
+
+
+body {
+  font-family: "Yu Gothic", suns-serif;
+  // font-family: "YuMincho", serif;
+  font-size: rem(16);//ソリッドコーディング
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000000;
+  // background-color: pink;
+}
+
+[id] {
+  scroll-margin-top: rem(80); // 固定ヘッダーの高さに合わせて調整
+}
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
