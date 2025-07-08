@@ -1,0 +1,11 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 999; /* 他より上に出す */
+  width: 100%;
+  transform: translatex(-50%);
+}

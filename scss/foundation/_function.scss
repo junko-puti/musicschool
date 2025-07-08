@@ -1,0 +1,20 @@
+@use "sass:math";
+
+//リキッドコーディング
+// @function rem($pixels) {
+//   @return math.div($pixels, 16) * 1rem;
+// }
+
+//ソリッドコーディング
+@function rem($pixels) {
+  @return math.div($pixels, 10) * 1rem;
+}
+
+// @function rem($pixels) {
+//   @return $pixels / 16 * 1rem;
+// }
+
+// @use 'sass:math';
+// @function rem($pixels) {
+//   @return math.div($pixels, 16) * 1rem;
+// }

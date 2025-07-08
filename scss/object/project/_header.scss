@@ -1,0 +1,118 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.header {
+  transition: background-color 0.5s, padding 0.5s;
+  height: rem(80);
+  display: flex;
+  align-items: center;
+  @include sp {
+    width: 100%;
+    height: rem(50);
+  }
+}
+.header.is-colored {
+  height: rem(80);
+  background-color: #4D9600;
+  @include sp {
+    height: rem(50);
+  }
+}
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 920px;/*880+20+20*/
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  @include sp {
+    max-width: 100%;
+  }
+}
+.header__logo{
+  height:100%;
+}
+.header__logo a{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding-top: rem(14.74);
+  padding-top: rem(14);
+  @include sp {
+    width: 79%;
+    padding-top: rem(9.89);
+    padding-top: rem(8.82);
+  }
+}
+
+/*--PC用メニュー--*/
+.header__nav{
+  height: 100%;
+}
+.header__nav .header__menu{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: rem(33);
+}
+.header__menu .header__menu_contact{
+  padding: rem(6) rem(30);
+  font-size: rem(15);
+  line-height: calc(33 / 15);
+  color: #ffffff;
+  background-color: #CB0000;
+}
+/*--sp用メニュー--*/
+.header__drawer {
+  position: fixed;
+  top: rem(50);
+  right: 0;
+  width: 80%;
+  z-index: 999;
+  max-width: rem(300);
+  height: rem(174);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #CB0000;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+.header__drawer.is-open {
+  transform: translateX(0);
+}
+.header__drawer .header__menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__menu a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: rem(18);
+  /*font-weight: 500;*/
+  line-height: calc(33 / 18);
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(16);
+  }
+}
+.header__drawer .header__menu a{
+  padding: 15px 0 10px 20px;
+  color: #ffffff;
+}
+.header__logo a:hover,
+.header__menu a:hover{
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header__drawer .header__menu a:hover{
+  text-decoration: none;
+  background-color: #000000;
+}
