@@ -1,0 +1,51 @@
+
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.fv {
+  position: relative;
+  width: 100%;
+  // aspect-ratio: 16 / 9;
+  top: 0;
+  left: 0;
+  z-index: 900; /* ヘッダーより低く */
+  margin-top: rem(80);
+  @include sp {
+    margin-top: rem(50);
+  }
+}
+.fv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.502); //15%の黒
+  // z-index: 100;
+  pointer-events: none;
+}
+.fv__catch {
+  position: relative;
+  z-index: 2;
+}
+.fv__catch{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  font-size: rem(40);
+  line-height: calc(60 / 40);
+  // letter-spacing: 0.3em; /* 文字サイズの30% */
+  text-align: center;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  @include sp {
+    width: 100%;
+    top: 51.5%;
+    left: 50%;
+    font-size: rem(30);
+    line-height: calc(50 / 30);
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(30);
+  }
+
+}

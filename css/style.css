@@ -482,20 +482,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
 }
 @media (max-width: 767px) {
   .header {
     width: 100%;
-    height: 5rem;
-  }
-}
-
-.header.is-colored {
-  height: 8rem;
-  background-color: #4D9600;
-}
-@media (max-width: 767px) {
-  .header.is-colored {
     height: 5rem;
   }
 }
@@ -541,13 +532,13 @@ img {
   width: 50%;
   height: 100%;
   padding-top: 1.474rem;
-  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 @media (max-width: 767px) {
   .header__logo a {
     width: 79%;
     padding-top: 0.989rem;
-    padding-top: 0.882rem;
+    padding-bottom: 0.882rem;
   }
 }
 
@@ -564,7 +555,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  gap: 3.3rem;
+  gap: 3rem;
 }
 
 .header__menu .header__menu_contact {
@@ -628,13 +619,7 @@ img {
           align-items: center;
   height: 100%;
   font-size: 1.8rem;
-  /*font-weight: 500;*/
   line-height: 1.8333333333;
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .header__menu a {
-    font-size: 1.6rem;
-  }
 }
 
 .header__drawer .header__menu a {
@@ -651,6 +636,59 @@ img {
 .header__drawer .header__menu a:hover {
   text-decoration: none;
   background-color: #000000;
+}
+
+.fv {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 900; /* ヘッダーより低く */
+  margin-top: 8rem;
+}
+@media (max-width: 767px) {
+  .fv {
+    margin-top: 5rem;
+  }
+}
+
+.fv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.502);
+  pointer-events: none;
+}
+
+.fv__catch {
+  position: relative;
+  z-index: 2;
+}
+
+.fv__catch {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  font-size: 4rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+  .fv__catch {
+    width: 100%;
+    top: 51.5%;
+    left: 50%;
+    font-size: 3rem;
+    line-height: 1.6666666667;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .fv__catch {
+    font-size: 3rem;
+  }
 }
 
 .u-pc {
