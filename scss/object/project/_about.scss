@@ -6,7 +6,7 @@
   padding-bottom: rem(34);
   text-align: center;
   @include pc {
-    padding-top: rem(61.6);
+    padding-top: rem(66);
     padding-bottom: rem(55);
   }
 }
@@ -32,6 +32,7 @@
 }
 .about__title{
   padding-bottom: rem(7);
+  color: #CB0000;
   @include pc {
     padding-bottom: rem(17);
   }
