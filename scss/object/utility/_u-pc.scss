@@ -2,8 +2,7 @@
 @use '../../foundation/mixin' as *; 
 
 .u-pc{
-  display: block; //初期状態（PC用）
   @include sp{
-     display: none;
+    display: none;
   }
 }

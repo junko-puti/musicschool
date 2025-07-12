@@ -57,3 +57,16 @@ img{
   height: auto;
   display: block;
 }
+h3{
+  font-size: rem(25);
+  @include pc {
+    font-size: rem(35);
+  }
+}
+h4{
+  font-size: rem(25);
+}
+p{
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+}

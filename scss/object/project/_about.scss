@@ -1,0 +1,115 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.about{
+  padding-top: rem(46);
+  padding-bottom: rem(34);
+  text-align: center;
+  @include pc {
+    padding-top: rem(61.6);
+    padding-bottom: rem(55);
+  }
+}
+.about__message{
+  position: relative;
+  padding-bottom: rem(96);
+  @include pc {
+    padding-bottom: rem(116);
+  }
+}
+.about__message::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: rem(-70);
+  background: url(../../../images/semicircle-sp.png) center center /contain no-repeat;
+  @include pc {
+    bottom: rem(-60);
+    background: url(../../../images/semicircle.png) center center /contain no-repeat;
+  }
+}
+.about__title{
+  padding-bottom: rem(7);
+  @include pc {
+    padding-bottom: rem(17);
+  }
+}
+.about__flow{
+  position: relative;
+}
+.about-flow::before {/*arrow-left*/
+  content: '';
+  position: absolute;
+  top: rem(-20);
+  left: 50%;
+  transform: translateX(-80%) rotate(-45deg);
+  width: 22px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #CB0000;
+}
+.about-flow::after {/*arrow-right*/
+  content: '';
+  position: absolute;
+  top: rem(-20);
+  left: 50%;
+  transform: translateX(-20%) rotate(45deg);
+  width: 22px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #CB0000;
+}
+.about-flow__pair {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(79.54);
+  padding-bottom: rem(17);
+  font-size: rem(20);
+  line-height: calc(50 / 20);
+}
+.about-flow__pair:last-child {
+  padding-bottom: 0;
+}
+.about-flow__pair:before {
+  position: absolute;
+  content: '';
+  width: rem(20);
+  height: rem(20);
+  left: 50%;
+  top: 35%;/*padding分調整*/
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #CB0000;
+}
+.about-flow__pair:last-child:before {
+  top: 50%;/*padding分調整*/
+}
+.about-flow__pair:after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: rem(25);
+  background-color: #CB0000;
+}
+.about-flow__pair-en{
+  text-align: right;
+  color: #CB0000;
+  @include pc {
+    font-size: rem(25);
+    line-height: calc(50 / 25);
+  }
+}
+.about-flow__pair-ja{
+  text-align: left;
+  @include pc {
+    font-size: rem(23);
+    line-height: calc(50 / 23);
+  }
+
+}

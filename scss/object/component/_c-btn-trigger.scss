@@ -4,15 +4,26 @@
 
 .c-btn-trigger {
   // display: none;
-  @include sp {
-    display: block;
-    position: relative;
-    // right: rem(4);
-    width: rem(71);
-    min-width: rem(71);
-    height: rem(50);
-    background-color: #CB0000;
-    cursor: pointer;
+  // @include sp {
+  //   display: block;
+  //   position: relative;
+  //   // right: rem(4);
+  //   width: rem(71);
+  //   min-width: rem(71);
+  //   height: rem(50);
+  //   background-color: #CB0000;
+  //   cursor: pointer;
+  // }
+  display: block;
+  position: relative;
+  // right: rem(4);
+  width: rem(71);
+  min-width: rem(71);
+  height: rem(50);
+  background-color: #CB0000;
+  cursor: pointer;
+  @include pc {
+    display: none;
   }
 }
 
