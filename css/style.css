@@ -407,6 +407,24 @@ img {
   display: block;
 }
 
+h3 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6666666667;
+}
+
 .l-header {
   position: fixed;
   top: 0;
@@ -417,15 +435,18 @@ img {
           transform: translatex(-50%);
 }
 
-@media (max-width: 767px) {
+.c-btn-trigger {
+  display: block;
+  position: relative;
+  width: 7.1rem;
+  min-width: 7.1rem;
+  height: 5rem;
+  background-color: #CB0000;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
   .c-btn-trigger {
-    display: block;
-    position: relative;
-    width: 7.1rem;
-    min-width: 7.1rem;
-    height: 5rem;
-    background-color: #CB0000;
-    cursor: pointer;
+    display: none;
   }
 }
 
@@ -472,10 +493,19 @@ img {
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.c-section__inner {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .header {
   -webkit-transition: background-color 0.5s, padding 0.5s;
   transition: background-color 0.5s, padding 0.5s;
-  height: 8rem;
+  width: 100%;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,10 +514,9 @@ img {
           align-items: center;
   background-color: #fff;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .header {
-    width: 100%;
-    height: 5rem;
+    height: 8rem;
   }
 }
 
@@ -505,16 +534,16 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 920px; /*880+20+20*/
+  max-width: 100%;
   width: 100%;
   height: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .header__inner {
-    max-width: 100%;
+    max-width: 920px; /*880+20+20*/
   }
 }
 
@@ -529,16 +558,16 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 79%;
   height: 100%;
-  padding-top: 1.474rem;
-  padding-bottom: 1.4rem;
+  padding-top: 0.989rem;
+  padding-bottom: 0.882rem;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .header__logo a {
-    width: 79%;
-    padding-top: 0.989rem;
-    padding-bottom: 0.882rem;
+    width: 50%;
+    padding-top: 1.474rem;
+    padding-bottom: 1.4rem;
   }
 }
 
@@ -644,11 +673,11 @@ img {
   top: 0;
   left: 0;
   z-index: 900; /* ヘッダーより低く */
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .fv {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 }
 
@@ -667,22 +696,22 @@ img {
 
 .fv__catch {
   position: absolute;
-  top: 52%;
+  width: 100%;
+  top: 51.5%;
   left: 50%;
-  font-size: 4rem;
-  line-height: 1.5;
+  font-size: 3rem;
+  line-height: 1.6666666667;
   text-align: center;
   color: #ffffff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .fv__catch {
-    width: 100%;
-    top: 51.5%;
+    top: 52%;
     left: 50%;
-    font-size: 3rem;
-    line-height: 1.6666666667;
+    font-size: 4rem;
+    line-height: 1.5;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -691,9 +720,147 @@ img {
   }
 }
 
-.u-pc {
-  display: block;
+.about {
+  padding-top: 4.6rem;
+  padding-bottom: 3.4rem;
+  text-align: center;
 }
+@media (min-width: 768px) {
+  .about {
+    padding-top: 6.16rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+.about__message {
+  position: relative;
+  padding-bottom: 9.6rem;
+}
+@media (min-width: 768px) {
+  .about__message {
+    padding-bottom: 11.6rem;
+  }
+}
+
+.about__message::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -7rem;
+  background: url(../../../images/semicircle-sp.png) center center/contain no-repeat;
+}
+@media (min-width: 768px) {
+  .about__message::after {
+    bottom: -6rem;
+    background: url(../../../images/semicircle.png) center center/contain no-repeat;
+  }
+}
+
+.about__title {
+  padding-bottom: 0.7rem;
+}
+@media (min-width: 768px) {
+  .about__title {
+    padding-bottom: 1.7rem;
+  }
+}
+
+.about__flow {
+  position: relative;
+}
+
+.about-flow::before { /*arrow-left*/
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-80%) rotate(-45deg);
+          transform: translateX(-80%) rotate(-45deg);
+  width: 22px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #CB0000;
+}
+
+.about-flow::after { /*arrow-right*/
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-20%) rotate(45deg);
+          transform: translateX(-20%) rotate(45deg);
+  width: 22px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #CB0000;
+}
+
+.about-flow__pair {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7.954rem;
+  padding-bottom: 1.7rem;
+  font-size: 2rem;
+  line-height: 2.5;
+}
+
+.about-flow__pair:last-child {
+  padding-bottom: 0;
+}
+
+.about-flow__pair:before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  left: 50%;
+  top: 35%; /*padding分調整*/
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #CB0000;
+}
+
+.about-flow__pair:last-child:before {
+  top: 50%; /*padding分調整*/
+}
+
+.about-flow__pair:after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2.5rem;
+  background-color: #CB0000;
+}
+
+.about-flow__pair-en {
+  text-align: right;
+  color: #CB0000;
+}
+@media (min-width: 768px) {
+  .about-flow__pair-en {
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+}
+
+.about-flow__pair-ja {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .about-flow__pair-ja {
+    font-size: 2.3rem;
+    line-height: 2.1739130435;
+  }
+}
+
 @media (max-width: 767px) {
   .u-pc {
     display: none;

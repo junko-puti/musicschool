@@ -10,9 +10,9 @@
   top: 0;
   left: 0;
   z-index: 900; /* ヘッダーより低く */
-  margin-top: rem(80);
-  @include sp {
-    margin-top: rem(50);
+  margin-top: rem(50);
+  @include pc {
+    margin-top: rem(80);
   }
 }
 .fv::after {
@@ -29,23 +29,21 @@
 }
 .fv__catch{
   position: absolute;
-  top: 52%;
+  width: 100%;
+  top: 51.5%;
   left: 50%;
-  font-size: rem(40);
-  line-height: calc(60 / 40);
-  // letter-spacing: 0.3em; /* 文字サイズの30% */
+  font-size: rem(30);
+  line-height: calc(50 / 30);
   text-align: center;
   color: #ffffff;
   transform: translate(-50%, -50%);
-  @include sp {
-    width: 100%;
-    top: 51.5%;
+  @include pc {
+    top: 52%;
     left: 50%;
-    font-size: rem(30);
-    line-height: calc(50 / 30);
+    font-size: rem(40);
+    line-height: calc(60 / 40);
   }
   @media (min-width: 768px) and (max-width: 979px) {
     font-size: rem(30);
   }
-
 }
