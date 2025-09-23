@@ -1,15 +1,28 @@
-//slick
-$(document).ready(function(){
-  $('.p-fv__slider').slick({
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnFocus: false, // フォーカス時に停止しない
-    pauseOnHover: false, // ホバー時に停止しない
-    pauseOnDotsHover: false // ドットホバー時に停止しない
-  });
-});
+//Splide
+new Splide(".splide", {
+  type: 'loop', //無限ループ
+  perPage: 3,
+  perMove: 1,//1枚ずつ移動
+  pagination: false,//ページネーションを非表示
+  arrows: true,//ここでは消さない（デフォルト矢印を無効化）
+  gap: '35px',//スライド間の余白を指定
+  padding: { left: 0, right: 0 }, // ← 余白をゼロに明示
+  breakpoints: {
+    767: {
+      perPage: 1,
+      perMove: 1,//SPでも1枚ずつ移動
+    },
+  },
+  // autoplay: true,//自動再生（デフォルトはfalse）
+  interval: 4000,//自動再生の間隔
+  speed: 400,//スライドの移動速度
+}).mount();
+
+
+
+//AOS
+AOS.init();
+
 
 
 // スムーススクロール（ヘッダー高さ80px考慮）

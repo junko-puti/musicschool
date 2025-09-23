@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.usp{
+.support{
   padding-top: rem(49);
   padding-bottom: rem(40);
   text-align: center;
@@ -12,7 +12,7 @@
     padding-bottom: rem(60);
   }
 }
-.usp__title{
+.support__title{
   padding-bottom: rem(14);
   @include pc {
     padding-bottom: rem(30);

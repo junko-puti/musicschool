@@ -6,23 +6,23 @@
     <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
     <meta name="apple-mobile-web-app-capable" content="no">
     <title>きたむらミューシックスクール</title>
-    <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!-- Splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   </head>
   <body>
     <header class="l-header header js-header">
       <div class="header__inner">
         <h1 class="header__logo">
-          <a href="#">
-            <picture>
-              <source srcset="./images/logo.png" media="(min-width: 768px)">
-              <img src="./images/logo-sp.png" alt="サイトロゴ">
-            </picture>
-          </a>
+            <a href="#">
+              <picture>
+                <source srcset="./images/logo.png" media="(min-width: 768px)">
+                <img src="./images/logo-sp.png" alt="きたむらミューシックスクール">
+              </picture>
+            </a>
         </h1>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -40,15 +40,15 @@
         <span></span>
         <span></span>
       </div>
-      <!-- SP用ドロワーメニュー -->
-      <nav class="header__drawer u-sp" id="drawer">
-        <ul class="header__menu">
-            <li><a href="#plan">料金</a></li>
-            <li><a href="#blog">ブログ</a></li>
-            <li><a href="#result">卒業実績</a></li>
-        </ul>
-      </nav>
     </header>
+    <!-- SP用ドロワーメニュー -->
+    <nav class="header__drawer u-sp" id="drawer">
+      <ul class="header__menu">
+          <li><a href="#plan">料金</a></li>
+          <li><a href="#blog">ブログ</a></li>
+          <li><a href="#result">卒業実績</a></li>
+      </ul>
+    </nav>
     <main>
       <!-- fv -->
       <section class="fv">
@@ -59,8 +59,8 @@
         <h2 class="fv__catch">「音楽で生きる」<br class="u-sp">を叶える<br>ミュージックスクール</h2>
       </section>
       <!-- about -->
-      <section class="about c-section" id="about">
-        <div class="about__inner c-section__inner">
+      <section class="about section" id="about">
+        <div class="about__inner section__inner">
           <div class="about__message">
             <h3 class="about__title">全人類、<br class="u-sp">ミュージシャン計画。</h3>
             <p class="about__text">私たちは音楽を愛するすべての人が、音<br class="u-sp">楽に熱狂できる世界を目指しています。</p>
@@ -81,70 +81,164 @@
           </div>
         </div>
       </section>
-      <!-- usp 強み -->
-      <section class="usp c-section" id="usp">
-        <div class="c-section__inner">
-          <h4 class="usp__title">音楽業界初！<br>収益化までサポートする<br class="u-sp">ミュージックスクール</h4>
-          <p class="usp__text">楽器や作詞作曲などの<br class="u-sp">技術・知識はもちろんのこと<br>自分で稼ぎつづけるための<br class="u-sp">ビジネス面もサポートします！</p>
+      <!-- support サポート -->
+      <section class="support section" id="support">
+        <div class="section__inner">
+          <h4 class="support__title">音楽業界初！<br>収益化までサポートする<br class="u-sp">ミュージックスクール</h4>
+          <p class="support__text">楽器や作詞作曲などの<br class="u-sp">技術・知識はもちろんのこと<br>自分で稼ぎつづけるための<br class="u-sp">ビジネス面もサポートします！</p>
         </div>
       </section>
       <!-- reason 理由 -->
-      <section class="reason c-section" id="reason">
-        <div class="c-section__inner">
+      <section class="reason section" id="reason">
+        <div class="section__inner">
           <h4 class="reason__title">きたむらミュージック<br class="u-sp">スクールが選ばれる理由</h4>
-
-          <div class="reason__list reason-list">
+          <div class="reason__items">
             <!--reason1-->
-            <div class="reason-list__item reason-item c-fade-in">
-              <figure class="reason-item__img">
-                <picture>
-                  <source srcset="./images/reason01.jpg" media="(min-width: 768px)">
-                  <img src="./images/reason01-sp.jpg" alt="選ばれる理由１">
-                </picture>
+            <div class="reason__item reason-item c-fade-in">
+              <figure class="reason-item__figure">
+                <div class="reason-item__img">
+                  <picture>
+                    <source srcset="./images/reason01.jpg" media="(min-width: 768px)">
+                    <img src="./images/reason01-sp.jpg" alt="選ばれる理由１">
+                  </picture>
+                </div>
+                <figcaption class="reason-item__caption">
+                  <h5 class="reason-item__subtitle">技術面はプロによるマンツーマン授業！</h5>
+                  <p class="reason-item__text">
+                    第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。
+                  </p>
+                </figcaption>
               </figure>
-              <div class="reason-item__caption">
-                <h5 class="reason-item__caption_head">技術面はプロによるマンツーマン授業！</h5>
-                <p class="reason-item__caption_txt">
-                  第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。
-                </p>
-              </div>
             </div>
             <!--reason2-->
-            <div class="reason-list__item reason-item c-fade-in">
-              <figure class="reason-item__img">
-                <picture>
-                  <source srcset="./images/reason02.jpg" media="(min-width: 768px)">
-                  <img src="./images/reason02-sp.jpg" alt="選ばれる理由２">
-                </picture>
+            <div class="reason__item reason-item c-fade-in">
+              <figure class="reason-item__figure">
+                <div class="reason-item__img">
+                  <picture>
+                    <source srcset="./images/reason02.jpg" media="(min-width: 768px)">
+                    <img src="./images/reason02-sp.jpg" alt="選ばれる理由２">
+                  </picture>
+                </div>
+                <figcaption class="reason-item__caption">
+                  <h5 class="reason-item__subtitle">収益化するためのビジネスサポート！</h5>
+                  <p class="reason-item__text">
+                    コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
+                  </p>
+                </figcaption>
               </figure>
-              <div class="reason-item__caption">
-                <h5 class="reason-item__caption_head">収益化するためのビジネスサポート！</h5>
-                <p class="reason-item__caption_txt">
-                  コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。
-              </div>
             </div>
             <!--reason3-->
-            <div class="reason-list__item reason-item c-fade-in">
-              <figure class="reason-item__img">
-                <picture>
-                  <source srcset="./images/reason03.jpg" media="(min-width: 768px)">
-                  <img src="./images/reason03-sp.jpg" alt="選ばれる理由３">
-                </picture>
+            <div class="reason__item reason-item c-fade-in">
+              <figure class="reason-item__figure">
+                <div class="reason-item__img">
+                  <picture>
+                    <source srcset="./images/reason03.jpg" media="(min-width: 768px)">
+                    <img src="./images/reason03-sp.jpg" alt="選ばれる理由３">
+                  </picture>
+                </div>
+                <figcaption class="reason-item__caption">
+                  <h5 class="reason-item__subtitle">24時間365日使える練習ROOMを完備!</h5>
+                  <p class="reason-item__text">
+                    一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
+                  </p>
+                </figcaption>
               </figure>
-              <div class="reason-item__caption">
-                <h5 class="reason-item__caption_head">24時間365日使える練習ROOMを完備!</h5>
-                <p class="reason-item__caption_txt">
-                  一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
-                </p>
-              </div>
             </div>
           </div>
-
-
-
-
-
+        </div>
+      </section>
+      <!-- voice 声 -->
+      <section class="voice section splide" id="voice" aria-labelledby="voice__title">
+        <h4 class="voice__title">生徒さんたちの声</h4>
+        <div class="section__inner">
+          <div class="splide__track">
+            <div class="voice__list voice-list c-slider splide__list">
+              <!--voice1-->
+              <figure class="voice-list__item voice-item c-slider__item splide__slide c-fade-in">
+                <div class="voice-item__img">
+                  <picture>
+                    <source srcset="./images/voice01.jpg" media="(min-width: 768px)">
+                    <img src="./images/voice01-sp.jpg" alt="生徒さんたちの声">
+                  </picture>
+                </div>
+                <figcaption class="voice-item__caption">
+                  <h5 class="voice-item__name">証券会社勤務  丸山さん</h5>
+                  <p class="voice-item__text">
+                    昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
+                  </p>
+                </figcaption>
+              </figure>
+              <!--voice2-->
+              <figure class="voice-list__item voice-item c-slider__item splide__slide c-fade-in">
+                <div class="voice-item__img">
+                  <picture>
+                    <source srcset="./images/voice02.jpg" media="(min-width: 768px)">
+                    <img src="./images/voice02.jpg" alt="生徒さんたちの声">
+                  </picture>
+                </div>
+                <figcaption class="voice-item__caption">
+                  <h5 class="voice-item__name">IT会社勤務  S.Eさん</h5>
+                  <p class="voice-item__text">
+                    プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
+                  </p>
+                </figcaption>
+              </figure>
+              <!--voice3-->
+              <figure class="voice-list__item voice-item c-slider__item splide__slide c-fade-in">
+                <div class="voice-item__img">
+                  <picture>
+                    <source srcset="./images/voice03.jpg" media="(min-width: 768px)">
+                    <img src="./images/voice03.jpg" alt="生徒さんたちの声">
+                  </picture>
+                </div>
+                <figcaption class="voice-item__caption">
+                  <h5 class="voice-item__name">都内大学生  田森さん</h5>
+                  <p class="voice-item__text">
+                    就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
+          <div class="splide__arrows">
+            <button type="button" class="splide__arrow splide__arrow--prev custom-arrow prev">
+              <img src="./images/arrow-l.png" alt="前へ">
+            </button>
+            <button type="button" class="splide__arrow splide__arrow--next custom-arrow next">
+              <img src="./images/arrow-r.png" alt="次へ">
+            </button>
+          </div>
+        </div>
+      </section>
+<!--FV-->
+      <!-- <section class="p-fv">
+        <div class="p-fv__slider p-slider">
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_01.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_01.jpg" alt="ファーストビュー1">
+            </picture>
+          </div>
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_02.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_02.jpg" alt="ファーストビュー2">
+            </picture>
+          </div>
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_03.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_03.jpg" alt="ファーストビュー3">
+            </picture>
+          </div>
+        </div>
+        <h2 class="p-fv__catch">永遠も。<br class="u-sp">瞬間も。<br>あなたと共に。</h2>
+      </section> -->
+<!--FV-->
+
+
+
+
         </div>
       </section>
     </main>
@@ -152,7 +246,8 @@
       
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
