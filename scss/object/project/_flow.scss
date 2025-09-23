@@ -1,0 +1,109 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.flow{
+  padding-top: rem(46);
+  padding-bottom: rem(55);
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(34);
+    padding-bottom: rem(90);
+  }
+}
+.flow__list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(36);
+  padding-left: rem(48);
+  @include pc {
+    margin-top: rem(53);
+    padding-left: rem(121);
+    row-gap: rem(58);
+    flex-direction: row;
+    flex-wrap: wrap;
+    vertical-align: top;
+  }
+}
+.flow-list__label:first-child{
+  margin-top: 0;
+}
+.flow-list__label,
+.flow-list__detail{
+  width: 100%;
+  text-align: left;
+}
+.flow-list__label{
+  position: relative;
+  margin-top: rem(36);
+  margin-bottom: rem(9);
+  font-size: rem(22);
+  font-weight: 500;
+  line-height: calc( 33/22 );
+  color: #CB0000;
+  @include pc {
+    width: 25.296%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+}
+.flow-list__detail{
+  margin-left: 0;
+  font-size: rem(16);
+  line-height: calc( 30/16 );
+  @include pc {
+    width: 74.703%;
+    font-size: rem(18);
+    line-height: calc( 30/18 );
+  }
+}
+.flow__list::before{
+  content: '';
+  position: absolute;
+  width: rem(3);
+  height: calc(100% - 1.2em);
+  top: 0.5em;
+  left: rem(17);
+  background-color: #CB0000;
+  @include pc {
+    height: 100%;
+    top: 1em;
+    left: rem(60);
+  }
+}
+.flow__list::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: rem(25);
+  height: rem(25);
+  bottom: rem(14);
+  left: rem(6);
+  border-left: rem(3) #CB0000 solid;
+  border-bottom: rem(3) #CB0000 solid;
+  transform: rotate(-45deg); //方向を調整
+  @include pc {
+    bottom: -0.8em;
+    left: rem(48.5);
+  }
+
+}
+.flow-list__label::before{
+  content: '';
+  position: absolute;
+  width: rem(20);
+  height: rem(20);
+  left: rem(-30);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #CB0000;
+  border-radius: 50%;
+  @include pc {
+    top: 0.75em;
+    left: rem(-60);
+  }
+
+}

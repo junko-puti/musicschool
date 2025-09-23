@@ -12,28 +12,9 @@
     padding-bottom: rem(80);
   }
 }
-// .voice .section__inner{
-//   max-width: 920px;
-//   width: 100%;
-//   margin: 0 auto;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   @include pc {
-//     width:  calc(100% + rem(50));
-//   }
-// }
-.voice__title{
-  padding-bottom: rem(39);
+.splide__track{
+  margin-top: rem(39);
 }
-// .voice__list{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   @include pc{
-//     flex-direction: row;
-//     column-gap: 35px;
-//   }
-// }
 .voice-list__item{
   position: relative;
 }
@@ -45,7 +26,6 @@
   @include pc{
     aspect-ratio: 27 / 19;
   }
-
 }
 .voice-item__img img {
   display: block;
