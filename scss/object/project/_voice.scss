@@ -1,0 +1,118 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.voice{
+  padding-top: rem(46);
+  padding-bottom: rem(50);
+  text-align: center;
+  color: #FFFFFF;
+  background-color:#CB0000;
+  @include pc{
+    padding-top: rem(44);
+    padding-bottom: rem(80);
+  }
+}
+// .voice .section__inner{
+//   max-width: 920px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   @include pc {
+//     width:  calc(100% + rem(50));
+//   }
+// }
+.voice__title{
+  padding-bottom: rem(39);
+}
+// .voice__list{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   @include pc{
+//     flex-direction: row;
+//     column-gap: 35px;
+//   }
+// }
+.voice-list__item{
+  position: relative;
+}
+.voice-item__img {
+  display: block;
+  width: 100%; /* または希望するサイズ */
+  aspect-ratio: 335 / 200;
+  overflow: hidden;
+  @include pc{
+    aspect-ratio: 27 / 19;
+  }
+
+}
+.voice-item__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.voice-item__caption{
+  margin-top: rem(27);
+  @include pc{
+    margin-top: rem(17);
+  }
+
+}
+.voice-item__name{
+  padding-bottom: rem(10);
+  font-size: rem(22);
+  line-height: calc(33 / 22);
+}
+.voice-item__text{
+  text-align: left;
+}
+#voice .splide__slide img {
+  height: auto;
+  width: 100%;
+}
+
+/*CSSでデフォルト矢印の見た目を完全に*/
+.splide__arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+.splide__arrow svg {
+  display: none;
+}
+
+/* 左右矢印 */
+.splide__arrows {
+  position: absolute;
+  top: 51%;
+  left: rem(5);
+  right: rem(5);
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  z-index: 2;
+  @include pc{
+    top: 50%;
+    left: rem(40);
+    right: rem(40);
+  }
+
+}
+.custom-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: rem(30);
+  height: auto;
+}
+.custom-arrow img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -10,54 +10,77 @@
     padding-bottom: rem(90);
   }
 }
-.reason-list__item{
+// .reason__title{
+//   margin-bottom: rem(36);
+//   @include pc{
+//     margin-bottom: rem(28);
+//   }
+// }
+.reason__items{
+  display: flex;
+  flex-direction: column;
+    margin-top: rem(36);
+  @include pc{
+    margin-top: rem(28);
+  }
+
+}
+.reason-item{
+  margin-top: rem(39);
+
+  
+  
   @include pc {
-    display: flex;
-    flex-direction: row;
-     gap: rem(50);
+    margin-top: rem(50);
   }
 }
-.reason h4{
-  margin-bottom: rem(36);
-  @include pc{
-    margin-bottom: rem(28);
+.reason-item:first-child{
+  margin-top: 0;
+}
+.reason-item__figure{
+  display: flex;
+  flex-direction: column;
+  @include pc {
+    flex-direction: row;
+    column-gap: rem(50);
   }
 }
 .reason-item__img{
-  margin-bottom: rem(30);
+  width: 100%;
   @include pc {
     width: 39.772%;
-    margin-bottom: rem(50);
+    margin-bottom: 0;
   }
 }
 .reason-item__caption{
-  margin-bottom: rem(39);
+  margin-top: rem(30);
   text-align: left;
   @include pc {
     flex: 1;
   }
 }
-.reason-item__caption_head{
+.reason-item__subtitle{
   position: relative;
   font-size: rem(20);
   line-height: calc(30 / 20);
   padding-bottom: rem(10);
-  margin-bottom: rem(17);
   @include pc {
-    // margin-top: rem(7);
     padding-bottom: rem(12);
-    margin-bottom: rem(37);
     font-size: rem(22);
     line-height: calc(33 / 22);
   }
 }
-.reason-list__item:first-child .reason-item__caption_head{
+.reason__item:first-child .reason-item__subtitle{
   @include pc {
-    // margin-top: rem(7);
-    margin-top: rem(9);/*微調整*/
+    padding-top: rem(9);//微調整//
   }
 }
-.reason-item__caption_head::after{
+// .reason__items:first-child .reason-item__subtitle{
+//   @include pc {
+//     margin-top: rem(7);/*微調整*/
+//   }
+// }
+.reason-item__subtitle::after{
   position: absolute;
   content: '';
   width:  100%;
@@ -70,10 +93,12 @@
     left: rem(-50);
   }
 }
-.reason-item__caption_txt{
+.reason-item__text{
+  margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
   @include pc {
+    margin-top: rem(37);
     font-size: rem(18);
     line-height: calc(33 / 18);
   }

@@ -28,9 +28,15 @@ html {
 //     font-size: calc(16 / 375 * 100vw);
 //   }
 // }
+* {
+  outline: 1px solid rgb(210, 159, 238);
+}
 // * {
-//   outline: 1px solid rgb(210, 159, 238);
+//   outline: 2px solid red;
 // }
+
+
+
 //ソリッドコーディング
 // html {
 //   scroll-behavior: smooth;

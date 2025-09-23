@@ -10,10 +10,13 @@
 //     padding-bottom: rem(50);
 //   }
 // }
-.c-section__inner{
+.section__inner{
   max-width: 920px;
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  @include pc {
+    width:  calc(100% + rem(50));
+  }
 }
