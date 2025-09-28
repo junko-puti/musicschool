@@ -112,29 +112,6 @@ $(function () {
 
 
 
-// モーダル
-const modal = document.getElementById("myModal");
-const modalImg = document.getElementById("js-modal-img");
-const captionText = document.getElementById("caption");
-const closeBtn = document.querySelector(".p-modal__close");
-const overlay = document.querySelector(".p-modal__overlay");
-
-// 画像クリックで開く（altをキャプションに使用）
-document.querySelectorAll(".p-card__img img").forEach(img => {
-  img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.dataset.modal || this.src;
-    captionText.textContent = this.alt;
-  };
-});
-
-// 閉じるボタン、またはオーバーレイクリックで閉じる
-closeBtn.onclick = overlay.onclick = function () {
-  modal.style.display = "none";
-};
-
-
-
 
 //スクロールトップボタンの変化
 $(function(){
