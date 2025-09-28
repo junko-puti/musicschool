@@ -1,13 +1,21 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.flow{
-  padding-top: rem(46);
+footer{
+  height: 100px;
+  color: #FFFFFF;
+  background-color: #CB0000;
+}
+.blog{
+  padding-top: rem(50);
+  padding-bottom: rem(132);
+
   text-align: center;
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    padding-top: rem(34);
+    padding-top: rem(70.5);
+    padding-bottom: rem(145);
   }
 }
 .flow__list{

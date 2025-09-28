@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.about{
+.vision{
   padding-top: rem(46);
   padding-bottom: rem(37);/*微調整*/
   text-align: center;
@@ -10,14 +10,14 @@
     padding-bottom: rem(55);
   }
 }
-.about__message{
+.vision__message{
   position: relative;
   padding-bottom: rem(96);
   @include pc {
     padding-bottom: rem(116);
   }
 }
-.about__message::after{
+.vision__message::after{
   position: absolute;
   content: '';
   width: 100%;
@@ -30,17 +30,21 @@
     background: url(../../../images/semicircle.png) center center /contain no-repeat;
   }
 }
-.about__title{
+.vision__title{
   padding-bottom: rem(7);
+  font-size: rem(25);
+  line-height: calc( 40 / 25 );
   color: #CB0000;
   @include pc {
+    font-size: rem(35);
+    line-height: calc( 50 / 35 );
     padding-bottom: rem(17);
   }
 }
-.about__flow{
+.vision__step{
   position: relative;
 }
-.about-flow::before {/*arrow-left*/
+.vision-step::before {/*arrow-left*/
   content: '';
   position: absolute;
   top: rem(-20);
@@ -51,7 +55,7 @@
   border-radius: 10px;
   background-color: #CB0000;
 }
-.about-flow::after {/*arrow-right*/
+.vision-step::after {/*arrow-right*/
   content: '';
   position: absolute;
   top: rem(-20);
@@ -62,7 +66,7 @@
   border-radius: 10px;
   background-color: #CB0000;
 }
-.about-flow__pair {
+.vision-step__item {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -71,10 +75,10 @@
   font-size: rem(20);
   line-height: calc(50 / 20);
 }
-.about-flow__pair:last-child {
+.vision-step__item:last-child {
   padding-bottom: 0;
 }
-.about-flow__pair:before {
+.vision-step__item:before {
   position: absolute;
   content: '';
   width: rem(20);
@@ -85,10 +89,10 @@
   border-radius: 50%;
   background-color: #CB0000;
 }
-.about-flow__pair:last-child:before {
+.vision-step__item:last-child:before {
   top: 50%;/*padding分調整*/
 }
-.about-flow__pair:after {
+.vision-step__item:after {
   position: absolute;
   content: '';
   width: 3px;
@@ -98,7 +102,7 @@
   bottom: rem(25);
   background-color: #CB0000;
 }
-.about-flow__pair-en{
+.vision-step__en{
   text-align: right;
   color: #CB0000;
   @include pc {
@@ -106,7 +110,7 @@
     line-height: calc(50 / 25);
   }
 }
-.about-flow__pair-ja{
+.vision-step__ja{
   text-align: left;
   @include pc {
     font-size: rem(23);

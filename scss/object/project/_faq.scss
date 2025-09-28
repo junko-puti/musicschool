@@ -1,0 +1,14 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.faq{
+  padding-top: rem(55);
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(90.5);
+  }
+}
+
+

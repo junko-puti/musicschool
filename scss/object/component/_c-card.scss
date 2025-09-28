@@ -1,0 +1,18 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*横並び対応 (Modifier）*/
+.c-card--horizontal {
+  flex-direction: column;
+  @include pc {
+    flex-direction: row;
+  }
+}
+

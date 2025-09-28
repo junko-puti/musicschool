@@ -12,54 +12,24 @@
     padding-bottom: rem(80);
   }
 }
+
+/*****************
+スライダー
+*****************/
 .splide__track{
   margin-top: rem(39);
 }
-.voice-list__item{
-  position: relative;
-}
-.voice-item__img {
-  display: block;
-  width: 100%; /* または希望するサイズ */
-  aspect-ratio: 335 / 200;
-  overflow: hidden;
-  @include pc{
-    aspect-ratio: 27 / 19;
-  }
-}
-.voice-item__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.voice-item__caption{
-  margin-top: rem(27);
-  @include pc{
-    margin-top: rem(17);
-  }
-
-}
-.voice-item__name{
-  padding-bottom: rem(10);
-  font-size: rem(22);
-  line-height: calc(33 / 22);
-}
-.voice-item__text{
-  text-align: left;
-}
 #voice .splide__slide img {
-  height: auto;
   width: 100%;
+  height: auto;
 }
-
 /*CSSでデフォルト矢印の見た目を完全に*/
 .splide__arrow {
-  background: none;
-  border: none;
   padding: 0;
   width: auto;
   height: auto;
+  border: none;
+  background: none;
 }
 .splide__arrow svg {
   display: none;
@@ -81,18 +51,50 @@
     left: rem(40);
     right: rem(40);
   }
-
 }
 .custom-arrow {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
   width: rem(30);
   height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 .custom-arrow img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
+/*****************
+card
+*****************/
+.voice-list__img{
+  width: 100%;
+  aspect-ratio: 335 / 200; // 比率を統一
+  overflow: hidden;
+  @include pc{
+    aspect-ratio: 27 / 19;
+  }
+}
+.voice-list__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voice-list__caption{
+  margin-top: rem(27);
+  @include pc{
+    margin-top: rem(17);
+  }
+}
+.voice-list__name{
+  padding-bottom: rem(10);
+  font-size: rem(22);
+  line-height: calc(33 / 22);
+}
+.voice-list__text{
+  text-align: left;
+}
+
