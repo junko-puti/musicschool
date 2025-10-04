@@ -3,12 +3,12 @@
 
 
 .header {
-  transition: background-color 0.5s, padding 0.5s;
   width: 100%;
   height: rem(50);
   display: flex;
   align-items: center;
   background-color: #fff;
+  transition: background-color 0.5s, padding 0.5s;
   @include pc {
     height: rem(80);
   }
@@ -41,17 +41,22 @@
 .header__logo a{
   display: flex;
   align-items: center;
-  width: rem(208);
   height: 100%;
   padding-top: rem(9.89);
   padding-bottom: rem(8.82);
   @include pc {
-    width: 50%;
     padding-top: rem(14.74);
     padding-bottom: rem(14);
   }
 }
-
+.header__logo-img{
+  width: rem(208);
+  aspect-ratio: 208 / 31;
+  @include pc {
+    width: rem(192);
+    aspect-ratio: 192 / 51;
+  }
+}
 /*--PC用メニュー--*/
 .header__nav{
   height: 100%;
@@ -60,7 +65,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  gap: rem(30);
+  gap: rem(33);
 }
 .header__menu .header__menu_contact{
   padding: rem(6) rem(30);
@@ -69,6 +74,16 @@
   color: #ffffff;
   background-color: #CB0000;
 }
+.header__menu li{
+  width: auto;
+}
+.header__menu .c-btn--h-contact {
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: calc(33 / 15);
+}
+
+
 /*--sp用メニュー--*/
 .header__drawer {
   position: fixed;

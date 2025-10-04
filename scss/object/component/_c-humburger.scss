@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *;
 
 
-.c-btn-trigger {
+.c-humburger {
   display: block;
   position: fixed;
   top: 0;
@@ -20,7 +20,7 @@
   }
 }
 
-.c-btn-trigger span {
+.c-humburger span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -33,29 +33,29 @@
 }
 
 // 各バーの初期位置（上下にずらす）
-.c-btn-trigger span:nth-of-type(1) { top: 26%;};
-.c-btn-trigger span:nth-of-type(2) { top: 50%;};
-.c-btn-trigger span:nth-of-type(3) { top: 74%;};
+.c-humburger span:nth-of-type(1) { top: 26%;};
+.c-humburger span:nth-of-type(2) { top: 50%;};
+.c-humburger span:nth-of-type(3) { top: 74%;};
 
-// .c-btn-trigger span:nth-of-type(1) {
+// .c-humburger span:nth-of-type(1) {
 //   transform: translateY(-50%, rem(-15));
 // }
-// .c-btn-trigger span:nth-of-type(2) {
+// .c-humburger span:nth-of-type(2) {
 //   transform: translate(-50%, -85%);
 // }
-// .c-btn-trigger span:nth-of-type(3) {
+// .c-humburger span:nth-of-type(3) {
 //   transform: translate(-50%, rem(9));
 // }
 
 // アクティブ時（×になる）
-#btn-trigger.active span:nth-of-type(1) {
+#humburger.active span:nth-of-type(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-#btn-trigger.active span:nth-of-type(2) {
+#humburger.active span:nth-of-type(2) {
   opacity: 0;
 }
-#btn-trigger.active span:nth-of-type(3) {
+#humburger.active span:nth-of-type(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
