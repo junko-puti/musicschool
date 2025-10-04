@@ -1,0 +1,70 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.c-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #CB0000;
+  border: 1px solid #CB0000;
+  font-weight: 400;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover {
+    color: #CB0000;
+    background-color: #FFFFFF;
+  }
+}
+
+  //fontは各プロジェクトで指定する
+.c-btn--h-contact{
+  max-width: rem(150);
+  width: 100%;
+  height: rem(45);
+  padding-top: rem(7);
+  padding-bottom: rem(5);
+  padding-left: rem(29);
+  padding-right: rem(29);
+}
+
+.c-btn--f-contact{
+  max-width: rem(335);
+  width: 100%;
+  height: rem(60);
+  padding-top: rem(13.5);
+  padding-bottom: rem(13.5);
+  // padding-left: rem(99);
+  // padding-right: rem(99);
+  @include pc {
+    max-width: rem(300);
+    width: 100%;
+    height: rem(60);
+    padding-top: rem(13.5);
+    padding-bottom: rem(13.5);
+    // padding-left: rem(82);
+    // padding-right: rem(82);
+  }
+}
+
+.c-btn--primary{
+  max-width: rem(150);
+  width: 100%;
+  height: rem(45);
+  padding-top: rem(7);
+  padding-bottom: rem(5);
+  padding-left: rem(29);
+  padding-right: rem(29);
+  @include pc {
+    max-width: rem(150);
+    width: 100%;
+    height: rem(45);
+    padding-top: rem(7);
+    padding-bottom: rem(5);
+    padding-left: rem(29);
+    padding-right: rem(29);
+    width: rem(192);
+    aspect-ratio: 192 / 51;
+  }
+}
+

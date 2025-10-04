@@ -55,7 +55,7 @@ AOS.init();
 ///////////////////
 // triggerボタン、ドロワーメニュー開閉
 $(function(){
-  $('.c-btn-trigger').on('click', function() {
+  $('.c-humburger').on('click', function() {
     $(this).toggleClass('active');
     $('#drawer').toggleClass('is-open');
     return false;
@@ -64,13 +64,13 @@ $(function(){
   // メニュー内リンククリックで閉じる
   $('#drawer a').on('click', function() {
     $('#drawer').removeClass('is-open');
-    $('.c-btn-trigger').removeClass('active');
+    $('.c-humburger').removeClass('active');
   });
 
   // メニュー外クリックで閉じる
   $(document).on('click', function(e) {
     const $drawer = $('#drawer');
-    const $btn = $('.c-btn-trigger');
+    const $btn = $('.c-humburger');
     if (!$drawer.is(e.target) && $drawer.has(e.target).length === 0 &&
         !$btn.is(e.target) && $btn.has(e.target).length === 0) {
       $drawer.removeClass('is-open');
@@ -82,7 +82,7 @@ $(function(){
   $(window).on('scroll', function() {
     if ($(window).scrollTop() === 0) {
       $('#drawer').removeClass('is-open');
-      $('.c-btn-trigger').removeClass('active');
+      $('.c-humburger').removeClass('active');
     }
   });
 });
@@ -109,6 +109,37 @@ $(function () {
   updateHeaderClass();
   $(window).on('scroll', updateHeaderClass);
 });
+
+
+
+
+const triggers = document.querySelectorAll(".faq-accordion__trigger");
+triggers.forEach((trigger) => {
+  const dataanswer = trigger.dataset.answer;
+  const answer = document.getElementById(dataanswer);
+
+  trigger.addEventListener("click", (e) => {
+    const target = e.currentTarget;
+    const isOpen = trigger.classList.contains("__open");
+
+    if (isOpen) {
+      // アコーディオンを閉じる
+      target.classList.remove("__open");
+      answer.classList.add("__close");
+    } else {
+      // アコーディオンを開く
+      target.classList.add("__open");
+      answer.classList.remove("__close");
+    }
+  });
+});
+
+
+
+
+
+
+
 
 
 

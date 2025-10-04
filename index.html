@@ -17,12 +17,14 @@
     <header class="l-header header js-header">
       <div class="header__inner">
         <h1 class="header__logo">
-            <a href="#">
+          <a href="#">
+            <div class="header__logo-img">
               <picture>
                 <source srcset="./images/logo.png" media="(min-width: 768px)">
                 <img src="./images/logo-sp.png" alt="きたむらミューシックスクール">
               </picture>
-            </a>
+            </div>
+          </a>
         </h1>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -30,12 +32,14 @@
             <li><a href="#plan">料金</a></li>
             <li><a href="#blog">ブログ</a></li>
             <li><a href="#result">卒業実績</a></li>
-            <li><a href="#contact" class="header__menu_contact">お問い合わせ</a></li>
+            <li><a href="#contact" class="c-btn c-btn--h-contact">お問い合わせ</a></li>
+
           </ul>
+          <!-- <a href="#contact" class="c-btn c-btn--h-contact">お問い合わせ</a> -->
         </nav>
       </div>
       <!-- ハンバーガーボタン（SP用） -->
-      <div class="c-btn-trigger u-sp" id="btn-trigger">
+      <div class="c-humburger u-sp" id="humburger">
         <span></span>
         <span></span>
         <span></span>
@@ -60,7 +64,7 @@
       </section>
       <!-- vision -->
       <section class="vision section" id="vision">
-        <div class="vision__inner section__inner">
+        <div class="vision__inner l-inner">
           <div class="vision__message">
             <h2 class="vision__title">全人類、<br class="u-sp">ミュージシャン計画。</h2>
             <p class="vision__text">私たちは音楽を愛するすべての人が、音<br class="u-sp">楽に熱狂できる世界を目指しています。</p>
@@ -83,14 +87,14 @@
       </section>
       <!-- support サポート -->
       <section class="support section" id="support">
-        <div class="section__inner">
+        <div class="l-inner">
           <h2 class="support__title">音楽業界初！<br>収益化までサポートする<br class="u-sp">ミュージックスクール</h2>
           <p class="support__text">楽器や作詞作曲などの<br class="u-sp">技術・知識はもちろんのこと<br>自分で稼ぎつづけるための<br class="u-sp">ビジネス面もサポートします！</p>
         </div>
       </section>
       <!-- reason 理由 -->
       <section class="reason section" id="reason">
-        <div class="section__inner">
+        <div class="l-inner">
           <h2 class="reason__title">きたむらミュージック<br class="u-sp">スクールが選ばれる理由</h2>
           <div class="reason__lists">
             <!--reason1-->
@@ -143,7 +147,7 @@
       </section>
       <!-- voice 生徒さんたちの声 -->
       <section class="voice section splide" id="voice" aria-labelledby="voice__title">
-        <div class="section__inner">
+        <div class="l-inner">
           <h2 class="voice__title">生徒さんたちの声</h2>
           <div class="splide__track">
             <div class="voice__lists splide__list">
@@ -206,8 +210,8 @@
       </section>
       <!-- flow ご利用の流れ -->
       <section class="flow section">
-        <h2 class="flow__title">ご利用の流れ</h2>
-        <div class="section__inner">
+        <div class="l-inner">
+          <h2 class="flow__title">ご利用の流れ</h2>
           <dl class="flow__list flow-list">
             <dt class="flow-list__label">お問い合わせ</dt>
             <dd class="flow-list__detail">
@@ -234,77 +238,178 @@
       </section>
       <!-- faq よくあるご質問 -->
       <section class="faq section">
-        <h2 class="faq__title">よくあるご質問</h2>
-        <div class="section__inner">
-
-
-
-
-
-
-<!-- <div class="accordion">
-  <h3 class="accordion-header">
-    <button class="accordion-trigger" data-panel="accordion-panel-1">
-      見出し01<span class="accordion-icon"></span>
-    </button>
-  </h3>
-  <div id="accordion-panel-1" class="accordion-panel __close">
-    <p class="accordion-panel__text">
-      テキストが入ります。テキストが入ります。テキストが入ります。
-    </p>
-  </div>
-  <h3 class="accordion-header">
-    <button class="accordion-trigger" data-panel="accordion-panel-2">
-      見出し02<span class="accordion-icon"></span>
-    </button>
-  </h3>
-  <div id="accordion-panel-2" class="accordion-panel __close">
-    <p class="accordion-panel__text">
-      テキストが入ります。テキストが入ります。テキストが入ります。
-    </p>
-  </div>
-  <h3 class="accordion-header">
-    <button class="accordion-trigger" data-panel="accordion-panel-3">
-      見出し03<span class="accordion-icon"></span>
-    </button>
-  </h3>
-  <div id="accordion-panel-3" class="accordion-panel __close">
-    <p class="accordion-panel__text">
-      テキストが入ります。テキストが入ります。テキストが入ります。
-    </p>
-  </div>
-</div>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="l-inner">
+          <h2 class="faq__title">よくあるご質問</h2>
+          <div class="faq__accordion faq-accodion">
+            <!--Q1-->
+            <h3 class="faq-accordion__question">
+              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-1">
+                どのような生徒さんがどれぐらいの期間で稼いでいますか？<span class="faq-accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="faq-accordion-answer-1" class="faq-accordion__answer __close">
+              <p class="faq-accordion__answer-text">
+                1テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+           <!--Q2-->
+            <h3 class="faq-accordion__question">
+              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-2">
+                途中でプランを変更することは可能ですか？<span class="faq-accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="faq-accordion-answer-2" class="faq-accordion__answer __close">
+              <p class="faq-accordion__answer-text">
+                途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。
+              </p>
+            </div>
+            <!--Q3-->
+            <h3 class="faq-accordion__question">
+              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-3">
+                入学金などの分割払いはできますか？<span class="faq-accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="faq-accordion-answer-3" class="faq-accordion__answer __close">
+              <p class="faq-accordion__answer-text">
+                3テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+            <!--Q4-->
+            <h3 class="faq-accordion__question">
+              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-4">
+                休学することも可能ですか？<span class="faq-accordion__icon"></span>
+              </button>
+            </h3>
+            <div id="faq-accordion-answer-4" class="faq-accordion__answer __close">
+              <p class="faq-accordion__answer-text">
+                4テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
+
+
+
+
+
       <!-- blog ブログ -->
       <section class="blog section">
-        <h2 class="blog__title">ブログ</h2>
-        <div class="section__inner">
+        <div class="l-inner">
+          <h2 class="blog__title">ブログ</h2>
+          <div class="blog__lists">
+            <!--blog1-->
+            <figure class="blog__list blog-list c-card c-fade-in">
+              <div class="blog-list__img">
+                <picture>
+                  <source srcset="./images/blog03.jpg" media="(min-width: 768px)">
+                  <img src="./images/blog03-sp.jpg" alt="生徒さんたちの声">
+                </picture>
+              </div>
+              <figcaption class="blog-list__caption">
+                <h3 class="blog-list__title">フォロワーではなくファンを増やせとは？</h3>
+                <p class="blog-list__date">
+                  0000.00.00
+                </p>
+              </figcaption>
+            </figure>
+            <!--blog2-->
+            <figure class="blog__list blog-list c-card c-fade-in">
+              <div class="blog-list__img">
+                <picture>
+                  <source srcset="./images/blog02.jpg" media="(min-width: 768px)">
+                  <img src="./images/blog02-sp.jpg" alt="生徒さんたちの声">
+                </picture>
+              </div>
+              <figcaption class="blog-list__caption">
+                <h3 class="blog-list__title">集客してる間は売れないという法則</h3>
+                <p class="blog-list__date">
+                  0000.00.00
+                </p>
+              </figcaption>
+            </figure>
+            <!--blog3-->
+            <figure class="blog__list blog-list c-card c-fade-in">
+              <div class="blog-list__img">
+                <picture>
+                  <source srcset="./images/blog01.jpg" media="(min-width: 768px)">
+                  <img src="./images/blog01-sp.jpg" alt="生徒さんたちの声">
+                </picture>
+              </div>
+              <figcaption class="blog-list__caption">
+                <h3 class="blog-list__title">アルペジオが劇的に向上する3つの習慣</h3>
+                <p class="blog-list__date">
+                  0000.00.00
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="blog__link">
+            <a href="#" class="c-link">ブログ一覧へ</a>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
-      <p>footer</p>
+
+
+
+    <footer class="footer">
+      <div class="footer__contact">
+        <a href="#" class="c-btn c-btn--f-contact">お問い合わせ</a>
+      </div>
+      <div class="footer__main">
+        <div class="l-inner">
+          <nav class="footer__nav">
+            <ul class="footer__menu">
+              <li><a href="#">ホーム</a></li>
+              <li><a href="#plan">料金</a></li>
+              <li><a href="#blog">ブログ</a></li>
+              <li><a href="#result">卒業実績</a></li>
+            </ul>
+            <a href="#">
+              <div class="footer__logo-img">
+                <img src="./images/logo-white.png" alt="きたむらミューシックスクーのロゴマーク">
+              </div>
+            </a>
+          </nav>
+          <p class="footer__copyright">Copyright © 0000 KITAMURA music school Inc.<br class="u-sp"> All Rights</p>
+          <div class="footer__sns">
+            <ul class="footer__sns-menu footer__menu">
+              <li>
+                <a href="#">
+                  <div class="footer__icn">
+                    <img src="./images/icon-twitter.png" alt="Twitter">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="footer__icn">
+                    <img src="./images/icon-facebook.png" alt="Facebook">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="footer__icn">
+                    <img src="./images/icon-youtube.png" alt="YouTube">
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="footer__icn">
+                    <img src="./images/icon-instagram.png" alt="Instagram">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
+    <a href="#" class="c-pagetop" aria-label="先頭に戻る"></a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

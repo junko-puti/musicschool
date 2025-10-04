@@ -3,11 +3,14 @@
 
 
 @use "layout/l-header" as *;
+@use "layout/l-inner" as *;
 // @use "layout/l-footer" as *;
 
 // @use "object/component/c-headline" as *;
-@use "object/component/c-btn-trigger" as *;
+@use "object/component/c-humburger" as *;
 @use "object/component/c-card" as *;
+@use "object/component/c-link" as *;
+@use "object/component/c-btn" as *;
 // @use "object/component/c-more-btn" as *;
 // @use "object/component/c-button" as *;
 // @use "object/component/c-top-btn" as *;
@@ -18,7 +21,6 @@
 @use "object/project/support" as *;
 @use "object/project/reason" as *;
 @use "object/project/voice" as *;
-@use "object/project/section" as *;
 @use "object/project/flow" as *;
 @use "object/project/faq" as *;
 @use "object/project/blog" as *;

@@ -1,0 +1,14 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+
+.l-inner{
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include pc {
+    width:  calc(100% + rem(50));
+  }
+}
