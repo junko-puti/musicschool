@@ -3,7 +3,7 @@
 
 .vision{
   padding-top: rem(46);
-  padding-bottom: rem(37);/*微調整*/
+  padding-bottom: rem(34);
   text-align: center;
   @include pc {
     padding-top: rem(66);
@@ -23,11 +23,13 @@
   width: 100%;
   height: 100%;
   left: 0;
-  bottom: rem(-70);
-  background: url(../../../images/semicircle-sp.png) center center /contain no-repeat;
+  bottom: rem(-65);
+  // background: url(../../../images/semicircle-sp.png) center center /contain no-repeat;
+  background: url(../images/semicircle-sp.png) center center /contain no-repeat;
   @include pc {
     bottom: rem(-60);
-    background: url(../../../images/semicircle.png) center center /contain no-repeat;
+    // background: url(../../../images/semicircle.png) center center /contain no-repeat;
+    background: url(../images/semicircle.png) center center /contain no-repeat;
   }
 }
 .vision__title{
@@ -39,6 +41,15 @@
     font-size: rem(35);
     line-height: calc( 50 / 35 );
     padding-bottom: rem(17);
+  }
+}
+.vision__text{
+  text-align: left;
+  @include pc {
+    // font-size: rem(35);
+    // line-height: calc( 50 / 35 );
+    // padding-bottom: rem(17);
+    text-align: center;
   }
 }
 .vision__step{
@@ -71,9 +82,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: rem(79.54);
+  padding-top: rem(1);//微調整
   padding-bottom: rem(17);
   font-size: rem(20);
   line-height: calc(50 / 20);
+  letter-spacing: 0.01em;//微調整
 }
 .vision-step__item:last-child {
   padding-bottom: 0;

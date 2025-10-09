@@ -1,0 +1,44 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-pagetop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(68);
+  height: rem(68);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+  // transition: bottom 0.3s ease, opacity 0.3s ease;//bottom 0.3sがあることで上下に動くようにみえた
+  opacity: 0;/*デフォルトで非表示にする*/
+  // visibility: hidden;//ぱっと消えてしまうので不使用
+  pointer-events: none; // 非表示時にクリックできないように
+}
+.c-pagetop::before{
+  content: "";
+  display: block;
+  width: rem(23.15); 
+  height: rem(15.7);
+  background-image: url("../images/arrow-top.png"); // 矢印画像のパス
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*.activeクラス付与で表示する*/
+.c-pagetop.active{
+  opacity: 1;
+  pointer-events: auto;
+  // visibility: visible;//ぱっと消えてしまうので不使用
+}
+.c-pagetop.active:hover{
+  opacity: 0.5;
+}
+
+
+
+
+
+

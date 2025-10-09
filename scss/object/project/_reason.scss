@@ -90,6 +90,7 @@
   margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
+  letter-spacing: -0.004em;//微調整
   @include pc {
     margin-top: rem(37);
     font-size: rem(18);

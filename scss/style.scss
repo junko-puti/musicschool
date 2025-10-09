@@ -1,43 +1,31 @@
-@use 'foundation/reset' as *;
-@use 'foundation/base' as *;
+@use 'foundation/reset';
+@use 'foundation/base';
 
 
-@use "layout/l-header" as *;
-@use "layout/l-inner" as *;
-// @use "layout/l-footer" as *;
+@use "layout/l-header";
+@use "layout/l-inner";
+@use "layout/l-fixed";
 
-// @use "object/component/c-headline" as *;
-@use "object/component/c-humburger" as *;
-@use "object/component/c-card" as *;
-@use "object/component/c-link" as *;
-@use "object/component/c-btn" as *;
-// @use "object/component/c-more-btn" as *;
-// @use "object/component/c-button" as *;
-// @use "object/component/c-top-btn" as *;
+@use "object/component/c-humburger";
+@use "object/component/c-card";
+@use "object/component/c-link";
+@use "object/component/c-btn";
+@use "object/component/c-pagetop";
+@use "object/component/c-fade-in";
 
-@use "object/project/header" as *;
-@use "object/project/fv" as *;
-@use "object/project/vision" as *;
-@use "object/project/support" as *;
-@use "object/project/reason" as *;
-@use "object/project/voice" as *;
-@use "object/project/flow" as *;
-@use "object/project/faq" as *;
-@use "object/project/blog" as *;
-@use "object/project/footer" as *;
 
-// @use "object/project/p-service" as *;
-// @use "object/project/p-works" as *;
-// @use "object/project/p-card" as *;
-// @use "object/project/p-modal" as *;
-// @use "object/project/p-news" as *;
-// @use "object/project/p-company" as *;
-// @use "object/project/p-contact" as *;
-// @use "object/project/p-form" as *;
-// @use "object/project/p-footer" as *;
-// @use "object/project/p-fade-in" as *;
+@use "object/project/header";
+@use "object/project/fv";
+@use "object/project/vision";
+@use "object/project/support";
+@use "object/project/reason";
+@use "object/project/voice";
+@use "object/project/flow";
+@use "object/project/faq";
+@use "object/project/blog";
+@use "object/project/fixed-btn";
+@use "object/project/footer";
 
-@use "object/utility/u-pc" as *;
-@use "object/utility/u-sp" as *;
-// @use "object/utility/u-mb0" as *;
-// @use "object/utility/u-spacer" as *;
+
+@use "object/utility/u-pc";
+@use "object/utility/u-sp";

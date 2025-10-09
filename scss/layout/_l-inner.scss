@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  @include pc {
-    width:  calc(100% + rem(50));
-  }
+  // @include pc {
+  //   width:  calc(100% + rem(50));
+  // }
 }

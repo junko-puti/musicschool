@@ -1,0 +1,8 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+
+.l-fixed{
+  position: fixed;
+  z-index: 999;
+}

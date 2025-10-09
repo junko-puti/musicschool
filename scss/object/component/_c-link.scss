@@ -4,7 +4,8 @@
 
 .c-link {
   display: inline-block;
-  font-size: rem(16);
+  font-size: rem(18);
+  line-height: calc(30 / 18);
   text-decoration: underline;
   text-underline-offset: 0.2em;
   transition: opacity 0.3s;

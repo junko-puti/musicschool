@@ -8,7 +8,8 @@
   color: #FFFFFF;
   background-color:#CB0000;
   @include pc{
-    padding-top: rem(44);
+    padding-top: rem(46);//微調整
+    // padding-top: rem(44);
     padding-bottom: rem(80);
   }
 }

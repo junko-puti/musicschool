@@ -112,7 +112,7 @@ $(function () {
 
 
 
-
+//アコーディオン
 const triggers = document.querySelectorAll(".faq-accordion__trigger");
 triggers.forEach((trigger) => {
   const dataanswer = trigger.dataset.answer;
@@ -146,31 +146,101 @@ triggers.forEach((trigger) => {
 
 //スクロールトップボタンの変化
 $(function(){
-  //変数にクラスをいれる
-  var btn = $('.c-top-btn');
-  //スクロールしてページトップから100に達したらボタンを表示
-  $(window).on('load scroll',function(){
-    if($(this).scrollTop() > 100){
-      btn.addClass('active');
-      $('.c-top-btn').css('transition', '0.6s');
-    }else{
-      btn.removeClass('active');
-      $('.c-top-btn').css('transition', '0.6s');
-    }
+  const btn = $('.js-btn');
+  $(window).on('scroll', function(){
+    const scrollTop = $(this).scrollTop();
+    //表示
+    btn.toggleClass('active',scrollTop > 100);
+
+    // フッター手前でストップ
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    footHeight = $("footer").innerHeight();
+    
+    const isOverlap = scrollHeight - scrollPosition <= footHeight;
+
+    $('.fixed-btn--pagetop').toggleClass('is-overlap', isOverlap);
+    $('.fixed-btn--f-contact').toggleClass('is-overlap', isOverlap);
+
+    // if (scrollHeight - scrollPosition <= footHeight) {
+    //   // ページトップボタンがフッター手前に来たらpositionをfixedからabsoluteに変更
+    //   $('.fixed-btn--pagetop').css({ position: 'absolute', bottom: `${footHeight + 70}px` });
+    //   $('.fixed-btn--f-contact').css({ position: 'absolute', bottom: `${footHeight}px` });
+    // } else {
+    //   $('.fixed-btn--pagetop').css({ position: 'fixed', bottom: `${70}px` });
+    //   $('.fixed-btn--f-contact').css({ position: 'fixed', bottom: `${0}`});
+    // }
+
   });
-  //スクロールしてトップへ戻る
-  btn.on('click',function(){
-    $('body,html').animate({
-      scrollTop: 0
-    });
+    // スムーススクロール
+  btn.on('click', function(){
+    $('body,html').animate({ scrollTop: 0 }, 500);
   });
+
 });
+
+
+
+// // ページトップボタン
+// $(function () {
+//   const pageTop = $("#page-top");
+//   pageTop.hide();
+//   $(window).scroll(function () {
+//     if ($(this).scrollTop() > 100) {
+//       pageTop.fadeIn();
+//     } else {
+//       pageTop.fadeOut();
+//     }
+//   });
+//   pageTop.click(function () {
+//     $("body,html").animate(
+//       {
+//         scrollTop: 0,
+//       },
+//       500
+//     );
+//     return false;
+//   });
+//   // フッター手前でストップ
+//   $("#page-top").hide();
+//   $(window).on("scroll", function () {
+//     scrollHeight = $(document).height();
+//     scrollPosition = $(window).height() + $(window).scrollTop();
+//     footHeight = $("footer").innerHeight();
+//     if (scrollHeight - scrollPosition <= footHeight) {
+//  // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+//       $("#page-top").css({
+//         position: "absolute",
+//         bottom: footHeight,
+//       });
+//     } else {
+//       $("#page-top").css({
+//         position: "fixed",
+//         bottom: "0",
+//       });
+//     }
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 //fade-in
 $(window).on("scroll load", function() { // 初回ロード時にも実行
-  $(".p-fade-in").each(function() {
+  $(".c-fade-in").each(function() {
     var scrollPosition = $(window).scrollTop() + $(window).height();
     var elementOffset = $(this).offset().top;
 

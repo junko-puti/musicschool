@@ -3,14 +3,14 @@
 
 .blog{
   padding-top: rem(50);
-  padding-bottom: rem(100);
+  padding-bottom: rem(191);
 
   text-align: center;
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
     padding-top: rem(70.5);
-    padding-bottom: rem(100);
+    padding-bottom: rem(205);
   }
 }
 .blog__lists{
