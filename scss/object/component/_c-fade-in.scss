@@ -1,0 +1,17 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.c-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* 可視範囲に入ったら表示 */
+.c-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+

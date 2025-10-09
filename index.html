@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="l-header header js-header">
-      <div class="header__inner">
+      <div class="l-inner header__inner">
         <h1 class="header__logo">
           <a href="#">
             <div class="header__logo-img">
@@ -33,9 +33,7 @@
             <li><a href="#blog">ブログ</a></li>
             <li><a href="#result">卒業実績</a></li>
             <li><a href="#contact" class="c-btn c-btn--h-contact">お問い合わせ</a></li>
-
           </ul>
-          <!-- <a href="#contact" class="c-btn c-btn--h-contact">お問い合わせ</a> -->
         </nav>
       </div>
       <!-- ハンバーガーボタン（SP用） -->
@@ -64,12 +62,13 @@
       </section>
       <!-- vision -->
       <section class="vision section" id="vision">
-        <div class="vision__inner l-inner">
+        <div class="l-inner">
+        <!-- <div class="l-inner vision-inner"> -->
           <div class="vision__message">
             <h2 class="vision__title">全人類、<br class="u-sp">ミュージシャン計画。</h2>
-            <p class="vision__text">私たちは音楽を愛するすべての人が、音<br class="u-sp">楽に熱狂できる世界を目指しています。</p>
+            <p class="vision__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
           </div>
-          <div class="vision__step vision-step">
+          <div class="vision__step vision-step c-fade-in">
             <div class="vision-step__item">
               <div class="vision-step__en">Enthusiasm</div>
               <div class="vision-step__ja">熱狂し</div>
@@ -87,7 +86,7 @@
       </section>
       <!-- support サポート -->
       <section class="support section" id="support">
-        <div class="l-inner">
+        <div class="l-inner c-fade-in">
           <h2 class="support__title">音楽業界初！<br>収益化までサポートする<br class="u-sp">ミュージックスクール</h2>
           <p class="support__text">楽器や作詞作曲などの<br class="u-sp">技術・知識はもちろんのこと<br>自分で稼ぎつづけるための<br class="u-sp">ビジネス面もサポートします！</p>
         </div>
@@ -136,7 +135,7 @@
                 </picture>
               </div>
               <figcaption class="reason-list__caption c-card__caption">
-                <h3 class="reason-list__subtitle">24時間365日使える練習ROOMを完備!</h3>
+                <h3 class="reason-list__subtitle">24時間365日使える練習ROOMを完備！</h3>
                 <p class="reason-list__text">
                   一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。（アプリで予約が必要です）
                 </p>
@@ -146,7 +145,8 @@
         </div>
       </section>
       <!-- voice 生徒さんたちの声 -->
-      <section class="voice section splide" id="voice" aria-labelledby="voice__title">
+      <section class="voice splide" id="voice" aria-labelledby="voice__title">
+      <!-- <section class="voice section splide" id="voice" aria-labelledby="voice__title"> -->
         <div class="l-inner">
           <h2 class="voice__title">生徒さんたちの声</h2>
           <div class="splide__track">
@@ -160,7 +160,7 @@
                   </picture>
                 </div>
                 <figcaption class="voice-list__caption">
-                  <h3 class="voice-list__name">証券会社勤務  丸山さん</h3>
+                  <h3 class="voice-list__name">証券会社勤務　丸山さん</h3>
                   <p class="voice-list__text">
                     昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
                   </p>
@@ -175,7 +175,7 @@
                   </picture>
                 </div>
                 <figcaption class="voice-list__caption">
-                  <h3 class="voice-list__name">IT会社勤務  S.Eさん</h3>
+                  <h3 class="voice-list__name">IT会社勤務　S.Eさん</h3>
                   <p class="voice-list__text">
                     プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
                   </p>
@@ -190,7 +190,7 @@
                   </picture>
                 </div>
                 <figcaption class="voice-list__caption">
-                  <h3 class="voice-list__name">都内大学生  田森さん</h3>
+                  <h3 class="voice-list__name">都内大学生　田森さん</h3>
                   <p class="voice-list__text">
                     就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
                   </p>
@@ -212,24 +212,24 @@
       <section class="flow section">
         <div class="l-inner">
           <h2 class="flow__title">ご利用の流れ</h2>
-          <dl class="flow__list flow-list">
-            <dt class="flow-list__label">お問い合わせ</dt>
-            <dd class="flow-list__detail">
+          <dl class="flow__list">
+            <dt class="flow__step-title">お問い合わせ</dt>
+            <dd class="flow__step-discriptiom">
               まずはフォームまたはメールにてお問い合わせください。<br>
               ヒアリングの日程を調整します。
             </dd>
-            <dt class="flow-list__label">ヒアリング</dt>
-            <dd class="flow-list__detail">
+            <dt class="flow__step-title">ヒアリング</dt>
+            <dd class="flow__step-discriptiom">
               現在の技術面や将来の目標などをお伺いします。<br>
               悩みや不安な事もお気軽にご相談ください。
             </dd>
-            <dt class="flow-list__label">プランのご提案</dt>
-            <dd class="flow-list__detail">
+            <dt class="flow__step-title">プランのご提案</dt>
+            <dd class="flow__step-discriptiom">
               ライフスタイルや目標によって最適なプランをご提案します。<br>
               継続できるようサポートいたします。
             </dd>
-            <dt class="flow-list__label">ご入学</dt>
-            <dd class="flow-list__detail">
+            <dt class="flow__step-title">ご入学</dt>
+            <dd class="flow__step-discriptiom">
               お申し込み完了後、レッスンがスタートします。<br>
               マンツーマン指導なので、いつからでもスタートが可能です。
             </dd>
@@ -288,12 +288,6 @@
           </div>
         </div>
       </section>
-
-
-
-
-
-
       <!-- blog ブログ -->
       <section class="blog section">
         <div class="l-inner">
@@ -351,65 +345,67 @@
         </div>
       </section>
     </main>
-
-
-
     <footer class="footer">
-      <div class="footer__contact">
-        <a href="#" class="c-btn c-btn--f-contact">お問い合わせ</a>
-      </div>
-      <div class="footer__main">
-        <div class="l-inner">
-          <nav class="footer__nav">
-            <ul class="footer__menu">
-              <li><a href="#">ホーム</a></li>
-              <li><a href="#plan">料金</a></li>
-              <li><a href="#blog">ブログ</a></li>
-              <li><a href="#result">卒業実績</a></li>
-            </ul>
+      <div class="l-inner">
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#plan">料金</a></li>
+            <li><a href="#blog">ブログ</a></li>
+            <li><a href="#result">卒業実績</a></li>
+          </ul>
+          <!-- <a href="#">
+            <div class="footer__logo-img">
+              <img src="./images/logo-white.png" alt="きたむらミューシックスクーのロゴマーク">
+            </div>
+          </a> -->
+          <div class="footer__logo-img">
             <a href="#">
-              <div class="footer__logo-img">
-                <img src="./images/logo-white.png" alt="きたむらミューシックスクーのロゴマーク">
-              </div>
+              <img src="./images/logo-white.png" alt="きたむらミューシックスクーのロゴマーク">
             </a>
-          </nav>
-          <p class="footer__copyright">Copyright © 0000 KITAMURA music school Inc.<br class="u-sp"> All Rights</p>
-          <div class="footer__sns">
-            <ul class="footer__sns-menu footer__menu">
-              <li>
-                <a href="#">
-                  <div class="footer__icn">
-                    <img src="./images/icon-twitter.png" alt="Twitter">
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="footer__icn">
-                    <img src="./images/icon-facebook.png" alt="Facebook">
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="footer__icn">
-                    <img src="./images/icon-youtube.png" alt="YouTube">
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="footer__icn">
-                    <img src="./images/icon-instagram.png" alt="Instagram">
-                  </div>
-                </a>
-              </li>
-            </ul>
           </div>
+        </nav>
+        <p class="footer__copyright">Copyright © 0000 KITAMURA music school Inc.<br class="u-sp"> All Rights</p>
+        <div class="footer__sns">
+          <ul class="footer__sns-menu footer__menu">
+            <li>
+              <a href="#">
+                <div class="footer__icn">
+                  <img src="./images/icon-twitter.png" alt="Twitter">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="footer__icn">
+                  <img src="./images/icon-facebook.png" alt="Facebook">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="footer__icn">
+                  <img src="./images/icon-youtube.png" alt="YouTube">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="footer__icn">
+                  <img src="./images/icon-instagram.png" alt="Instagram">
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
-    <a href="#" class="c-pagetop" aria-label="先頭に戻る"></a>
+
+    <!-- 固定ボタン　c-pagetop/c-btn--f-contact---------------->
+    <a href="#" class="c-pagetop l-fixed fixed-btn--pagetop js-btn" aria-label="先頭に戻る"></a>
+    <a href="#" class="c-btn c-btn--f-contact l-fixed fixed-btn--f-contact js-btn">お問い合わせ</a>
+    <!-------------------------------------------------------->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

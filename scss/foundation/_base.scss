@@ -46,13 +46,12 @@ html {
 
 
 body {
-  font-family: "Yu Gothic", suns-serif;
-  // font-family: "YuMincho", serif;
+  font-family: "Yu Gothic", sans-serif;
   font-size: rem(16);//ソリッドコーディング
   font-weight: 400;
   line-height: 1.6;
   color: #000000;
-  // background-color: pink;
+  position: relative;
 }
 
 [id] {

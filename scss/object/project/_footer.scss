@@ -1,32 +1,33 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-footer{
-  padding-top: rem(32);
-  // padding-bottom: rem(50.7);
-  color: #FFFFFF;
-  @include pc {
-    padding-top: rem(45);
-    padding-bottom: rem(48.5);
-  }
-}
-.footer__contact{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // background-color: #CB0000;
-}
-.footer__contact .c-btn--f-contact {
-  margin: 0 auto;
-  font-size: rem(20);
-  line-height: calc(33 / 20);
-  @include pc {
-    margin: 0 0 0 auto;
-  }
-}
-.footer__main{
+// footer{
+//   padding-top: rem(32);
+//   // padding-bottom: rem(50.7);
+//   color: #FFFFFF;
+//   @include pc {
+//     padding-top: rem(45);
+//     // padding-bottom: rem(48.5);
+//   }
+// }
+// .footer__contact{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   // background-color: #CB0000;
+// }
+// .footer__contact .c-btn--f-contact {
+//   margin: 0 auto;
+//   font-size: rem(20);
+//   line-height: calc(33 / 20);
+//   @include pc {
+//     margin: 0 0 0 auto;
+//   }
+// }
+.footer{
   padding-top: rem(44);
   padding-bottom: rem(50.67);
+  color: #FFFFFF;
   background-color: #CB0000;
 }
 .footer__nav{
@@ -62,6 +63,9 @@ footer{
 .footer__sns{
   margin-top: rem(16);
   text-align: center;
+  @include pc {
+    margin-top: rem(8);
+  }
 }
 .footer__sns-menu{
   column-gap: rem(12);

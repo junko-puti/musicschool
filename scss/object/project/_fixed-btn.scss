@@ -1,0 +1,43 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.fixed-btn--pagetop{
+  right: rem(20);
+  bottom: rem(79);
+  @include pc {
+    right: rem(116);
+    bottom: rem(91);
+  }
+}
+.fixed-btn--pagetop.is-overlap{
+  position: absolute;
+  bottom: rem(374);
+  bottom: rem(381);//微調整
+  @include pc {
+    bottom: rem(365);
+  }
+}
+
+
+.fixed-btn--f-contact{
+  bottom: 0;
+  left: 50%;
+  font-size: rem(20);
+  line-height: calc(33 / 20);
+  letter-spacing: 0.2em;
+  transform: translateX(-50%);
+  @include pc {
+    bottom: 0;
+    right: 0;
+    left: auto;
+    transform: none;
+  }
+}
+.fixed-btn--f-contact.is-overlap{
+  position: absolute;
+  bottom: rem(295);
+  bottom: rem(303);//微調整
+  @include pc {
+    bottom: rem(274);
+  }
+}
