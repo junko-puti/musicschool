@@ -27,7 +27,17 @@
   align-items: center;
   height: 100%;
 }
+
 .header__logo{
+  width: rem(208);
+  height: 100%;
+  aspect-ratio: 208 / 31;
+  @include pc {
+    width: rem(192);
+    aspect-ratio: 192 / 51;
+  }
+}
+.header__logo h1{
   height:100%;
 }
 .header__logo a{
@@ -41,57 +51,6 @@
     padding-top: rem(14.74);
     padding-bottom: rem(14);
   }
-}
-.header__logo-img{
-  width: rem(208);
-  aspect-ratio: 208 / 31;
-  @include pc {
-    width: rem(192);
-    aspect-ratio: 192 / 51;
-  }
-}
-
-
-/*--PC用メニュー--*/
-.header__nav{
-  height: 100%;
-}
-.header__nav .header__menu{
-  display: flex;
-  align-items: center;
-  height: 100%;
-  gap: rem(33);
-  // padding-top: rem(5);//微調整
-}
-.header__menu .header__menu_contact{
-  padding: rem(6) rem(30);
-  font-size: rem(15);
-  line-height: calc(33 / 15);
-  color: #ffffff;
-  background-color: #CB0000;
-}
-.header__menu li{
-  width: auto;
-  height: 100%;
-}
-.header__menu li:last-child{//お問い合わせ
-  width: auto;
-  height: auto;
-}
-.header__menu a{
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-top: rem(5);//微調整
-  font-size: rem(17);
-  line-height: calc(33 / 17);
-  transition: opacity 0.3s ease;
-}
-.header__menu .c-btn--h-contact{//お問い合わせ
-  font-size: rem(15);
-  font-weight: 500;
-  line-height: calc(33 / 15);
-  transition: background-color 0.5s ease,
 }
 
 
@@ -129,6 +88,85 @@
   line-height: calc(33 / 18);
   transition: background-color 0.3s ease;
 }
+
+/*--PC用メニュー--*/
+.header__nav{
+  height: 100%;
+}
+.header__nav .header__menu{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: rem(33);
+}
+.header__menu li{
+  width: auto;
+  height: 100%;
+}
+.header__menu li:last-child{//お問い合わせ
+  width: auto;
+  height: auto;
+}
+.header__menu a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: rem(5);//微調整
+  font-size: rem(17);
+  line-height: calc(33 / 17);
+  transition: opacity 0.3s ease;
+  /*下線*/
+  position: relative;
+  text-decoration: none; /* 元の下線を消す */
+  // color: inherit;
+}
+.header__menu .c-btn--h-contact{//お問い合わせ
+  font-size: rem(15);
+  font-weight: 500;
+  line-height: calc(33 / 15);
+  transition: background-color 0.5s ease,
+}
+/*- 下線 -*/
+.header__menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 20.5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor; /* 文字色と一致 */
+  transition: width 0.4s ease;
+  // transition: width 0.4s ease ,opacity 0.3s ease;
+}
+.header__menu .c-btn--h-contact::after {
+  content: none;
+}
+// /* PC〜タブレットサイズのみ有効（SPは除外） */
+@media screen and (min-width: 768px) {
+  .header__menu a:hover::after {
+    width: 100%;
+    // opacity: 0.5;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu a::after {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*-- hover --*/

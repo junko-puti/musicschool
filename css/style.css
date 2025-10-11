@@ -686,6 +686,18 @@ p {
 }
 
 .header__logo {
+  width: 20.8rem;
+  height: 100%;
+  aspect-ratio: 208/31;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    width: 19.2rem;
+    aspect-ratio: 192/51;
+  }
+}
+
+.header__logo h1 {
   height: 100%;
 }
 
@@ -702,64 +714,6 @@ p {
     padding-top: 1.474rem;
     padding-bottom: 1.4rem;
   }
-}
-
-.header__logo-img {
-  width: 20.8rem;
-  aspect-ratio: 208/31;
-}
-@media (min-width: 768px) {
-  .header__logo-img {
-    width: 19.2rem;
-    aspect-ratio: 192/51;
-  }
-}
-
-/*--PC用メニュー--*/
-.header__nav {
-  height: 100%;
-}
-
-.header__nav .header__menu {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  gap: 3.3rem;
-}
-
-.header__menu .header__menu_contact {
-  padding: 0.6rem 3rem;
-  font-size: 1.5rem;
-  line-height: 2.2;
-  color: #ffffff;
-  background-color: #CB0000;
-}
-
-.header__menu li {
-  width: auto;
-  height: 100%;
-}
-
-.header__menu li:last-child {
-  width: auto;
-  height: auto;
-}
-
-.header__menu a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-top: 0.5rem;
-  font-size: 1.7rem;
-  line-height: 1.9411764706;
-  transition: opacity 0.3s ease;
-}
-
-.header__menu .c-btn--h-contact {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2.2;
-  transition: background-color 0.5s ease;
 }
 
 /*--sp用メニュー--*/
@@ -800,6 +754,74 @@ p {
   transition: background-color 0.3s ease;
 }
 
+/*--PC用メニュー--*/
+.header__nav {
+  height: 100%;
+}
+
+.header__nav .header__menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 3.3rem;
+}
+
+.header__menu li {
+  width: auto;
+  height: 100%;
+}
+
+.header__menu li:last-child {
+  width: auto;
+  height: auto;
+}
+
+.header__menu a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 0.5rem;
+  font-size: 1.7rem;
+  line-height: 1.9411764706;
+  transition: opacity 0.3s ease;
+  /*下線*/
+  position: relative;
+  text-decoration: none; /* 元の下線を消す */
+}
+
+.header__menu .c-btn--h-contact {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.2;
+  transition: background-color 0.5s ease;
+}
+
+/*- 下線 -*/
+.header__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 20.5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor; /* 文字色と一致 */
+  transition: width 0.4s ease;
+}
+
+.header__menu .c-btn--h-contact::after {
+  content: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu a:hover::after {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu a::after {
+    display: none;
+  }
+}
 /*-- hover --*/
 .header__logo a:hover {
   opacity: 0.5;
@@ -1417,11 +1439,12 @@ card
   border-top: 0.05rem solid #000000;
 }
 
+/*-- question --*/
 .faq-accordion__question {
   position: relative;
 }
 
-.faq-accordion__trigger {
+.faq-accordion__question {
   position: relative;
   display: block;
   width: 100%;
@@ -1430,17 +1453,18 @@ card
   line-height: 1.875;
   text-align: left;
   font-weight: 400;
+  transition: background-color 0.3s ease;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .faq-accordion__trigger {
+  .faq-accordion__question {
     padding: 1.7rem 6.5rem;
     font-size: 1.7rem;
     line-height: 1.7647058824;
   }
 }
 
-.faq-accordion__trigger:before {
+.faq-accordion__question:before {
   position: absolute;
   content: "Q";
   width: 3.5rem;
@@ -1458,20 +1482,17 @@ card
   font-weight: bold;
 }
 @media (min-width: 768px) {
-  .faq-accordion__trigger:before {
+  .faq-accordion__question:before {
     left: 2rem;
   }
 }
 
-.faq-accordion__trigger.__open .faq-accordion__icon {
-  transform: rotate(-45deg);
-}
-
 @media (hover: hover) {
-  .faq-accordion__trigger:hover {
+  .faq-accordion__question:hover {
     background-color: #dbeafe;
   }
 }
+/*-- 矢印アイコン --*/
 .faq-accordion__icon {
   position: absolute;
   top: 0;
@@ -1483,11 +1504,21 @@ card
   border: solid #000;
   border-width: 2px 2px 0 0;
   transform: rotate(135deg);
+  transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .faq-accordion__icon {
     right: 3rem;
   }
+}
+
+.faq-accordion__question.active .faq-accordion__icon {
+  transform: rotate(-45deg);
+}
+
+/*-- answer --*/
+.faq-accordion__answer {
+  display: none;
 }
 
 .faq-accordion__answer {
@@ -1507,17 +1538,13 @@ card
   }
 }
 
-.faq-accordion__answer.__close {
-  display: none;
-}
-
-.faq-accordion__answer-text {
+.faq-accordion__answer {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.875;
 }
 @media (min-width: 768px) {
-  .faq-accordion__answer-text {
+  .faq-accordion__answer {
     font-size: 1.7rem;
     line-height: 1.7647058824;
   }

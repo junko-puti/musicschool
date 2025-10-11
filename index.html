@@ -6,6 +6,7 @@
     <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
     <meta name="apple-mobile-web-app-capable" content="no">
     <title>きたむらミューシックスクール</title>
+    <link rel="icon" href="images/favicon.ico">
     <!-- Splide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
@@ -16,16 +17,26 @@
   <body>
     <header class="l-header header js-header">
       <div class="l-inner header__inner">
-        <h1 class="header__logo">
-          <a href="#">
-            <div class="header__logo-img">
+        <div class="header__logo">
+          <h1>
+            <a href="#">
               <picture>
                 <source srcset="./images/logo.png" media="(min-width: 768px)">
                 <img src="./images/logo-sp.png" alt="きたむらミューシックスクール">
               </picture>
-            </div>
-          </a>
-        </h1>
+            </a>
+          </h1>
+        </div>
+        <!-- <h1 class="header__logo">
+          <div class="header__logo-img">
+            <a href="#">
+              <picture>
+                <source srcset="./images/logo.png" media="(min-width: 768px)">
+                <img src="./images/logo-sp.png" alt="きたむらミューシックスクール">
+              </picture>
+            </a>
+          </div>
+        </h1> -->
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
           <ul class="header__menu">
@@ -146,12 +157,11 @@
       </section>
       <!-- voice 生徒さんたちの声 -->
       <section class="voice splide" id="voice" aria-labelledby="voice__title">
-      <!-- <section class="voice section splide" id="voice" aria-labelledby="voice__title"> -->
         <div class="l-inner">
-          <h2 class="voice__title">生徒さんたちの声</h2>
+          <h2 class="voice__title" id="voice__title">生徒さんたちの声</h2>
           <div class="splide__track">
             <div class="voice__lists splide__list">
-              <!--voice1-->
+              <!-- voice1 -->
               <figure class="voice__list voice-list c-card splide__slide c-fade-in">
                 <div class="voice-list__img">
                   <picture>
@@ -166,7 +176,7 @@
                   </p>
                 </figcaption>
               </figure>
-              <!--voice2-->
+              <!-- voice2 -->
               <figure class="voice__list voice-list c-card splide__slide c-fade-in">
                 <div class="voice-list__img">
                   <picture>
@@ -181,7 +191,7 @@
                   </p>
                 </figcaption>
               </figure>
-              <!--voice3-->
+              <!-- voice3 -->
               <figure class="voice__list voice-list c-card splide__slide c-fade-in">
                 <div class="voice-list__img">
                   <picture>
@@ -241,50 +251,54 @@
         <div class="l-inner">
           <h2 class="faq__title">よくあるご質問</h2>
           <div class="faq__accordion faq-accodion">
-            <!--Q1-->
+            <!-- Q1 -->
             <h3 class="faq-accordion__question">
-              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-1">
-                どのような生徒さんがどれぐらいの期間で稼いでいますか？<span class="faq-accordion__icon"></span>
-              </button>
+              <span>
+                どのような生徒さんがどれぐらいの期間で稼いでいますか？
+              </span>
+              <span class="faq-accordion__icon"></span>
             </h3>
-            <div id="faq-accordion-answer-1" class="faq-accordion__answer __close">
-              <p class="faq-accordion__answer-text">
+            <p class="faq-accordion__answer">
+              <span>
                 1テキストが入ります。テキストが入ります。テキストが入ります。
-              </p>
-            </div>
-           <!--Q2-->
+              </span>
+            </p>
+            <!-- Q2 -->
             <h3 class="faq-accordion__question">
-              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-2">
-                途中でプランを変更することは可能ですか？<span class="faq-accordion__icon"></span>
-              </button>
+              <span>
+                途中でプランを変更することは可能ですか？
+              </span>
+              <span class="faq-accordion__icon"></span>
             </h3>
-            <div id="faq-accordion-answer-2" class="faq-accordion__answer __close">
-              <p class="faq-accordion__answer-text">
+            <p class="faq-accordion__answer">
+              <span>
                 途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。
-              </p>
-            </div>
-            <!--Q3-->
+              </span>
+            </p>
+            <!-- Q3 -->
             <h3 class="faq-accordion__question">
-              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-3">
-                入学金などの分割払いはできますか？<span class="faq-accordion__icon"></span>
-              </button>
+              <span>
+                入学金などの分割払いはできますか？
+              </span>
+              <span class="faq-accordion__icon"></span>
             </h3>
-            <div id="faq-accordion-answer-3" class="faq-accordion__answer __close">
-              <p class="faq-accordion__answer-text">
-                3テキストが入ります。テキストが入ります。テキストが入ります。
-              </p>
-            </div>
-            <!--Q4-->
+            <p class="faq-accordion__answer">
+              <span>
+                1テキストが入ります。テキストが入ります。テキストが入ります。
+              </span>
+            </p>
+            <!-- Q4 -->
             <h3 class="faq-accordion__question">
-              <button class="faq-accordion__trigger" data-answer="faq-accordion-answer-4">
-                休学することも可能ですか？<span class="faq-accordion__icon"></span>
-              </button>
+              <span>
+                休学することも可能ですか？
+              </span>
+              <span class="faq-accordion__icon"></span>
             </h3>
-            <div id="faq-accordion-answer-4" class="faq-accordion__answer __close">
-              <p class="faq-accordion__answer-text">
-                4テキストが入ります。テキストが入ります。テキストが入ります。
-              </p>
-            </div>
+            <p class="faq-accordion__answer">
+              <span>
+                テキストが入ります。テキストが入ります。テキストが入ります。
+              </span>
+            </p>
           </div>
         </div>
       </section>
@@ -293,7 +307,7 @@
         <div class="l-inner">
           <h2 class="blog__title">ブログ</h2>
           <div class="blog__lists">
-            <!--blog1-->
+            <!-- blog1 -->
             <figure class="blog__list blog-list c-card c-fade-in">
               <div class="blog-list__img">
                 <picture>
@@ -308,7 +322,7 @@
                 </p>
               </figcaption>
             </figure>
-            <!--blog2-->
+            <!-- blog2 -->
             <figure class="blog__list blog-list c-card c-fade-in">
               <div class="blog-list__img">
                 <picture>
@@ -323,7 +337,7 @@
                 </p>
               </figcaption>
             </figure>
-            <!--blog3-->
+            <!-- blog3 -->
             <figure class="blog__list blog-list c-card c-fade-in">
               <div class="blog-list__img">
                 <picture>
@@ -401,10 +415,10 @@
       </div>
     </footer>
 
-    <!-- 固定ボタン　c-pagetop/c-btn--f-contact---------------->
+    <!-- 固定ボタン -->
     <a href="#" class="c-pagetop l-fixed fixed-btn--pagetop js-btn" aria-label="先頭に戻る"></a>
     <a href="#" class="c-btn c-btn--f-contact l-fixed fixed-btn--f-contact js-btn">お問い合わせ</a>
-    <!-------------------------------------------------------->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
