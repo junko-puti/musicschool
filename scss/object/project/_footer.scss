@@ -58,7 +58,11 @@
   margin-top: rem(28.91);
   font-size: rem(15);
   line-height: calc(20 / 15);
+  letter-spacing: -0.03em;
   text-align: center;
+}
+.footer__copyright span{
+  display: inline-block;
 }
 .footer__sns{
   margin-top: rem(16);

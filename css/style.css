@@ -1714,25 +1714,25 @@ card
   color: #000000;
 }
 
+.fixed-btn--pagetop,
+.fixed-btn--f-contact {
+  position: fixed;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
 .fixed-btn--pagetop {
   right: 2rem;
   bottom: 7.9rem;
+  transform: translateY(50px);
 }
 @media (min-width: 768px) {
   .fixed-btn--pagetop {
     right: 11.6rem;
     bottom: 9.1rem;
-  }
-}
-
-.fixed-btn--pagetop.is-overlap {
-  position: absolute;
-  bottom: 37.4rem;
-  bottom: 38.1rem;
-}
-@media (min-width: 768px) {
-  .fixed-btn--pagetop.is-overlap {
-    bottom: 36.5rem;
   }
 }
 
@@ -1742,26 +1742,42 @@ card
   font-size: 2rem;
   line-height: 1.65;
   letter-spacing: 0.2em;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50px);
 }
 @media (min-width: 768px) {
   .fixed-btn--f-contact {
     bottom: 0;
     right: 0;
     left: auto;
-    transform: none;
+    transform: translateY(50px);
   }
 }
 
-.fixed-btn--f-contact.is-overlap {
-  position: absolute;
-  bottom: 29.5rem;
-  bottom: 30.3rem;
+/* active */
+.fixed-btn--pagetop.active,
+.fixed-btn--f-contact.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.fixed-btn--pagetop.active {
+  transform: translateY(0);
+}
+
+.fixed-btn--f-contact.active {
+  transform: translate(-50%, 0);
 }
 @media (min-width: 768px) {
-  .fixed-btn--f-contact.is-overlap {
-    bottom: 27.4rem;
+  .fixed-btn--f-contact.active {
+    transform: translate(0, 0);
   }
+}
+
+/* is-overlap */
+.fixed-btn--pagetop.is-overlap,
+.fixed-btn--f-contact.is-overlap {
+  position: absolute;
 }
 
 .footer {
@@ -1801,7 +1817,12 @@ card
   margin-top: 2.891rem;
   font-size: 1.5rem;
   line-height: 1.3333333333;
+  letter-spacing: -0.03em;
   text-align: center;
+}
+
+.footer__copyright span {
+  display: inline-block;
 }
 
 .footer__sns {
