@@ -16,6 +16,10 @@ new Splide(".splide", {
   autoplay: true,//自動再生（デフォルトはfalse）
   interval: 4000,//自動再生の間隔
   speed: 400,//スライドの移動速度
+  reducedMotion: {
+    autoplay: true, // ← これで「動きを減らす」設定でも autoplay を強制
+    speed: 400
+  }
 }).mount();
 
 
@@ -72,23 +76,46 @@ $('.faq-accordion__question').click(function() {
 //スクロールトップボタンの変化 //AI・検索コードを参考にカスタマイズ
 $(function(){
   const btn = $('.js-btn');
+  const pagetop = $('.fixed-btn--pagetop');
+  const contact = $('.fixed-btn--f-contact');
+
   $(window).on('scroll', function(){
     const scrollTop = $(this).scrollTop();
     //表示
     btn.toggleClass('active',scrollTop > 100);
 
     // フッター手前でストップ
-    scrollHeight = $(document).height();
-    scrollPosition = $(window).height() + $(window).scrollTop();
-    footHeight = $("footer").innerHeight();
+    const scrollHeight = $(document).height();
+    const scrollPosition = $(window).height() + scrollTop;
+    const footHeight = $("footer").outerHeight();
     
     const isOverlap = scrollHeight - scrollPosition <= footHeight;
 
-    $('.fixed-btn--pagetop').toggleClass('is-overlap', isOverlap);
-    $('.fixed-btn--f-contact').toggleClass('is-overlap', isOverlap);
-
+   if (isOverlap) {
+      let offset = 79; // SP用（モバイルファースト）
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        offset = 91; // PC用
+      }
+      pagetop.css({
+        position: 'absolute',
+        bottom: footHeight + offset + 'px'
+      });
+      contact.css({
+        position: 'absolute',
+        bottom: footHeight + 'px'
+      });
+    } else {
+      pagetop.css({
+        position: '',
+        bottom: ''
+      });
+      contact.css({
+        position: '',
+        bottom: ''
+      });
+    }
   });
-    // スムーススクロール
+  // スムーススクロール
   btn.on('click', function(){
     $('body,html').animate({ scrollTop: 0 }, 500);
   });

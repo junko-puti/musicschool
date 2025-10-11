@@ -1,43 +1,58 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
+.fixed-btn--pagetop,
+.fixed-btn--f-contact {
+  position: fixed;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
 .fixed-btn--pagetop{
   right: rem(20);
   bottom: rem(79);
+  transform: translateY(50px);
   @include pc {
     right: rem(116);
     bottom: rem(91);
   }
 }
-.fixed-btn--pagetop.is-overlap{
-  position: absolute;
-  bottom: rem(374);
-  bottom: rem(381);//微調整
-  @include pc {
-    bottom: rem(365);
-  }
-}
-
-
 .fixed-btn--f-contact{
   bottom: 0;
   left: 50%;
   font-size: rem(20);
   line-height: calc(33 / 20);
   letter-spacing: 0.2em;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50px);
   @include pc {
     bottom: 0;
     right: 0;
     left: auto;
-    transform: none;
+    transform: translateY(50px);
   }
 }
+
+  /* active */
+.fixed-btn--pagetop.active,
+.fixed-btn--f-contact.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.fixed-btn--pagetop.active{
+  transform: translateY(0);
+}
+.fixed-btn--f-contact.active {
+  transform: translate(-50%, 0);
+  @include pc {
+    transform: translate(0, 0);
+  }
+}
+
+/* is-overlap */
+.fixed-btn--pagetop.is-overlap,
 .fixed-btn--f-contact.is-overlap{
   position: absolute;
-  bottom: rem(295);
-  bottom: rem(303);//微調整
-  @include pc {
-    bottom: rem(274);
-  }
 }
