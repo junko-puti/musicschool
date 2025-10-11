@@ -4,6 +4,7 @@
 
 //リキッドコーディング
 html {
+    scroll-behavior: smooth;
     font-size: 62.5%;
     //768~920(inner)
     @media(min-width: 768px) and (max-width: 920px){
@@ -28,9 +29,9 @@ html {
 //     font-size: calc(16 / 375 * 100vw);
 //   }
 // }
-* {
-  outline: 1px solid rgb(210, 159, 238);
-}
+// * {
+//   outline: 1px solid rgb(210, 159, 238);
+// }
 // * {
 //   outline: 2px solid red;
 // }
