@@ -13,7 +13,7 @@ new Splide(".splide", {
       perMove: 1,//SPでも1枚ずつ移動
     },
   },
-  // autoplay: true,//自動再生（デフォルトはfalse）
+  autoplay: true,//自動再生（デフォルトはfalse）
   interval: 4000,//自動再生の間隔
   speed: 400,//スライドの移動速度
 }).mount();
@@ -25,34 +25,6 @@ AOS.init();
 
 
 
-// スムーススクロール（ヘッダー高さ80px考慮）
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const targetId = this.getAttribute('href');
-
-//     if (targetId === "#") {
-//       // href="#" の場合はページ最上部へ
-//       window.scrollTo({ top: 0, behavior: 'smooth' });
-//     } else {
-//       const targetElement = document.querySelector(targetId);
-//       if (targetElement) {
-//         const headerHeight = 80; // ヘッダーの高さ
-//         const elementPosition = targetElement.getBoundingClientRect().top;
-//         const offsetPosition = window.scrollY + elementPosition - headerHeight;
-
-//         window.scrollTo({
-//           top: offsetPosition,
-//           behavior: 'smooth'
-//         });
-//       }
-//     }
-//   });
-// });
-
-
-
-///////////////////
 // triggerボタン、ドロワーメニュー開閉
 $(function(){
   $('.c-humburger').on('click', function() {
@@ -89,62 +61,15 @@ $(function(){
 
 
 
-// メニュー背景色の変化---ABOUTエリアが画面の真ん中に来たら変更する
-function updateHeaderClass() {
-  const $about = $('#about');
-  if ($about.length === 0 || !$about.offset()) return;
-
-  const aboutOffset = $about.offset().top;
-  const scrollPosition = $(window).scrollTop();
-  const windowHeight = $(window).height();
-
-  if (scrollPosition + windowHeight / 2 > aboutOffset) {
-    $('.js-header').addClass('is-colored');
-  } else {
-    $('.js-header').removeClass('is-colored');
-  }
-}
-
-$(function () {
-  updateHeaderClass();
-  $(window).on('scroll', updateHeaderClass);
-});
-
-
-
 //アコーディオン
-const triggers = document.querySelectorAll(".faq-accordion__trigger");
-triggers.forEach((trigger) => {
-  const dataanswer = trigger.dataset.answer;
-  const answer = document.getElementById(dataanswer);
-
-  trigger.addEventListener("click", (e) => {
-    const target = e.currentTarget;
-    const isOpen = trigger.classList.contains("__open");
-
-    if (isOpen) {
-      // アコーディオンを閉じる
-      target.classList.remove("__open");
-      answer.classList.add("__close");
-    } else {
-      // アコーディオンを開く
-      target.classList.add("__open");
-      answer.classList.remove("__close");
-    }
-  });
+$('.faq-accordion__question').click(function() {
+  $(this).next().slideToggle();
+  $(this).toggleClass('active');
 });
 
 
 
-
-
-
-
-
-
-
-
-//スクロールトップボタンの変化
+//スクロールトップボタンの変化 //AI・検索コードを参考にカスタマイズ
 $(function(){
   const btn = $('.js-btn');
   $(window).on('scroll', function(){
@@ -162,15 +87,6 @@ $(function(){
     $('.fixed-btn--pagetop').toggleClass('is-overlap', isOverlap);
     $('.fixed-btn--f-contact').toggleClass('is-overlap', isOverlap);
 
-    // if (scrollHeight - scrollPosition <= footHeight) {
-    //   // ページトップボタンがフッター手前に来たらpositionをfixedからabsoluteに変更
-    //   $('.fixed-btn--pagetop').css({ position: 'absolute', bottom: `${footHeight + 70}px` });
-    //   $('.fixed-btn--f-contact').css({ position: 'absolute', bottom: `${footHeight}px` });
-    // } else {
-    //   $('.fixed-btn--pagetop').css({ position: 'fixed', bottom: `${70}px` });
-    //   $('.fixed-btn--f-contact').css({ position: 'fixed', bottom: `${0}`});
-    // }
-
   });
     // スムーススクロール
   btn.on('click', function(){
@@ -178,63 +94,6 @@ $(function(){
   });
 
 });
-
-
-
-// // ページトップボタン
-// $(function () {
-//   const pageTop = $("#page-top");
-//   pageTop.hide();
-//   $(window).scroll(function () {
-//     if ($(this).scrollTop() > 100) {
-//       pageTop.fadeIn();
-//     } else {
-//       pageTop.fadeOut();
-//     }
-//   });
-//   pageTop.click(function () {
-//     $("body,html").animate(
-//       {
-//         scrollTop: 0,
-//       },
-//       500
-//     );
-//     return false;
-//   });
-//   // フッター手前でストップ
-//   $("#page-top").hide();
-//   $(window).on("scroll", function () {
-//     scrollHeight = $(document).height();
-//     scrollPosition = $(window).height() + $(window).scrollTop();
-//     footHeight = $("footer").innerHeight();
-//     if (scrollHeight - scrollPosition <= footHeight) {
-//  // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-//       $("#page-top").css({
-//         position: "absolute",
-//         bottom: footHeight,
-//       });
-//     } else {
-//       $("#page-top").css({
-//         position: "fixed",
-//         bottom: "0",
-//       });
-//     }
-//   });
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
