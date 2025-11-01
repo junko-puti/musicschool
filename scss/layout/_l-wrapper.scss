@@ -1,0 +1,11 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+
+.l-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 画面の高さいっぱいを最小の高さとして確保 */
+    min-height: 100vh;
+}

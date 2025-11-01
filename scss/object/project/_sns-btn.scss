@@ -1,0 +1,8 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.sns-btn{
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(3);
+}

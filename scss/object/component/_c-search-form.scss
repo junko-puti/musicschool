@@ -1,0 +1,67 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: rem(54);
+  @include pc{
+    height: rem(40);
+  }
+}
+.c-search-form__label {
+  flex: 1;
+  background-color: #E8E8E8;
+}
+.c-search-form__input {
+  width: 100%;
+  height: rem(54);
+  padding: rem(5) rem(10);
+  @include pc{
+    height: rem(40);
+  }
+}
+.c-search-form__button{
+  width: rem(54);
+  height: rem(54);
+  @include pc{
+    width: rem(40);
+    height: rem(40);
+  }
+}
+.c-search-form__icon {
+  width: rem(54);
+  height: rem(54);
+  padding: rem(11) rem(14);
+  background-color: #000000;
+  @include pc{
+    width: rem(40);
+    height: rem(40);
+    padding: rem(8.34) rem(10.1);
+    right: rem(-2);
+  }
+}
+
+.c-search-form__icon {
+  transition: opacity 0.3s ease;
+}
+.c-search-form__icon:hover {
+  opacity: 0.7;
+}
+.c-search-form__input {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: #E8E8E8;
+  border: rem(2) solid transparent;
+}
+.c-search-form__input:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+.c-search-form__input:focus {
+  outline: none;
+  border: rem(2) solid #000000;
+  background-color: #fff;
+  box-sizing: border-box;
+}

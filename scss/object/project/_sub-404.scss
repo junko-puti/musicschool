@@ -1,0 +1,25 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.sub-404{
+  padding-top: rem(47);
+  padding-bottom: rem(50);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(68);
+    padding-bottom: rem(90);
+    // height: 100Vh;
+  }
+}
+.sub-404 .c-btn--primary{
+  max-width: rem(880);
+  margin: 0 auto;
+  margin-top: rem(9);
+  @include media(375px){
+    width: 100%;
+  }
+  @include pc{
+    margin-top: rem(40);
+  }
+}

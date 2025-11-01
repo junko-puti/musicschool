@@ -4,28 +4,47 @@
 
 @use "layout/l-header";
 @use "layout/l-inner";
+@use "layout/l-two-column";
 @use "layout/l-fixed";
+@use "layout/l-wrapper";
 
 @use "object/component/c-humburger";
 @use "object/component/c-card";
 @use "object/component/c-link";
 @use "object/component/c-btn";
 @use "object/component/c-pagetop";
-@use "object/component/c-fade-in";
-
+@use "object/component/c-breadcrumb";
+@use "object/component/c-pager";
+@use "object/component/c-status-message";
+@use "object/component/c-heading-deco";
+@use "object/component/c-search-form";
+@use "object/component/c-table";
 
 @use "object/project/header";
 @use "object/project/fv";
-@use "object/project/vision";
-@use "object/project/support";
-@use "object/project/reason";
-@use "object/project/voice";
-@use "object/project/flow";
-@use "object/project/faq";
-@use "object/project/blog";
-@use "object/project/fixed-btn";
 @use "object/project/footer";
+@use "object/project/fixed-btn";
+@use "object/project/card-lists";
+@use "object/project/sns-btn";
+@use "object/project/article";
+@use "object/project/page-nav";
 
+@use "object/project/top-vision";
+@use "object/project/top-support";
+@use "object/project/top-reason";
+@use "object/project/top-voice";
+@use "object/project/top-flow";
+@use "object/project/top-faq";
+@use "object/project/top-blog";
+@use "object/project/sub-plan";
+@use "object/project/sub-blog-list";
+@use "object/project/sub-blog-details";
+@use "object/project/sub-search";
+@use "object/project/sub-result-list";
+@use "object/project/sub-result-details";
+@use "object/project/sub-contact";
+@use "object/project/sub-contact-send";
+@use "object/project/sub-404";
 
 @use "object/utility/u-pc";
 @use "object/utility/u-sp";

@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  transition: background-color 0.5s, padding 0.5s;
+  // transition: background-color 0.5s, padding 0.5s;
   @include pc {
     height: rem(80);
   }
@@ -52,7 +52,9 @@
     padding-bottom: rem(14);
   }
 }
-
+.header__logo a:hover{
+  opacity: 0.5;
+}
 
 /*--sp用メニュー--*/
 .header__drawer {
@@ -88,7 +90,9 @@
   line-height: calc(33 / 18);
   transition: background-color 0.3s ease;
 }
-
+.header__drawer .header__menu a:hover{
+  background-color: #000000;
+}
 /*--PC用メニュー--*/
 .header__nav{
   height: 100%;
@@ -111,7 +115,8 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding-top: rem(5);//微調整
+  // padding-top: rem(5);//微調整
+  // padding-bottom: 1px;
   font-size: rem(17);
   line-height: calc(33 / 17);
   transition: opacity 0.3s ease;
@@ -120,9 +125,9 @@
   text-decoration: none; /* 元の下線を消す */
   // color: inherit;
 }
+
 .header__menu .c-btn--h-contact{//お問い合わせ
   font-size: rem(15);
-  font-weight: 500;
   line-height: calc(33 / 15);
   transition: background-color 0.5s ease,
 }
@@ -130,13 +135,14 @@
 .header__menu a::after {
   content: '';
   position: absolute;
-  bottom: 20.5px;
+  // bottom: 20.5px;
+  bottom: rem(20.5);
   left: 0;
   width: 0;
-  height: 1px;
+  // height: 1px;
+  height: rem(1);
   background-color: currentColor; /* 文字色と一致 */
   transition: width 0.4s ease;
-  // transition: width 0.4s ease ,opacity 0.3s ease;
 }
 .header__menu .c-btn--h-contact::after {
   content: none;
@@ -145,7 +151,6 @@
 @media screen and (min-width: 768px) {
   .header__menu a:hover::after {
     width: 100%;
-    // opacity: 0.5;
   }
 }
 @media screen and (max-width: 767px) {
@@ -154,28 +159,3 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-- hover --*/
-.header__logo a:hover{
-  opacity: 0.5;
-}
-.header__menu a:hover{
-  opacity: 0.5;
-}
-.header__drawer .header__menu a:hover{
-  background-color: #000000;
-}

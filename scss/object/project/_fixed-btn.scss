@@ -19,6 +19,12 @@
     bottom: rem(91);
   }
 }
+.fixed-btn--cta-pagetop{
+  right: rem(30);
+  @include pc {
+    right: rem(100);
+  }
+}
 .fixed-btn--f-contact{
   bottom: 0;
   left: 50%;
@@ -56,3 +62,6 @@
 .fixed-btn--f-contact.is-overlap{
   position: absolute;
 }
+
+
+

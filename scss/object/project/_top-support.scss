@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.support{
+.top-support{
   padding-top: rem(49);
   padding-bottom: rem(40);
   text-align: center;
@@ -12,9 +12,12 @@
     padding-bottom: rem(60);
   }
 }
-.support__title{
+.top-support__title{
   padding-bottom: rem(14);
   @include pc {
     padding-bottom: rem(30);
   }
+}
+.top-support__text{
+  font-weight: 500;
 }

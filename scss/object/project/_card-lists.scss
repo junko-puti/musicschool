@@ -1,0 +1,20 @@
+
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.card-lists {
+  display: flex;
+  flex-direction: column;
+}
+.card-lists--horizontal {
+  @include pc {
+    flex-direction: row;
+  }
+}
+.card-lists--2col {
+  @include pc {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

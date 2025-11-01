@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.vision{
+.top-vision{
   padding-top: rem(46);
   padding-bottom: rem(34);
   text-align: center;
@@ -10,20 +10,21 @@
     padding-bottom: rem(55);
   }
 }
-.vision__message{
+.top-vision__message{
   position: relative;
   padding-bottom: rem(96);
   @include pc {
     padding-bottom: rem(116);
   }
 }
-.vision__message::after{
+.top-vision__message::after{
   position: absolute;
   content: '';
   width: 100%;
   height: 100%;
   left: 0;
   bottom: rem(-65);
+  z-index: -1;//画像がテキストと重なっている為下げる
   // background: url(../../../images/semicircle-sp.png) center center /contain no-repeat;
   background: url(../images/semicircle-sp.png) center center /contain no-repeat;
   @include pc {
@@ -32,7 +33,7 @@
     background: url(../images/semicircle.png) center center /contain no-repeat;
   }
 }
-.vision__title{
+.top-vision__title{
   padding-bottom: rem(7);
   font-size: rem(25);
   line-height: calc( 40 / 25 );
@@ -43,8 +44,9 @@
     padding-bottom: rem(17);
   }
 }
-.vision__text{
+.top-vision__text{
   text-align: left;
+  font-weight: 500;
   @include pc {
     // font-size: rem(35);
     // line-height: calc( 50 / 35 );
@@ -52,32 +54,32 @@
     text-align: center;
   }
 }
-.vision__step{
+.top-vision__step{
   position: relative;
 }
-.vision-step::before {/*arrow-left*/
+.top-vision-step::before {/*arrow-left*/
   content: '';
   position: absolute;
   top: rem(-20);
   left: 50%;
   transform: translateX(-80%) rotate(-45deg);
-  width: 22px;
-  height: 3px;
-  border-radius: 10px;
+  width: rem(22);
+  height: rem(3);
+  border-radius: rem(10);
   background-color: #CB0000;
 }
-.vision-step::after {/*arrow-right*/
+.top-vision-step::after {/*arrow-right*/
   content: '';
   position: absolute;
   top: rem(-20);
   left: 50%;
   transform: translateX(-20%) rotate(45deg);
-  width: 22px;
-  height: 3px;
-  border-radius: 10px;
+  width: rem(22);
+  height: rem(3);
+  border-radius: rem(10);
   background-color: #CB0000;
 }
-.vision-step__item {
+.top-vision-step__item {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,10 +90,10 @@
   line-height: calc(50 / 20);
   letter-spacing: 0.01em;//微調整
 }
-.vision-step__item:last-child {
+.top-vision-step__item:last-child {
   padding-bottom: 0;
 }
-.vision-step__item:before {
+.top-vision-step__item:before {
   position: absolute;
   content: '';
   width: rem(20);
@@ -102,20 +104,20 @@
   border-radius: 50%;
   background-color: #CB0000;
 }
-.vision-step__item:last-child:before {
+.top-vision-step__item:last-child:before {
   top: 50%;/*padding分調整*/
 }
-.vision-step__item:after {
+.top-vision-step__item:after {
   position: absolute;
   content: '';
-  width: 3px;
+  width: rem(3);
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
   bottom: rem(25);
   background-color: #CB0000;
 }
-.vision-step__en{
+.top-vision-step__en{
   text-align: right;
   color: #CB0000;
   @include pc {
@@ -123,8 +125,9 @@
     line-height: calc(50 / 25);
   }
 }
-.vision-step__ja{
+.top-vision-step__ja{
   text-align: left;
+  font-weight: 500;
   @include pc {
     font-size: rem(23);
     line-height: calc(50 / 23);

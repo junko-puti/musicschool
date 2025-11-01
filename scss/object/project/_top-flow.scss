@@ -1,16 +1,17 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.flow{
+.top-flow{
   padding-top: rem(46);
   text-align: center;
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    padding-top: rem(31);
+    padding-top: rem(35);//微調整
+    // padding-top: rem(31);
   }
 }
-.flow__list{
+.top-flow__list{
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -24,19 +25,18 @@
     row-gap: rem(58);
   }
 }
-.flow__step-title:first-child{
+.top-flow__step-title:first-child{
   margin-top: 0;
 }
-.flow__step-title,
-.flow__step-discriptiom{
+.top-flow__step-title,
+.top-flow__step-discriptiom{
   // width: 100%;
   text-align: left;
 }
-.flow__step-title{
+.top-flow__step-title{
   position: relative;
   margin-top: rem(36);
   font-size: rem(22);
-  font-weight: 500;
   line-height: calc( 33/22 );
   color: #CB0000;
   @include pc {
@@ -45,11 +45,12 @@
     // margin-bottom: 0;
   }
 }
-.flow__step-discriptiom{
+.top-flow__step-discriptiom{
   margin-left: 0;
   margin-top: rem(9);
   font-size: rem(16);
   line-height: calc( 30/16 );
+  font-weight: 500;
   @include pc {
     // width: 74.703%;
     margin-top: 0;
@@ -57,7 +58,7 @@
     line-height: calc( 30/18 );
   }
 }
-.flow__list::before{
+.top-flow__list::before{
   content: '';
   position: absolute;
   width: rem(3);
@@ -71,7 +72,7 @@
     left: rem(60);
   }
 }
-.flow__list::after{
+.top-flow__list::after{
   content: '';
   position: absolute;
   display: block;
@@ -87,7 +88,7 @@
     left: rem(48.5);
   }
 }
-.flow__step-title::before{
+.top-flow__step-title::before{
   content: '';
   position: absolute;
   width: rem(20);
