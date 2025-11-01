@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.voice{
+.top-voice{
   padding-top: rem(46);
   padding-bottom: rem(50);
   text-align: center;
@@ -21,6 +21,9 @@
 *****************/
 .splide__track{
   margin-top: rem(39);
+  @include pc{
+    margin-top: rem(34); //微調整
+  }
 }
 #voice .splide__slide img {
   width: 100%;
@@ -42,8 +45,10 @@
 .splide__arrows {
   position: absolute;
   top: 51%;
-  left: rem(5);
-  right: rem(5);
+  left: 0;
+  right: 0;
+  max-width: rem(998);//((440+20.24+18.6)×2)+α
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
@@ -51,8 +56,6 @@
   z-index: 2;
   @include pc{
     top: 50%;
-    left: rem(40);
-    right: rem(40);
   }
 }
 .custom-arrow {
@@ -71,7 +74,14 @@
 /*****************
 card
 *****************/
-.voice-list__img{
+.top-voice__list a{
+  transition: opacity 0.3s;
+}
+.top-voice__list a:hover{
+  opacity: 0.8;
+}
+
+.top-voice-list__img{
   width: 100%;
   aspect-ratio: 335 / 200; // 比率を統一
   overflow: hidden;
@@ -79,25 +89,26 @@ card
     aspect-ratio: 27 / 19;
   }
 }
-.voice-list__img img {
+.top-voice-list__img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.voice-list__caption{
+.top-voice-list__text{
   margin-top: rem(27);
   @include pc{
     margin-top: rem(17);
   }
 }
-.voice-list__name{
+.top-voice-list__name{
   padding-bottom: rem(10);
   font-size: rem(22);
   line-height: calc(33 / 22);
 }
-.voice-list__text{
+.top-voice-list__comment{
   text-align: left;
+  font-weight: 500;
 }
 

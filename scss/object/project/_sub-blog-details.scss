@@ -1,0 +1,418 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.sub-blog-details{
+  padding-top: rem(50);
+  padding-bottom: rem(197);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(70);//微調整
+    padding-bottom: rem(187);
+  }
+}
+.sub-blog-details__sidebar{
+  padding-top: rem(30.14);
+  @include pc{
+    padding-top: 0;
+  }
+}
+
+
+/*メイン*/
+
+//メイン記事
+.sub-blog-details .article__core .c-card__img::before{
+  content: 'ギター';
+  width: rem(80);
+  height:  rem(30);
+}
+.sub-blog-details .article__core .c-card__title{
+  font-size: rem(20);
+  line-height: calc(30 / 20);
+  @include pc{
+    font-size: rem(25);
+    line-height: calc(40 / 25);
+  }
+}
+.sub-blog-details .article__core h1.c-card__title{
+// .sub-blog-details h1.c-card__title{
+  margin-top: rem(30);
+  @include pc{
+    margin-top: rem(46);
+    letter-spacing: -0.02em;//微調整
+  }
+}
+.sub-blog-details .article__core .c-card__date{
+  margin-top: rem(6);
+  font-size: rem(17);
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  @include pc{
+    margin-top: rem(5);
+  }
+}
+.sub-blog-details .article__core .sns-btn{
+  margin-top: rem(22);//  微調整
+  // margin-top: rem(25);
+}
+.sub-blog-details .sns-btn__img img{
+  width: auto;
+  height: rem(40);
+  display: block;
+}
+.sub-blog-details .article__core .c-card__text{
+  font-size: rem(16);
+  line-height: calc(30 / 16);
+  // font-weight: 500;
+  @include pc{
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+  }
+}
+.sub-blog-details .article__core .c-card__text--first{
+  margin-top: rem(27);
+  letter-spacing: -0.01em;
+  @include pc{
+    margin-top: rem(48);
+  }
+}
+.sub-blog-details .article__core h2.c-card__title{
+  margin-top: rem(39);
+  @include pc{
+    margin-top: rem(33);
+    font-size: rem(20);
+    line-height: calc(40 / 20);
+  }
+}
+.sub-blog-details .article__core .c-card__text--second{
+  margin-top: rem(17);
+  letter-spacing: -0.01em;
+  @include pc{
+    margin-top: rem(15);
+  }
+}
+.sub-blog-details .article__core .c-card__img--second{
+  margin-top: rem(39);
+  aspect-ratio: 335 / 200;
+  overflow: hidden;
+  width: rem(335);
+  @include pc{
+    margin-top: rem(17);
+  }
+}
+.sub-blog-details .article-core__list{
+  position: relative;
+  padding-bottom: rem(38.5);
+  margin-top: rem(27);
+  font-size: rem(16);
+  line-height: calc(30 / 16);
+  font-weight: 500;
+  @include pc{
+    padding-bottom: rem(40.5);
+    margin-top: rem(28);
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+  }
+}
+.sub-blog-details .article-core__list li{
+  padding-left: 1em;     /* 全体を右にズラす */
+  text-indent: -1em;     /* 1行目だけ左に戻す */
+}
+.sub-blog-details .article-core__list::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height:  rem(0.5);
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+// .sub-blog-details .article-core__list li{
+//   list-style-type: disc;
+//   margin-left: rem(20);
+// }
+.sub-blog-details .article__core h3.c-card__title{
+  position: relative;
+  padding-left: rem(9.5);
+  margin-top: rem(50);
+  @include pc{
+    margin-top: rem(43.5);
+    font-size: rem(20);
+    line-height: calc(40 / 20);
+  }
+}
+.sub-blog-details .article__core h3.c-card__title:before{
+  position: absolute;
+  content: '';
+  width: rem(3);
+  height: rem(50);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #000000;
+  @include pc{
+    top: 44%;
+    height: rem(20);
+  }
+}
+.sub-blog-details .article__core .c-card__text--third{
+  position: relative;
+  padding: rem(14) rem(20) rem(14) rem(70);
+  margin-top: rem(19.5);
+  // margin-top: rem(36.5);
+  background-color: #E8E8E8;
+  @include pc{
+    padding: rem(14) rem(30) rem(14) rem(67);
+    margin-top: rem(17);
+    letter-spacing: -0.01em;//微調整
+  }
+}
+.sub-blog-details .article__core .c-card__text--third::before{
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: rem(27);
+  height: rem(23.28);
+  top: rem(22);
+  left: rem(25);
+  background-image: url("../images/quotation-sp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include pc{
+    top: rem(20);
+    left: rem(30);
+  }
+}
+.sub-blog-details .sub-blog-details__link{
+  margin-top: rem(25);//部調整
+  @include pc{
+    margin-top: rem(27);
+    text-align: left;
+  }
+}
+.sub-blog-details .sub-blog-details__link a{
+  font-size: rem(20);
+  line-height: calc(33 / 20);
+  color: #CB0000;
+}
+
+
+/*前後ページリンク*/
+.sub-blog-details .article__nav{
+  margin-top: rem(45);
+  @include pc{
+    margin-top: rem(55);
+  }
+}
+
+
+/*関連記事*/
+.sub-blog-details .article__related{
+  // margin-top: rem(67);
+  margin-top: rem(64);
+  @include pc{
+    margin-top: rem(100);
+  }
+}
+.sub-blog-details .article__related .c-card{
+  align-items: center;
+  @include pc{
+    align-items: flex-start;
+  }
+}
+
+.sub-blog-details .article__related .card-lists{
+  margin-top: rem(19);//微調整
+  row-gap: rem(21);
+  @include pc{
+    margin-top: rem(30);//微調整
+    row-gap: rem(30);
+  }
+}
+.sub-blog-details .article__related .c-card__img{
+  aspect-ratio: 160 / 110;
+  flex: 0 0 rem(160); // 幅
+  // width: rem(160);
+  overflow: hidden;
+  @include pc{
+    flex: 0 0 rem(200); // 幅
+    aspect-ratio: 200 / 140;
+    // width: rem(200);
+  }
+}
+.sub-blog-details .article__related .c-card__img img {
+  display: block;
+  width: 100%;
+  // height: auto;
+  height: 100%;
+  // overflow: hidden;
+  object-fit: cover;
+}
+
+.sub-blog-details .article__related .c-card__img::before{
+  content: 'ギター';
+  width: rem(80);
+  height:  rem(30);
+  padding-top: rem(2);
+  font-size: rem(15);
+  line-height: calc(25 / 15);
+  @include pc{
+  width: rem(80);
+  height:  rem(30);
+  }
+}
+.sub-blog-details .article__related .c-card__text{
+  font-size: rem(17);
+  line-height: calc(28 / 17);
+  font-weight: 700;
+  max-height: rem(56);/*2行表示*/
+  overflow: hidden;
+  @include pc{
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+  }
+}
+.sub-blog-details .article__related .c-card__text span{
+  display: inline-block;
+  @include pc{
+    display: inline;
+  }
+}
+.sub-blog-details .article__related .c-card__date{
+  margin-top: rem(3);//微調整
+  font-size: rem(17);
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  @include pc{
+    margin-top: rem(13);
+  }
+}
+
+
+
+
+
+/*サイドバー*/
+.sidebar__content{
+  margin-top: rem(29);//微調整
+}
+.sidebar__content:first-child{
+  margin-top: 0;
+}
+/*無料メールマガジン*/
+.sidebar-newsletter__container{
+  position: relative;
+  border: rem(0.5) #000000 solid;
+  width: 100%;
+  height: auto;
+  padding: rem(20);
+}
+.sidebar-newsletter__container a{
+  transition: opacity 0.3s ease;
+}
+.sidebar-newsletter__container a:hover{
+  opacity: 0.5;
+}
+.sidebar-newsletter__container p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: rem(18);
+  line-height: calc(33 / 18);
+}
+
+/*ブログ内を検索*/
+.sidebar-search__container{
+  border: rem(0.5) #000000 solid;
+  width: 100%;
+  height: auto;
+  padding: rem(20);
+  @include pc{
+    padding: rem(15);
+  }
+}
+.sidebar-search__container div{
+  background-color: #000000;
+}
+
+/*おすすめの記事*/
+.sidebar-recommend__list a{
+  transition: opacity 0.3s ease;
+}
+.sidebar-recommend__list a:hover{
+  opacity: 0.5;
+}
+.sidebar-recommend__list li{
+  margin-top: rem(20.5);
+  @include pc{
+    margin-top: rem(15);
+  }
+}
+.sidebar-recommend__list .c-card__text{
+  margin-top: rem(8.54);
+  font-size: rem(17);
+  line-height: calc(28 / 17);
+  font-weight: 700;
+  @include pc{
+    margin-top: 0;
+  }
+}
+.sidebar-recommend__list .card-lists{
+  row-gap: rem(21);
+  margin-top: rem(30);
+}
+.sidebar-recommend__list .c-card{
+  flex-direction: row;//spで横並び
+  column-gap: rem(20);
+  @include pc{
+    column-gap: rem(15);
+  }
+}
+.sidebar-recommend__list .c-card__img{
+  aspect-ratio: 160 / 110;
+  flex: 0 0 rem(160); // 幅
+  @include pc{
+    flex: 0 0 rem(95); // 幅
+    aspect-ratio: 95 / 75;
+    overflow: hidden;
+  }
+}
+
+.sidebar-recommend__list .c-card__img::before{
+  content: '';
+}
+
+/*カテゴリー*/
+.sidebar__category{
+  font-size: rem(17);
+  line-height: calc(28 / 17);
+  font-weight: 500;
+}
+.sidebar-category__list{
+  margin-top: rem(12);
+}
+.sidebar-category__list li{
+  position: relative;
+  padding-bottom: rem(7);
+  margin-top: rem(12);//微調整
+}
+.sidebar-category__list li:first-child{
+  margin-top: 0;
+}
+.sidebar-category__list li::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: rem(0.5);
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+.sidebar-category__list li a{
+  transition: opacity 0.3s ease;
+}
+.sidebar-category__list li a:hover{
+  opacity: 0.5;
+}

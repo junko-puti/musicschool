@@ -1,0 +1,23 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+
+.l-two-column {
+  display: flex;
+  flex-direction: column;
+  @include pc{
+    flex-direction: row;
+    column-gap: rem(30)
+  }
+}
+.l-two-column__main {
+  min-width: 0; // コンテンツのはみ出し防止
+  flex: 1;
+}
+.l-two-column__sidebar {
+  @include pc{
+    width: rem(250);
+    flex-shrink: 0;//縮小させない
+  }
+}
+

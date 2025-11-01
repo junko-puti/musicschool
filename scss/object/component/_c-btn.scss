@@ -5,17 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
   cursor: pointer;
   color: #FFFFFF;
   background-color: #CB0000;
   border: 1px solid #CB0000;
-  font-weight: 400;
+  // font-weight: 400;
   transition: background-color 0.5s ease,
   color 0.5s ease;
-  &:hover {
-    color: #CB0000;
-    background-color: #FFFFFF;
-  }
+}
+.c-btn:hover {
+  color: #CB0000;
+  background-color: #FFFFFF;
 }
 
 //ヘッダー コンタクトボタン
@@ -50,32 +51,24 @@
 .c-btn--f-contact.active{
   opacity: 1;
   pointer-events: auto;
-  // visibility: visible;//ぱっと消えてしまうので不使用
+  transition: background-color 0.5s ease,
 }
-// .c-btn--f-contact.active:hover{
-//   opacity: 0.5;
-// }
 
 
 //共通ボタン
 .c-btn--primary{
-  max-width: rem(150);
-  width: 100%;
-  height: rem(45);
-  padding-top: rem(7);
-  padding-bottom: rem(5);
-  padding-left: rem(29);
-  padding-right: rem(29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(335);
+  height: rem(50);
+  font-size: rem(20);
+  line-height: calc(26 / 20);
   @include pc {
-    max-width: rem(150);
-    width: 100%;
-    height: rem(45);
-    padding-top: rem(7);
-    padding-bottom: rem(5);
-    padding-left: rem(29);
-    padding-right: rem(29);
-    width: rem(192);
-    aspect-ratio: 192 / 51;
+    width: rem(250);
+    height: rem(50);
+    font-size: rem(25);
+    line-height: calc(33 / 25);
   }
 }
 

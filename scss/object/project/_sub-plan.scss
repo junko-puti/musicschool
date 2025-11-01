@@ -1,0 +1,268 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.sub-plan{
+  padding-top: rem(46);
+  padding-bottom: rem(186);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(67);
+    padding-bottom: rem(223);
+  }
+}
+/**************
+plan__pricing
+**************/
+.sub-plan h2{
+  margin-top: rem(38);
+  font-size: rem(25);
+  line-height: calc(40 / 25);
+  text-align: center;
+  @include pc{
+    margin-top: rem(57);
+  }
+}
+.sub-plan__pricing h2{
+  margin-top: 0;
+}
+.sub-plan__pricing ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rem(39);
+  row-gap: rem(19.5);
+  @include pc {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: rem(30);
+  }
+}
+.sub-plan__pricing li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(210);
+  height: rem(60);
+  font-size: rem(20);
+  line-height: calc(33 / 20);
+  color: #FFFFFF;
+  background-color: #CB0000;
+}
+.sub-plan__pricing .sub-plan__plus{
+  width: rem(18.5);
+  height: rem(18.5);
+  background-color: #FFFFFF;
+}
+.sub-plan__pricing .plan__plas img{
+  width: 100%;
+}
+.sub-plan__pricing p{
+  margin-top: rem(47);
+  font-size: rem(16);
+  line-height: calc(30 / 16);
+  font-weight: 500;
+  @include pc {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    letter-spacing: -0.01em;
+  }
+}
+
+/***********
+plan__detail
+***********/
+.sub-plan__detail h3{
+  margin-top: rem(38);
+  @include pc{
+    margin-top: rem(57);
+  }
+}
+.sub-plan__table-wrapper{
+  padding-bottom: rem(18.5);/*テーブルとスクロールバーとの余白*/
+  margin-top: rem(36);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  @include pc {
+    max-width: rem(880);
+    margin: 0 auto;
+    padding-bottom: 0;
+    margin-top: rem(48);
+  }
+}
+
+/*スクロールバー*/
+.sub-plan__table-wrapper::-webkit-scrollbar {
+  // margin-top: 20px;
+  margin-top: rem(20);
+  height: rem(25); // 横スクロールバーの高さ
+}
+.sub-plan__table-wrapper::-webkit-scrollbar-track {
+  background: rgba(80, 80, 80, 0.15); // トラック背景
+}
+ .sub-plan__table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(80, 80, 80, 0.25); // スクロールつまみ
+}
+
+.sub-plan__table{
+  min-width: rem(670); // SP幅
+  width: 100%;
+  font-size: rem(16);
+  line-height: calc(25 / 16);
+  font-weight: 500;
+  table-layout: fixed;
+  border-collapse: collapse;
+  @include pc {
+    min-width: rem(880); // PC幅
+    font-size: rem(17);
+    line-height: calc(25 / 17);
+  }
+}
+.sub-plan__table th{
+  font-weight: 500;
+}
+.sub-plan__table th,
+.sub-plan__table td{
+  white-space: nowrap;
+  width: calc(100% / 2);
+  height: rem(85);
+  vertical-align: middle;
+  @include pc {
+    width: calc(100% / 4);
+    // text-align: center;
+  }
+}
+
+/*table thead*/
+.sub-plan__table .sub-plan__name th{
+  height: rem(66);
+  color: #FFFFFF;
+  font-weight: 700;
+  @include pc{
+    height: rem(80);
+  }
+}
+.sub-plan__cell{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(20);
+  line-height: calc(25 / 20);
+  text-align: center;
+  color: #FFFFFF;
+  @include pc{
+    line-height: calc(33 / 20);
+  }
+}
+.sub-plan__cell span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(17);
+  line-height: calc(25 / 17);
+  color: #FFFFFF;
+  @include pc{
+    line-height: calc(33 / 17);
+  }
+}
+.sub-plan__cell--nul{
+  background-color: #FFFFFF;
+}
+.sub-plan__cell--standard{
+  display: flex;
+  flex-direction: column;
+  height: rem(66);
+  // line-height: calc(25 / 20);
+  line-height: calc(20 / 20);//微調整
+  background-color: #CB0000;
+  @include pc{
+    height: rem(80);
+  }
+}
+.sub-plan__cell--basic,
+.sub-plan__cell--premium{
+  height: rem(66);
+  margin-top: 0;
+  background-color: #000000;
+  @include pc{
+    height: rem(50);
+    margin-top: rem(30);
+  }
+}
+
+/*table tbody*/
+.sub-plan__class{/*上下横罫線*/
+  border-top: rem(0.5) solid #000000;
+  border-bottom: rem(0.5) solid #000000;
+}
+.sub-plan__class tr:nth-child(even){/*偶数業背景グレイ*/
+  background-color: rgba(80, 80, 80, 0.15);
+}
+.sub-plan__class th{
+  padding-left: rem(10);
+  @include pc{
+    padding-left: rem(20);
+  }
+}
+.sub-plan__class td{/*アイテム間に縦罫線*/
+  text-align: center;
+}
+.sub-plan__class th,
+.sub-plan__class td{/*アイテム間に縦罫線*/
+  border-right: rem(0.5) solid #000000;
+}
+.sub-plan__class tr td:last-child{/*右罫線消す*/
+  border-right: none;
+}
+.sub-plan__price td{
+  font-size: rem(22);
+  line-height: calc(33 / 22);
+  font-weight: 700;
+}
+.sub-plan__price th{
+  font-weight: 700;
+}
+.sub-plan__price--standard{
+  color: #CB0000;
+}
+.sub-plan__marker {
+  display: block;
+  width: rem(15);
+  height: rem(15);
+  border-radius: 50%;
+  background-color: #000000;
+}
+.sub-plan__marker--standard{
+  background-color: #CB0000;
+}
+.sub-plan__marker--none {
+  display: block;
+  width: rem(30);
+  height: rem(1);
+  background-color: #707070;
+}
+.sub-plan__marker-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sub-plan__schedule{
+  margin-top: rem(8);
+}
+.sub-plan__note{
+  margin-top: rem(18);
+  font-size: rem(16);
+  line-height: calc(30 / 16);
+  font-weight: 500;
+  @include pc{
+    margin-top: rem(28.5);
+    font-size: rem(17);
+    line-height: calc(25 / 17);
+  }
+}
+
+
+

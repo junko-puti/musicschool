@@ -1,0 +1,185 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.sub-result-details{
+  padding-top: rem(50);
+  padding-bottom: rem(195);
+  // padding-bottom: rem(197);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(70);//微調整
+    padding-bottom: rem(157);
+  }
+}
+.sub-result-details .article__core .c-card__img--result-top{
+  @include pc{
+    aspect-ratio: 22 / 10; //880/400
+  }
+}
+.sub-result-details .article__core .c-card__img::before{
+  content: 'ポップス';
+  width: rem(100);
+  height:  rem(30);
+}
+
+.sub-result-details .article__core h1.c-card__title{
+  margin-top: rem(30);
+  font-size: rem(20);
+  line-height: calc(30 / 20);
+  @include pc{
+    margin-top: rem(50);
+    font-size: rem(25);
+    line-height: calc(40 / 25);
+    letter-spacing: -0.02em;//微調整
+  }
+}
+.sub-result-details .article__core .c-card__date{
+  margin-top: rem(12);
+  font-size: rem(17);
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  @include pc{
+    margin-top: rem(15);
+  }
+}
+.sub-result-details .article__core .c-table{
+  margin-top: rem(13);
+  @include pc{
+    width: rem(400);
+    margin-top: 0;
+  }
+}
+.sub-result-details .article__core .c-card__text{
+  margin-top: rem(28);
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+  @include pc{
+    flex: 1;
+    margin-top: 0;
+  }
+}
+.sub-result-details .article__core .c-card__text span{
+display:  inline-block}
+.c-card-body__wrap{
+  @include pc{
+    margin-top: rem(55);
+    display: flex;
+    flex-direction: row;
+    column-gap: rem(40);
+  }
+}
+
+/*前後ページリンク*/
+.sub-result-details .article__nav{
+  margin-top: rem(40);
+  @include pc{
+    margin-top: rem(60);
+  }
+}
+.sub-result-details .page-nav .c-card__title{
+  @include pc{
+    width: rem(226);
+  }
+}
+
+
+/*関連記事*/
+.sub-result-details .article__related{
+  // margin-top: rem(67);
+  margin-top: rem(61);
+  @include pc{
+    margin-top: rem(100);
+  }
+}
+.sub-result-details .article__related .c-card{
+  align-items: flex-start;
+  // align-items: center;
+  // @include pc{
+  //   align-items: flex-start;
+  // }
+}
+.sub-result-details .article__related .c-card__text{
+  margin-top: 0;
+}
+
+//////////////////
+.sub-result-details .article__related .card-lists{
+  margin-top: rem(19);//微調整
+  row-gap: rem(22);//微調整
+  @include pc{
+    margin-top: rem(30);//微調整
+    row-gap: rem(30);
+  }
+}
+.sub-result-details .article__related .c-card__img{
+  aspect-ratio: 160 / 113;
+  flex: 0 0 rem(160); // 幅
+  // width: rem(160);
+  overflow: hidden;
+  @include pc{
+    flex: 0 0 rem(260); // 幅
+    aspect-ratio: 260 / 183;
+    // width: rem(200);
+  }
+}
+.sub-result-details .article__related .c-card__img img {
+  display: block;
+  width: 100%;
+  // height: auto;
+  height: 100%;
+  // overflow: hidden;
+  object-fit: cover;
+}
+
+.sub-result-details .article__related .c-card__img::before{
+  content: 'ギター';
+  width: rem(80);
+  height:  rem(30);
+  padding-top: rem(2);
+  font-size: rem(15);
+  line-height: calc(25 / 15);
+  @include pc{
+  width: rem(100);
+  height:  rem(30);
+  }
+}
+.sub-result-details .article__related li:nth-child(1) .c-card__img::before{
+    content: 'ロック';
+}
+.sub-result-details .article__related li:nth-child(2) .c-card__img::before{
+    content: 'ジャズ';
+}
+.sub-result-details .article__related li:nth-child(3) .c-card__img::before{
+    content: 'ラテン';
+}
+
+///////////////
+
+.sub-result-details .article__related .c-card__text{
+  font-size: rem(17);
+  line-height: calc(28 / 17);
+  font-weight: 700;
+  max-height: rem(56);/*2行表示*/
+  overflow: hidden;
+  @include pc{
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+  }
+}
+.sub-result-details .article__related .c-card__text span{
+  display: inline-block;
+  @include pc{
+    display: inline;
+  }
+}
+.sub-result-details .article__related .c-card__date{
+  margin-top: rem(3);//微調整
+  font-size: rem(17);
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  @include pc{
+    margin-top: rem(13);
+  }
+}
+

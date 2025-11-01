@@ -1,0 +1,39 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+  line-height: 1.6;
+}
+.c-table tbody{
+  border: rem(0.5) solid #707070;
+}
+.c-table th,
+.c-table td {
+  height: rem(38);
+  padding: rem(4) rem(10);
+  border-bottom: rem(0.5) solid #707070;
+  text-align: left;
+  @include pc{
+    padding: rem(4) rem(20);
+  }
+}
+
+.c-table th {
+  width: 35%;
+  background-color: #E5E5E5;
+  @include pc{
+    width: 34%;
+  }
+}
+
+.c-table td {
+  width: 64%;
+  font-weight: 500;
+  background-color: #fff;
+  border-left: rem(0.5) solid #707070;
+}

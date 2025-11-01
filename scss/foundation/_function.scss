@@ -1,14 +1,14 @@
 @use "sass:math";
 
 //リキッドコーディング
-// @function rem($pixels) {
-//   @return math.div($pixels, 16) * 1rem;
-// }
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
 
 //ソリッドコーディング
-@function rem($pixels) {
-  @return math.div($pixels, 10) * 1rem;
-}
+// @function rem($pixels) {
+//   @return math.div($pixels, 10) * 1rem;
+// }
 
 // @function rem($pixels) {
 //   @return $pixels / 16 * 1rem;
@@ -18,3 +18,11 @@
 // @function rem($pixels) {
 //   @return math.div($pixels, 16) * 1rem;
 // }
+
+//サイズ用関数
+//$pixelsVw:サイズ
+//$baseWidth:ベースとなる画面横幅
+
+@function vw($pixelsVw, $baseWidth) {
+  @return calc($pixelsVw / $baseWidth * 100vw);
+}
