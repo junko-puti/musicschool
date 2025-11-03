@@ -123,6 +123,7 @@
   @include pc {
     font-size: rem(25);
     line-height: calc(50 / 25);
+    letter-spacing: -0.04em;
   }
 }
 .top-vision-step__ja{
