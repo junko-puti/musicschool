@@ -552,9 +552,9 @@ p {
   }
 }
 
-/*****************
-card
-*****************/
+/********
+card 共通
+********/
 .c-card__img {
   position: relative;
   width: 100%;
@@ -570,7 +570,7 @@ card
 
 .c-card__img::before {
   position: absolute;
-  content: "common";
+  content: "";
   left: 0;
   top: 0;
   z-index: 10;
@@ -596,6 +596,817 @@ card
 .c-card__text {
   text-align: left;
   font-weight: 500;
+}
+
+/*--------------
+hover 
+---------------*/
+.c-card {
+  transition: opacity 0.3s ease;
+}
+
+.c-card:hover {
+  opacity: 0.7;
+}
+
+/*--------------
+label 
+---------------*/
+/*共通*/
+.c-card--label-responsive-s .c-card__img::before {
+  width: 5.625rem;
+  height: 1.875rem;
+  padding-top: 0.125rem;
+  font-size: 0.9375rem;
+  line-height: 1.6666666667;
+}
+@media (min-width: 768px) {
+  .c-card--label-responsive-s .c-card__img::before {
+    width: 5rem;
+    height: 1.875rem;
+  }
+}
+
+.c-card--label-responsive-l .c-card__img::before {
+  width: 5.625rem;
+  height: 1.875rem;
+  padding-top: 0.125rem;
+  font-size: 0.9375rem;
+  line-height: 1.6666666667;
+}
+@media (min-width: 768px) {
+  .c-card--label-responsive-l .c-card__img::before {
+    width: 6.25rem;
+    height: 1.875rem;
+  }
+}
+
+.c-card--label-s .c-card__img::before {
+  width: 5rem;
+  height: 1.875rem;
+  padding-top: 0.125rem;
+  font-size: 0.9375rem;
+  line-height: 1.6666666667;
+}
+
+.c-card--label-l .c-card__img::before {
+  width: 6.25rem;
+  height: 1.875rem;
+  padding-top: 0.125rem;
+  font-size: 0.9375rem;
+  line-height: 1.6666666667;
+}
+
+[data-label=sns] .c-card__img::before {
+  content: "SNS";
+}
+
+[data-label=shukyaku] .c-card__img::before {
+  content: "集客方法";
+}
+
+[data-label=guitar] .c-card__img::before {
+  content: "ギター";
+}
+
+[data-label=pops] .c-card__img::before {
+  content: "ポップス";
+}
+
+[data-label=rock] .c-card__img::before {
+  content: "ロック";
+}
+
+[data-label=jazz] .c-card__img::before {
+  content: "ジャズ";
+}
+
+[data-label=latin] .c-card__img::before {
+  content: "ラテン";
+}
+
+[data-label=classic] .c-card__img::before {
+  content: "クラシック";
+}
+
+/***************
+card 選ばれる理由
+***************/
+@media (min-width: 768px) {
+  .c-card--reason {
+    column-gap: 3.125rem;
+  }
+}
+
+.c-card--reason .c-card__img {
+  aspect-ratio: 335/200;
+}
+@media (min-width: 768px) {
+  .c-card--reason .c-card__img {
+    width: 39.772%;
+    aspect-ratio: 350/247;
+  }
+}
+
+.c-card--reason .c-card__img::before {
+  content: none;
+}
+
+.c-card--reason .c-card__body {
+  margin-top: 1.875rem;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .c-card--reason .c-card__body {
+    flex: 1;
+    margin-top: -0.1875rem;
+  }
+}
+
+.c-card--reason .c-card__title {
+  position: relative;
+  padding-bottom: 0.625rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-card--reason .c-card__title {
+    padding-bottom: 0.75rem;
+    font-size: 1.375rem;
+    line-height: 1.5;
+  }
+}
+
+.c-card--reason .c-card__title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  background-color: #CB0000;
+}
+@media (min-width: 768px) {
+  .c-card--reason .c-card__title::after {
+    width: calc(100% + 3.125rem);
+    left: -3.125rem;
+  }
+}
+
+.c-card--reason .c-card__text {
+  margin-top: 1.0625rem;
+  font-size: 1rem;
+  line-height: 1.875;
+  letter-spacing: -0.004em;
+}
+@media (min-width: 768px) {
+  .c-card--reason .c-card__text {
+    margin-top: 2.3125rem;
+    font-size: 1.125rem;
+    line-height: 1.8333333333;
+  }
+}
+
+/*******************
+card TOPページ-ブログ
+*******************/
+.c-card--top-blog {
+  transition: opacity 0.3s ease;
+}
+
+.c-card--top-blog .c-card:hover {
+  opacity: 0.7;
+}
+
+.c-card--top-blog .c-card__img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 335/200;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .c-card--top-blog .c-card__img {
+    aspect-ratio: 260/200;
+  }
+}
+
+.c-card--top-blog .c-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-card--top-blog .c-card__body {
+  margin-top: 1.875rem;
+}
+@media (min-width: 768px) {
+  .c-card--top-blog .c-card__body {
+    margin-top: 1.25rem;
+  }
+}
+
+.c-card--top-blog .c-card__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .c-card--top-blog .c-card__title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+.c-card--top-blog .c-card__date {
+  margin-top: 0.375rem;
+  text-align: right;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+}
+@media (min-width: 768px) {
+  .c-card--top-blog .c-card__date {
+    margin-top: 0.6875rem;
+  }
+}
+
+.c-card--top-blog .c-card__text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .c-card--top-blog .c-card__text {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+/************************
+card ブログ一覧/検索ページ
+************************/
+@media (min-width: 768px) {
+  .c-card--blog-list {
+    column-gap: 3.125rem;
+  }
+}
+
+.c-card--blog-list .c-card__img {
+  aspect-ratio: 335/200;
+}
+@media (min-width: 768px) {
+  .c-card--blog-list .c-card__img {
+    flex: 0 0 16.25rem;
+    aspect-ratio: 260/184;
+    overflow: hidden;
+  }
+}
+
+.c-card--blog-list .c-card__body {
+  margin-top: 1.875rem;
+}
+@media (min-width: 768px) {
+  .c-card--blog-list .c-card__body {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+.c-card--blog-list .c-card__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-card--blog-list .c-card__title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+.c-card--blog-list .c-card__date {
+  margin-top: 0.375rem;
+  text-align: right;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+}
+@media (min-width: 768px) {
+  .c-card--blog-list .c-card__date {
+    margin-top: 0.1875rem;
+    text-align: left;
+  }
+}
+
+.c-card--blog-list .c-card__text {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.875;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .c-card--blog-list .c-card__text {
+    margin-top: 0.6875rem;
+    font-size: 1.125rem;
+    line-height: 1.6666666667;
+    letter-spacing: -0.02em;
+  }
+}
+
+/******************
+card ブログ-details
+******************/
+.c-card--blog-details .c-card__text {
+  font-size: 1rem;
+  line-height: 1.875;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__text {
+    font-size: 1.125rem;
+    line-height: 1.6666666667;
+  }
+}
+
+.c-card--blog-details .c-card__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__title {
+    font-size: 1.5625rem;
+    line-height: 1.6;
+  }
+}
+
+.c-card--blog-details h1.c-card__title {
+  margin-top: 1.875rem;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details h1.c-card__title {
+    margin-top: 2.875rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.c-card--blog-details .c-card__date {
+  margin-top: 0.375rem;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__date {
+    margin-top: 0.3125rem;
+  }
+}
+
+.c-card--blog-details .c-card__text--first {
+  margin-top: 1.6875rem;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__text--first {
+    margin-top: 3rem;
+  }
+}
+
+.c-card--blog-details h2.c-card__title {
+  margin-top: 2.4375rem;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details h2.c-card__title {
+    margin-top: 2.0625rem;
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+
+.c-card--blog-details .c-card__text--second {
+  margin-top: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__text--second {
+    margin-top: 0.9375rem;
+  }
+}
+
+.c-card--blog-details .c-card__img--second {
+  margin-top: 2.4375rem;
+  aspect-ratio: 335/200;
+  overflow: hidden;
+  width: 20.9375rem;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__img--second {
+    margin-top: 1.0625rem;
+  }
+}
+
+.c-card--blog-details h3.c-card__title {
+  position: relative;
+  padding-left: 0.59375rem;
+  margin-top: 3.125rem;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details h3.c-card__title {
+    margin-top: 2.71875rem;
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+
+.c-card--blog-details h3.c-card__title:before {
+  position: absolute;
+  content: "";
+  width: 0.1875rem;
+  height: 3.125rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details h3.c-card__title:before {
+    top: 44%;
+    height: 1.25rem;
+  }
+}
+
+.c-card--blog-details .c-card__text--third {
+  position: relative;
+  padding: 0.875rem 1.25rem 0.875rem 4.375rem;
+  margin-top: 1.21875rem;
+  background-color: #E8E8E8;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__text--third {
+    padding: 0.875rem 1.875rem 0.875rem 4.1875rem;
+    margin-top: 1.0625rem;
+    letter-spacing: -0.01em;
+  }
+}
+
+.c-card--blog-details .c-card__text--third::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 1.6875rem;
+  height: 1.455rem;
+  top: 1.375rem;
+  left: 1.5625rem;
+  background-image: url("../images/quotation-sp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .c-card--blog-details .c-card__text--third::before {
+    top: 1.25rem;
+    left: 1.875rem;
+  }
+}
+
+/*********************************
+card 関連記事 サイドバーあり(ブログ）
+*********************************/
+.c-card--related-compact .c-card {
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .c-card {
+    align-items: flex-start;
+  }
+}
+
+.c-card--related-compact .card-lists {
+  margin-top: 1.1875rem;
+  row-gap: 1.3125rem;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .card-lists {
+    margin-top: 1.875rem;
+    row-gap: 1.875rem;
+  }
+}
+
+.c-card--related-compact .c-card__img {
+  aspect-ratio: 160/110;
+  flex: 0 0 10rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .c-card__img {
+    flex: 0 0 12.5rem;
+    aspect-ratio: 200/140;
+  }
+}
+
+.c-card--related-compact .c-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-card--related-compact .c-card__text {
+  font-size: 1.0625rem;
+  line-height: 1.6470588235;
+  font-weight: 700;
+  max-height: 3.5rem; /*2行表示*/
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .c-card__text {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+.c-card--related-compact .c-card__text span {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .c-card__text span {
+    display: inline;
+  }
+}
+
+.c-card--related-compact .c-card__date {
+  margin-top: 0.1875rem;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .c-card--related-compact .c-card__date {
+    margin-top: 0.8125rem;
+  }
+}
+
+/***************
+card 卒業実績一覧
+***************/
+@media (min-width: 768px) {
+  .c-card--result-list {
+    column-gap: 3.125rem;
+  }
+}
+
+.c-card--result-list .c-card__img {
+  aspect-ratio: 335/200;
+}
+@media (min-width: 768px) {
+  .c-card--result-list .c-card__img {
+    aspect-ratio: 387/273;
+    overflow: hidden;
+  }
+}
+
+.c-card--result-list .c-card__body {
+  margin-top: 1.875rem;
+}
+@media (min-width: 768px) {
+  .c-card--result-list .c-card__body {
+    margin-top: 1.25rem;
+  }
+}
+
+.c-card--result-list .c-card__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-card--result-list .c-card__title {
+    line-height: 1.25;
+  }
+}
+
+.c-card--result-list .c-card__date {
+  margin-top: 0.375rem;
+  text-align: right;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+}
+@media (min-width: 768px) {
+  .c-card--result-list .c-card__date {
+    margin-top: 0.625rem;
+  }
+}
+
+/*******************
+card 卒業実績-details
+*******************/
+@media (min-width: 768px) {
+  .c-card--result-details .c-card__img {
+    aspect-ratio: 22/10;
+  }
+}
+
+.c-card--result-details h1.c-card__title {
+  margin-top: 1.875rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .c-card--result-details h1.c-card__title {
+    margin-top: 3.125rem;
+    font-size: 1.5625rem;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+  }
+}
+
+.c-card--result-details .c-card__date {
+  margin-top: 0.75rem;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .c-card--result-details .c-card__date {
+    margin-top: 0.9375rem;
+  }
+}
+
+.c-card--result-details .c-table {
+  margin-top: 0.8125rem;
+}
+@media (min-width: 768px) {
+  .c-card--result-details .c-table {
+    width: 25rem;
+    margin-top: 0;
+  }
+}
+
+.c-card--result-details .c-card__text {
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+  line-height: 1.6666666667;
+}
+@media (min-width: 768px) {
+  .c-card--result-details .c-card__text {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+.c-card--result-details .c-card__text span {
+  display: inline-block;
+}
+
+/*************************
+card 関連記事 全幅(卒業実績）
+*************************/
+.c-card--related-full {
+  align-items: flex-start;
+}
+
+.c-card--related-full .c-card__text {
+  margin-top: 0;
+}
+
+.c-card--related-full .c-card__img {
+  aspect-ratio: 160/113;
+  flex: 0 0 10rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .c-card--related-full .c-card__img {
+    flex: 0 0 16.25rem;
+    aspect-ratio: 260/183;
+  }
+}
+
+.c-card--related-full .c-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-card--related-full .c-card__text {
+  font-size: 1.0625rem;
+  line-height: 1.6470588235;
+  font-weight: 700;
+  max-height: 3.5rem; /*2行表示*/
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .c-card--related-full .c-card__text {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+.c-card--related-full .c-card__text span {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .c-card--related-full .c-card__text span {
+    display: inline;
+  }
+}
+
+.c-card--related-full .c-card__date {
+  margin-top: 0.1875rem;
+  font-size: 1.0625rem;
+  line-height: 1.7647058824;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .c-card--related-full .c-card__date {
+    margin-top: 0.8125rem;
+  }
+}
+
+/***************
+card おすすめ記事
+***************/
+.c-card--recommend .c-card__text {
+  margin-top: 0.53375rem;
+  font-size: 1.0625rem;
+  line-height: 1.6470588235;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .c-card--recommend .c-card__text {
+    margin-top: 0;
+  }
+}
+
+.c-card--recommend .card-lists {
+  row-gap: 1.3125rem;
+  margin-top: 1.875rem;
+}
+
+.c-card--recommend {
+  flex-direction: row;
+  column-gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .c-card--recommend {
+    column-gap: 0.9375rem;
+  }
+}
+
+.c-card--recommend .c-card__img {
+  aspect-ratio: 160/110;
+  flex: 0 0 10rem;
+}
+@media (min-width: 768px) {
+  .c-card--recommend .c-card__img {
+    flex: 0 0 5.9375rem;
+    aspect-ratio: 95/75;
+    overflow: hidden;
+  }
+}
+
+.c-card--recommend .c-card__img::before {
+  content: "";
+}
+
+/***************
+card 前後ページへ
+***************/
+.c-card--page-nav {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .c-card--page-nav {
+    margin-top: 1rem;
+    column-gap: 0.9375rem;
+  }
+}
+
+.c-card--page-nav .c-card__img {
+  aspect-ratio: auto;
+}
+@media (min-width: 768px) {
+  .c-card--page-nav .c-card__img {
+    width: 100%;
+    aspect-ratio: 98/68;
+    overflow: hidden;
+  }
+}
+
+.c-card--page-nav .c-card__img img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .c-card--page-nav .c-card__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.c-card--page-nav .c-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .c-card--page-nav .c-card__title {
+    line-height: 1.416875;
+  }
 }
 
 .c-link {
@@ -1549,49 +2360,6 @@ card
   }
 }
 
-.page-nav .c-card {
-  margin-top: 1rem;
-}
-@media (min-width: 768px) {
-  .page-nav .c-card {
-    margin-top: 1rem;
-    column-gap: 0.9375rem;
-  }
-}
-
-.page-nav .c-card__img {
-  aspect-ratio: auto;
-}
-@media (min-width: 768px) {
-  .page-nav .c-card__img {
-    width: 100%;
-    aspect-ratio: 98/68;
-    overflow: hidden;
-  }
-}
-
-.page-nav .c-card__img img {
-  display: none;
-}
-@media (min-width: 768px) {
-  .page-nav .c-card__img img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.page-nav .c-card__title {
-  font-size: 1rem;
-  font-weight: 700;
-}
-@media (min-width: 768px) {
-  .page-nav .c-card__title {
-    line-height: 1.416875;
-  }
-}
-
 .top-vision {
   padding-top: 2.875rem;
   padding-bottom: 2.125rem;
@@ -1734,6 +2502,7 @@ card
   .top-vision-step__en {
     font-size: 1.5625rem;
     line-height: 2;
+    letter-spacing: -0.04em;
   }
 }
 
@@ -1799,89 +2568,14 @@ card
 }
 
 @media (min-width: 768px) {
-  .top-reason .c-card {
-    column-gap: 3.125rem;
+  .top-reason__wrapper .c-card:first-of-type .c-card__body {
+    margin-top: 0.4375rem;
   }
 }
 
 /*****************
 card
 *****************/
-.top-reason .c-card__img {
-  aspect-ratio: 335/200;
-}
-@media (min-width: 768px) {
-  .top-reason .c-card__img {
-    width: 39.772%;
-    aspect-ratio: 350/247;
-  }
-}
-
-.top-reason .c-card__img::before {
-  content: none;
-}
-
-.top-reason .c-card__body {
-  margin-top: 1.875rem;
-  text-align: left;
-}
-@media (min-width: 768px) {
-  .top-reason .c-card__body {
-    flex: 1;
-    margin-top: -0.1875rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .top-reason__wrapper .c-card:first-of-type .c-card__body {
-    margin-top: 0.4375rem;
-  }
-}
-
-.top-reason .c-card__title {
-  position: relative;
-  padding-bottom: 0.625rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .top-reason .c-card__title {
-    padding-bottom: 0.75rem;
-    font-size: 1.375rem;
-    line-height: 1.5;
-  }
-}
-
-.top-reason .c-card__title::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.125rem;
-  left: 0;
-  bottom: 0;
-  background-color: #CB0000;
-}
-@media (min-width: 768px) {
-  .top-reason .c-card__title::after {
-    width: calc(100% + 3.125rem);
-    left: -3.125rem;
-  }
-}
-
-.top-reason .c-card__text {
-  margin-top: 1.0625rem;
-  font-size: 1rem;
-  line-height: 1.875;
-  letter-spacing: -0.004em;
-}
-@media (min-width: 768px) {
-  .top-reason .c-card__text {
-    margin-top: 2.3125rem;
-    font-size: 1.125rem;
-    line-height: 1.8333333333;
-  }
-}
-
 .top-voice {
   padding-top: 2.875rem;
   padding-bottom: 3.125rem;
@@ -2310,117 +3004,6 @@ card
   }
 }
 
-/*****************
-card
-*****************/
-.top-blog .c-card {
-  transition: opacity 0.3s ease;
-}
-
-.top-blog .c-card:hover {
-  opacity: 0.7;
-}
-
-.top-blog .c-card__img {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 335/200;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__img {
-    aspect-ratio: 260/200;
-  }
-}
-
-.top-blog .c-card__img::before {
-  position: absolute;
-  content: "common";
-  width: 5.625rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-  color: #FFFFFF;
-  background-color: #CB0000;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__img::before {
-    width: 5rem;
-    height: 1.875rem;
-  }
-}
-
-.top-blog .card-lists li:nth-child(1) .c-card__img::before {
-  content: "SNS";
-}
-
-.top-blog .card-lists li:nth-child(2) .c-card__img::before {
-  content: "集客方法";
-}
-
-.top-blog .card-lists li:nth-child(3) .c-card__img::before {
-  content: "ギター";
-}
-
-.top-blog .c-card__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.top-blog .c-card__body {
-  margin-top: 1.875rem;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__body {
-    margin-top: 1.25rem;
-  }
-}
-
-.top-blog .c-card__title {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  text-align: left;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__title {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
-.top-blog .c-card__date {
-  margin-top: 0.375rem;
-  text-align: right;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__date {
-    margin-top: 0.6875rem;
-  }
-}
-
-.top-blog .c-card__text {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  text-align: left;
-}
-@media (min-width: 768px) {
-  .top-blog .c-card__text {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
 .top-blog__link {
   margin-top: 2.3125rem;
 }
@@ -2434,6 +3017,9 @@ card
   color: #000000;
 }
 
+/*****************
+card
+*****************/
 .sub-plan {
   padding-top: 2.875rem;
   padding-bottom: 11.625rem;
@@ -2790,116 +3376,6 @@ blog-list
   }
 }
 
-/**************
-card
-**************/
-.sub-blog-list .c-card {
-  transition: opacity 0.3s ease;
-}
-
-.sub-blog-list .c-card:hover {
-  opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-  .sub-blog-list .c-card--horizontal {
-    column-gap: 3.125rem;
-  }
-}
-
-.sub-blog-list .c-card__img {
-  aspect-ratio: 335/200;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__img {
-    flex: 0 0 16.25rem;
-    aspect-ratio: 260/184;
-    overflow: hidden;
-  }
-}
-
-.sub-blog-list .c-card__img::before {
-  width: 5.625rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__img::before {
-    width: 5rem;
-    height: 1.875rem;
-  }
-}
-
-.sub-blog-list .card-lists li:nth-child(1) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(4) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(7) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(10) .c-card__img::before {
-  content: "ギター";
-}
-
-.sub-blog-list .card-lists li:nth-child(2) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(5) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(8) .c-card__img::before {
-  content: "集客方法";
-}
-
-.sub-blog-list .card-lists li:nth-child(3) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(6) .c-card__img::before,
-.sub-blog-list .card-lists li:nth-child(9) .c-card__img::before {
-  content: "SNS";
-}
-
-.sub-blog-list .c-card__body {
-  margin-top: 1.875rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__body {
-    flex: 1;
-    margin-top: 0;
-  }
-}
-
-.sub-blog-list .c-card__title {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__title {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
-.sub-blog-list .c-card__date {
-  margin-top: 0.375rem;
-  text-align: right;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__date {
-    margin-top: 0.1875rem;
-    text-align: left;
-  }
-}
-
-.sub-blog-list .c-card__text {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.875;
-  letter-spacing: -0.01em;
-}
-@media (min-width: 768px) {
-  .sub-blog-list .c-card__text {
-    margin-top: 0.6875rem;
-    font-size: 1.125rem;
-    line-height: 1.6666666667;
-    letter-spacing: -0.02em;
-  }
-}
-
 .sub-blog-list .c-pager {
   margin-top: 3.6875rem;
 }
@@ -2909,6 +3385,9 @@ card
   }
 }
 
+/**************
+card
+**************/
 .sub-blog-details {
   padding-top: 3.125rem;
   padding-bottom: 12.3125rem;
@@ -2932,45 +3411,6 @@ card
 }
 
 /*メイン*/
-.sub-blog-details .article__core .c-card__img::before {
-  content: "ギター";
-  width: 5rem;
-  height: 1.875rem;
-}
-
-.sub-blog-details .article__core .c-card__title {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__title {
-    font-size: 1.5625rem;
-    line-height: 1.6;
-  }
-}
-
-.sub-blog-details .article__core h1.c-card__title {
-  margin-top: 1.875rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core h1.c-card__title {
-    margin-top: 2.875rem;
-    letter-spacing: -0.02em;
-  }
-}
-
-.sub-blog-details .article__core .c-card__date {
-  margin-top: 0.375rem;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__date {
-    margin-top: 0.3125rem;
-  }
-}
-
 .sub-blog-details .article__core .sns-btn {
   margin-top: 1.375rem;
 }
@@ -2979,60 +3419,6 @@ card
   width: auto;
   height: 2.5rem;
   display: block;
-}
-
-.sub-blog-details .article__core .c-card__text {
-  font-size: 1rem;
-  line-height: 1.875;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__text {
-    font-size: 1.125rem;
-    line-height: 1.6666666667;
-  }
-}
-
-.sub-blog-details .article__core .c-card__text--first {
-  margin-top: 1.6875rem;
-  letter-spacing: -0.01em;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__text--first {
-    margin-top: 3rem;
-  }
-}
-
-.sub-blog-details .article__core h2.c-card__title {
-  margin-top: 2.4375rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core h2.c-card__title {
-    margin-top: 2.0625rem;
-    font-size: 1.25rem;
-    line-height: 2;
-  }
-}
-
-.sub-blog-details .article__core .c-card__text--second {
-  margin-top: 1.0625rem;
-  letter-spacing: -0.01em;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__text--second {
-    margin-top: 0.9375rem;
-  }
-}
-
-.sub-blog-details .article__core .c-card__img--second {
-  margin-top: 2.4375rem;
-  aspect-ratio: 335/200;
-  overflow: hidden;
-  width: 20.9375rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__img--second {
-    margin-top: 1.0625rem;
-  }
 }
 
 .sub-blog-details .article-core__list {
@@ -3065,69 +3451,6 @@ card
   bottom: 0;
   left: 0;
   background-color: #000000;
-}
-
-.sub-blog-details .article__core h3.c-card__title {
-  position: relative;
-  padding-left: 0.59375rem;
-  margin-top: 3.125rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core h3.c-card__title {
-    margin-top: 2.71875rem;
-    font-size: 1.25rem;
-    line-height: 2;
-  }
-}
-
-.sub-blog-details .article__core h3.c-card__title:before {
-  position: absolute;
-  content: "";
-  width: 0.1875rem;
-  height: 3.125rem;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #000000;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core h3.c-card__title:before {
-    top: 44%;
-    height: 1.25rem;
-  }
-}
-
-.sub-blog-details .article__core .c-card__text--third {
-  position: relative;
-  padding: 0.875rem 1.25rem 0.875rem 4.375rem;
-  margin-top: 1.21875rem;
-  background-color: #E8E8E8;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__text--third {
-    padding: 0.875rem 1.875rem 0.875rem 4.1875rem;
-    margin-top: 1.0625rem;
-    letter-spacing: -0.01em;
-  }
-}
-
-.sub-blog-details .article__core .c-card__text--third::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 1.6875rem;
-  height: 1.455rem;
-  top: 1.375rem;
-  left: 1.5625rem;
-  background-image: url("../images/quotation-sp.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__core .c-card__text--third::before {
-    top: 1.25rem;
-    left: 1.875rem;
-  }
 }
 
 .sub-blog-details .sub-blog-details__link {
@@ -3163,95 +3486,6 @@ card
 @media (min-width: 768px) {
   .sub-blog-details .article__related {
     margin-top: 6.25rem;
-  }
-}
-
-.sub-blog-details .article__related .c-card {
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card {
-    align-items: flex-start;
-  }
-}
-
-.sub-blog-details .article__related .card-lists {
-  margin-top: 1.1875rem;
-  row-gap: 1.3125rem;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .card-lists {
-    margin-top: 1.875rem;
-    row-gap: 1.875rem;
-  }
-}
-
-.sub-blog-details .article__related .c-card__img {
-  aspect-ratio: 160/110;
-  flex: 0 0 10rem;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card__img {
-    flex: 0 0 12.5rem;
-    aspect-ratio: 200/140;
-  }
-}
-
-.sub-blog-details .article__related .c-card__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sub-blog-details .article__related .c-card__img::before {
-  content: "ギター";
-  width: 5rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card__img::before {
-    width: 5rem;
-    height: 1.875rem;
-  }
-}
-
-.sub-blog-details .article__related .c-card__text {
-  font-size: 1.0625rem;
-  line-height: 1.6470588235;
-  font-weight: 700;
-  max-height: 3.5rem; /*2行表示*/
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card__text {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
-.sub-blog-details .article__related .c-card__text span {
-  display: inline-block;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card__text span {
-    display: inline;
-  }
-}
-
-.sub-blog-details .article__related .c-card__date {
-  margin-top: 0.1875rem;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  .sub-blog-details .article__related .c-card__date {
-    margin-top: 0.8125rem;
   }
 }
 
@@ -3323,49 +3557,6 @@ card
   .sidebar-recommend__list li {
     margin-top: 0.9375rem;
   }
-}
-
-.sidebar-recommend__list .c-card__text {
-  margin-top: 0.53375rem;
-  font-size: 1.0625rem;
-  line-height: 1.6470588235;
-  font-weight: 700;
-}
-@media (min-width: 768px) {
-  .sidebar-recommend__list .c-card__text {
-    margin-top: 0;
-  }
-}
-
-.sidebar-recommend__list .card-lists {
-  row-gap: 1.3125rem;
-  margin-top: 1.875rem;
-}
-
-.sidebar-recommend__list .c-card {
-  flex-direction: row;
-  column-gap: 1.25rem;
-}
-@media (min-width: 768px) {
-  .sidebar-recommend__list .c-card {
-    column-gap: 0.9375rem;
-  }
-}
-
-.sidebar-recommend__list .c-card__img {
-  aspect-ratio: 160/110;
-  flex: 0 0 10rem;
-}
-@media (min-width: 768px) {
-  .sidebar-recommend__list .c-card__img {
-    flex: 0 0 5.9375rem;
-    aspect-ratio: 95/75;
-    overflow: hidden;
-  }
-}
-
-.sidebar-recommend__list .c-card__img::before {
-  content: "";
 }
 
 /*カテゴリー*/
@@ -3454,116 +3645,6 @@ search
   }
 }
 
-/**************
-card
-**************/
-.sub-search .c-card {
-  transition: opacity 0.3s ease;
-}
-
-.sub-search .c-card:hover {
-  opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-  .sub-search .c-card--horizontal {
-    column-gap: 3.125rem;
-  }
-}
-
-.sub-search .c-card__img {
-  aspect-ratio: 335/200;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__img {
-    flex: 0 0 16.25rem;
-    aspect-ratio: 260/184;
-    overflow: hidden;
-  }
-}
-
-.sub-search .c-card__img::before {
-  width: 5.625rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__img::before {
-    width: 5rem;
-    height: 1.875rem;
-  }
-}
-
-.sub-search .card-lists li:nth-child(1) .c-card__img::before,
-.sub-search .card-lists li:nth-child(4) .c-card__img::before,
-.sub-search .card-lists li:nth-child(7) .c-card__img::before,
-.sub-search .card-lists li:nth-child(10) .c-card__img::before {
-  content: "ギター";
-}
-
-.sub-search .card-lists li:nth-child(2) .c-card__img::before,
-.sub-search .card-lists li:nth-child(5) .c-card__img::before,
-.sub-search .card-lists li:nth-child(8) .c-card__img::before {
-  content: "集客方法";
-}
-
-.sub-search .card-lists li:nth-child(3) .c-card__img::before,
-.sub-search .card-lists li:nth-child(6) .c-card__img::before,
-.sub-search .card-lists li:nth-child(9) .c-card__img::before {
-  content: "SNS";
-}
-
-.sub-search .c-card__body {
-  margin-top: 1.875rem;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__body {
-    flex: 1;
-    margin-top: 0;
-  }
-}
-
-.sub-search .c-card__title {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__title {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
-.sub-search .c-card__date {
-  margin-top: 0.375rem;
-  text-align: right;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__date {
-    margin-top: 0.1875rem;
-    text-align: left;
-  }
-}
-
-.sub-search .c-card__text {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.875;
-  letter-spacing: -0.01em;
-}
-@media (min-width: 768px) {
-  .sub-search .c-card__text {
-    margin-top: 0.6875rem;
-    font-size: 1.125rem;
-    line-height: 1.6666666667;
-    letter-spacing: -0.02em;
-  }
-}
-
 .sub-search .c-pager {
   margin-top: 3.6875rem;
 }
@@ -3573,6 +3654,9 @@ card
   }
 }
 
+/**************
+card
+**************/
 .sub-result-list {
   padding-top: 2.875rem;
   padding-bottom: 12.6875rem;
@@ -3607,106 +3691,9 @@ result-list
   }
 }
 
-/**************
-card
-**************/
 @media (min-width: 768px) {
   .sub-result-list .card-lists li {
     width: calc((100% - 106px) / 2);
-  }
-}
-
-.sub-result-list .c-card {
-  transition: opacity 0.3s ease;
-}
-
-.sub-result-list .c-card:hover {
-  opacity: 0.7;
-}
-
-@media (min-width: 768px) {
-  .sub-result-list .c-card--horizontal {
-    column-gap: 3.125rem;
-  }
-}
-
-.sub-result-list .c-card__img {
-  aspect-ratio: 335/200;
-}
-@media (min-width: 768px) {
-  .sub-result-list .c-card__img {
-    aspect-ratio: 387/273;
-    overflow: hidden;
-  }
-}
-
-.sub-result-list .c-card__img::before {
-  width: 5rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-result-list .c-card__img::before {
-    width: 6.25rem;
-    height: 1.875rem;
-  }
-}
-
-.sub-result-list .card-lists li:nth-child(1) .c-card__img::before,
-.sub-result-list .card-lists li:nth-child(6) .c-card__img::before {
-  content: "ポップス";
-}
-
-.sub-result-list .card-lists li:nth-child(2) .c-card__img::before,
-.sub-result-list .card-lists li:nth-child(7) .c-card__img::before {
-  content: "ロック";
-}
-
-.sub-result-list .card-lists li:nth-child(3) .c-card__img::before,
-.sub-result-list .card-lists li:nth-child(8) .c-card__img::before {
-  content: "ジャズ";
-}
-
-.sub-result-list .card-lists li:nth-child(4) .c-card__img::before,
-.sub-result-list .card-lists li:nth-child(9) .c-card__img::before {
-  content: "ラテン";
-}
-
-.sub-result-list .card-lists li:nth-child(5) .c-card__img::before,
-.sub-result-list .card-lists li:nth-child(10) .c-card__img::before {
-  content: "クラシック";
-}
-
-.sub-result-list .c-card__body {
-  margin-top: 1.875rem;
-}
-@media (min-width: 768px) {
-  .sub-result-list .c-card__body {
-    margin-top: 1.25rem;
-  }
-}
-
-.sub-result-list .c-card__title {
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .sub-result-list .c-card__title {
-    line-height: 1.25;
-  }
-}
-
-.sub-result-list .c-card__date {
-  margin-top: 0.375rem;
-  text-align: right;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-}
-@media (min-width: 768px) {
-  .sub-result-list .c-card__date {
-    margin-top: 0.625rem;
   }
 }
 
@@ -3719,6 +3706,9 @@ card
   }
 }
 
+/**************
+card
+**************/
 .sub-result-details {
   padding-top: 3.125rem;
   padding-bottom: 12.1875rem;
@@ -3730,70 +3720,6 @@ card
     padding-top: 4.375rem;
     padding-bottom: 9.8125rem;
   }
-}
-
-@media (min-width: 768px) {
-  .sub-result-details .article__core .c-card__img--result-top {
-    aspect-ratio: 22/10;
-  }
-}
-
-.sub-result-details .article__core .c-card__img::before {
-  content: "ポップス";
-  width: 6.25rem;
-  height: 1.875rem;
-}
-
-.sub-result-details .article__core h1.c-card__title {
-  margin-top: 1.875rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__core h1.c-card__title {
-    margin-top: 3.125rem;
-    font-size: 1.5625rem;
-    line-height: 1.6;
-    letter-spacing: -0.02em;
-  }
-}
-
-.sub-result-details .article__core .c-card__date {
-  margin-top: 0.75rem;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__core .c-card__date {
-    margin-top: 0.9375rem;
-  }
-}
-
-.sub-result-details .article__core .c-table {
-  margin-top: 0.8125rem;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__core .c-table {
-    width: 25rem;
-    margin-top: 0;
-  }
-}
-
-.sub-result-details .article__core .c-card__text {
-  margin-top: 1.75rem;
-  font-size: 1.125rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__core .c-card__text {
-    flex: 1;
-    margin-top: 0;
-  }
-}
-
-.sub-result-details .article__core .c-card__text span {
-  display: inline-block;
 }
 
 @media (min-width: 768px) {
@@ -3831,103 +3757,14 @@ card
   }
 }
 
-.sub-result-details .article__related .c-card {
-  align-items: flex-start;
-}
-
-.sub-result-details .article__related .c-card__text {
-  margin-top: 0;
-}
-
-.sub-result-details .article__related .card-lists {
+.article__related .card-lists {
   margin-top: 1.1875rem;
   row-gap: 1.375rem;
 }
 @media (min-width: 768px) {
-  .sub-result-details .article__related .card-lists {
+  .article__related .card-lists {
     margin-top: 1.875rem;
     row-gap: 1.875rem;
-  }
-}
-
-.sub-result-details .article__related .c-card__img {
-  aspect-ratio: 160/113;
-  flex: 0 0 10rem;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__related .c-card__img {
-    flex: 0 0 16.25rem;
-    aspect-ratio: 260/183;
-  }
-}
-
-.sub-result-details .article__related .c-card__img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sub-result-details .article__related .c-card__img::before {
-  content: "ギター";
-  width: 5rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__related .c-card__img::before {
-    width: 6.25rem;
-    height: 1.875rem;
-  }
-}
-
-.sub-result-details .article__related li:nth-child(1) .c-card__img::before {
-  content: "ロック";
-}
-
-.sub-result-details .article__related li:nth-child(2) .c-card__img::before {
-  content: "ジャズ";
-}
-
-.sub-result-details .article__related li:nth-child(3) .c-card__img::before {
-  content: "ラテン";
-}
-
-.sub-result-details .article__related .c-card__text {
-  font-size: 1.0625rem;
-  line-height: 1.6470588235;
-  font-weight: 700;
-  max-height: 3.5rem; /*2行表示*/
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__related .c-card__text {
-    font-size: 1.25rem;
-    line-height: 1.25;
-  }
-}
-
-.sub-result-details .article__related .c-card__text span {
-  display: inline-block;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__related .c-card__text span {
-    display: inline;
-  }
-}
-
-.sub-result-details .article__related .c-card__date {
-  margin-top: 0.1875rem;
-  font-size: 1.0625rem;
-  line-height: 1.7647058824;
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  .sub-result-details .article__related .c-card__date {
-    margin-top: 0.8125rem;
   }
 }
 

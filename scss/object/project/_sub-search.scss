@@ -40,100 +40,66 @@ search
     row-gap: rem(70);
   }
 }
-/**************
-card
-**************/
-.sub-search .c-card{
-  transition: opacity 0.3s ease;
-  // transition: color 0.3s opacity 0.3s;
-}
-.sub-search .c-card:hover{
-  opacity: 0.7;
-  // color: #CB0000;
-}
-
-.sub-search .c-card--horizontal {
-  @include pc {
-    column-gap: rem(50);
-  }
-}
-.sub-search .c-card__img{
-  aspect-ratio: 335 / 200; //
-  @include pc{
-    flex: 0 0 rem(260); // 幅
-    aspect-ratio: 260 / 184;
-    overflow: hidden;
-  }
-}
-.sub-search .c-card__img::before{
-  width: rem(90);
-  height:  rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
-  @include pc{
-  width: rem(80);
-  height:  rem(30);
-  }
-}
-.sub-search .card-lists li:nth-child(1) .c-card__img::before,
-.sub-search .card-lists li:nth-child(4) .c-card__img::before,
-.sub-search .card-lists li:nth-child(7) .c-card__img::before,
-.sub-search .card-lists li:nth-child(10) .c-card__img::before{
-  content: 'ギター';
-}
-.sub-search .card-lists li:nth-child(2) .c-card__img::before,
-.sub-search .card-lists li:nth-child(5) .c-card__img::before,
-.sub-search .card-lists li:nth-child(8) .c-card__img::before{
-  content: '集客方法';
-}
-.sub-search .card-lists li:nth-child(3) .c-card__img::before,
-.sub-search .card-lists li:nth-child(6) .c-card__img::before,
-.sub-search .card-lists li:nth-child(9) .c-card__img::before{
-  content: 'SNS';
-}
-.sub-search .c-card__body{
-  margin-top: rem(30);
-  @include pc{
-    flex: 1;
-    margin-top: 0;
-  }
-}
-.sub-search .c-card__title{
-  font-size: rem(20);
-  line-height: calc(30 / 20);
-  @include pc{
-    font-size: rem(20);
-    line-height: calc(25 / 20);
-  }
-}
-.sub-search .c-card__date{
-  margin-top: rem(6);
-  text-align: right;
-  font-size: rem(17);
-  line-height: calc(30 / 17);
-  @include pc{
-    margin-top: rem(3);
-    text-align: left;
-  }
-}
-.sub-search .c-card__text{
-  margin-top: rem(8);
-  font-size: rem(16);
-  line-height: calc(30 / 16);
-  letter-spacing: -0.01em;
-  @include pc{
-    margin-top: rem(11);
-    font-size: rem(18);
-    line-height: calc(30 / 18);
-    letter-spacing: -0.02em;
-  }
-}
 .sub-search .c-pager{
   margin-top: rem(59);
   @include pc{
     margin-top: rem(70);
   }
 }
+
+/**************
+card
+**************/
+
+// .c-card--search {
+//   @include pc {
+//     column-gap: rem(50);
+//   }
+// }
+// .sub-search .c-card__img{
+//   aspect-ratio: 335 / 200; //
+//   @include pc{
+//     flex: 0 0 rem(260); // 幅
+//     aspect-ratio: 260 / 184;
+//     overflow: hidden;
+//   }
+// }
+// .sub-search .c-card__body{
+//   margin-top: rem(30);
+//   @include pc{
+//     flex: 1;
+//     margin-top: 0;
+//   }
+// }
+// .sub-search .c-card__title{
+//   font-size: rem(20);
+//   line-height: calc(30 / 20);
+//   @include pc{
+//     font-size: rem(20);
+//     line-height: calc(25 / 20);
+//   }
+// }
+// .sub-search .c-card__date{
+//   margin-top: rem(6);
+//   text-align: right;
+//   font-size: rem(17);
+//   line-height: calc(30 / 17);
+//   @include pc{
+//     margin-top: rem(3);
+//     text-align: left;
+//   }
+// }
+// .sub-search .c-card__text{
+//   margin-top: rem(8);
+//   font-size: rem(16);
+//   line-height: calc(30 / 16);
+//   letter-spacing: -0.01em;
+//   @include pc{
+//     margin-top: rem(11);
+//     font-size: rem(18);
+//     line-height: calc(30 / 18);
+//     letter-spacing: -0.02em;
+//   }
+// }
 
 
