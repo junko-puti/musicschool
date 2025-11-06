@@ -12,7 +12,7 @@
     padding-bottom: rem(157);
   }
 }
-.c-card-body__wrap{
+.p-card-body__wrap{
   @include pc{
     margin-top: rem(55);
     display: flex;
@@ -21,18 +21,18 @@
   }
 }
 
-// .sub-result-details .article__core .c-card__img--result-top{
+// .sub-result-details .article__core .p-card__img--result-top{
 //   @include pc{
 //     aspect-ratio: 22 / 10; //880/400
 //   }
 // }
-// .sub-result-details .article__core .c-card__img::before{
+// .sub-result-details .article__core .p-card__img::before{
 //   content: 'ポップス';
 //   width: rem(100);
 //   height:  rem(30);
 // }
 
-// .sub-result-details .article__core h1.c-card__title{
+// .sub-result-details .article__core h1.p-card__title{
 //   margin-top: rem(30);
 //   font-size: rem(20);
 //   line-height: calc(30 / 20);
@@ -43,7 +43,7 @@
 //     letter-spacing: -0.02em;//微調整
 //   }
 // }
-// .sub-result-details .article__core .c-card__date{
+// .sub-result-details .article__core .p-card__date{
 //   margin-top: rem(12);
 //   font-size: rem(17);
 //   line-height: calc(30 / 17);
@@ -59,7 +59,7 @@
 //     margin-top: 0;
 //   }
 // }
-// .sub-result-details .article__core .c-card__text{
+// .sub-result-details .article__core .p-card__text{
 //   margin-top: rem(28);
 //   font-size: rem(18);
 //   line-height: calc(30 / 18);
@@ -68,9 +68,9 @@
 //     margin-top: 0;
 //   }
 // }
-// .sub-result-details .article__core .c-card__text span{
+// .sub-result-details .article__core .p-card__text span{
 // display:  inline-block}
-// .c-card-body__wrap{
+// .p-card-body__wrap{
 //   @include pc{
 //     margin-top: rem(55);
 //     display: flex;
@@ -86,7 +86,7 @@
     margin-top: rem(60);
   }
 }
-.sub-result-details .page-nav .c-card__title{
+.sub-result-details .page-nav .p-card__title{
   @include pc{
     width: rem(226);
   }
@@ -110,14 +110,14 @@
   }
 }
 
-// .sub-result-details .article__related .c-card{
+// .sub-result-details .article__related .p-card{
 //   align-items: flex-start;
 //   // align-items: center;
 //   // @include pc{
 //   //   align-items: flex-start;
 //   // }
 // }
-// .sub-result-details .article__related .c-card__text{
+// .sub-result-details .article__related .p-card__text{
 //   margin-top: 0;
 // }
 
@@ -130,7 +130,7 @@
 //     row-gap: rem(30);
 //   }
 // }
-// .sub-result-details .article__related .c-card__img{
+// .sub-result-details .article__related .p-card__img{
 //   aspect-ratio: 160 / 113;
 //   flex: 0 0 rem(160); // 幅
 //   // width: rem(160);
@@ -141,7 +141,7 @@
 //     // width: rem(200);
 //   }
 // }
-// .sub-result-details .article__related .c-card__img img {
+// .sub-result-details .article__related .p-card__img img {
 //   display: block;
 //   width: 100%;
 //   // height: auto;
@@ -150,7 +150,7 @@
 //   object-fit: cover;
 // }
 
-// .sub-result-details .article__related .c-card__img::before{
+// .sub-result-details .article__related .p-card__img::before{
 //   content: 'ギター';
 //   width: rem(80);
 //   height:  rem(30);
@@ -162,19 +162,19 @@
 //   height:  rem(30);
 //   }
 // }
-// .sub-result-details .article__related li:nth-child(1) .c-card__img::before{
+// .sub-result-details .article__related li:nth-child(1) .p-card__img::before{
 //     content: 'ロック';
 // }
-// .sub-result-details .article__related li:nth-child(2) .c-card__img::before{
+// .sub-result-details .article__related li:nth-child(2) .p-card__img::before{
 //     content: 'ジャズ';
 // }
-// .sub-result-details .article__related li:nth-child(3) .c-card__img::before{
+// .sub-result-details .article__related li:nth-child(3) .p-card__img::before{
 //     content: 'ラテン';
 // }
 
 // ///////////////
 
-// .sub-result-details .article__related .c-card__text{
+// .sub-result-details .article__related .p-card__text{
 //   font-size: rem(17);
 //   line-height: calc(28 / 17);
 //   font-weight: 700;
@@ -185,13 +185,13 @@
 //     line-height: calc(25 / 20);
 //   }
 // }
-// .sub-result-details .article__related .c-card__text span{
+// .sub-result-details .article__related .p-card__text span{
 //   display: inline-block;
 //   @include pc{
 //     display: inline;
 //   }
 // }
-// .sub-result-details .article__related .c-card__date{
+// .sub-result-details .article__related .p-card__date{
 //   margin-top: rem(3);//微調整
 //   font-size: rem(17);
 //   line-height: calc(30 / 17);

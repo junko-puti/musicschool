@@ -9,7 +9,6 @@
 @use "layout/l-wrapper";
 
 @use "object/component/c-humburger";
-@use "object/component/c-card";
 @use "object/component/c-link";
 @use "object/component/c-btn";
 @use "object/component/c-pagetop";
@@ -19,6 +18,8 @@
 @use "object/component/c-heading-deco";
 @use "object/component/c-search-form";
 @use "object/component/c-table";
+
+@use "object/project/p-card";
 
 @use "object/project/header";
 @use "object/project/fv";

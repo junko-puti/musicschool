@@ -7,8 +7,8 @@
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    padding-top: rem(70);//微調整
-    // padding-top: rem(66);
+    // padding-top: rem(70);//微調整
+    padding-top: rem(66);
     padding-bottom: rem(210);
   }
 }
@@ -28,12 +28,14 @@ search
 .sub-search h2 span{
   font-weight: 700;
 }
-.sub-search h2 .sub-search__counter{
+.sub-search .sub-search__counter{
+  font-size: rem(18);
+  line-height: calc(30 / 18);
   font-weight: 500;
 }
 .sub-search__wrapper{
-  margin-top: rem(45);//微調整
-  // margin-top: rem(42);
+  // margin-top: rem(45);//微調整
+  margin-top: rem(42);
   row-gap: rem(39);
   @include pc{
     margin-top: rem(42);
@@ -51,12 +53,12 @@ search
 card
 **************/
 
-// .c-card--search {
+// .p-card--search {
 //   @include pc {
 //     column-gap: rem(50);
 //   }
 // }
-// .sub-search .c-card__img{
+// .sub-search .p-card__img{
 //   aspect-ratio: 335 / 200; //
 //   @include pc{
 //     flex: 0 0 rem(260); // 幅
@@ -64,14 +66,14 @@ card
 //     overflow: hidden;
 //   }
 // }
-// .sub-search .c-card__body{
+// .sub-search .p-card__body{
 //   margin-top: rem(30);
 //   @include pc{
 //     flex: 1;
 //     margin-top: 0;
 //   }
 // }
-// .sub-search .c-card__title{
+// .sub-search .p-card__title{
 //   font-size: rem(20);
 //   line-height: calc(30 / 20);
 //   @include pc{
@@ -79,7 +81,7 @@ card
 //     line-height: calc(25 / 20);
 //   }
 // }
-// .sub-search .c-card__date{
+// .sub-search .p-card__date{
 //   margin-top: rem(6);
 //   text-align: right;
 //   font-size: rem(17);
@@ -89,7 +91,7 @@ card
 //     text-align: left;
 //   }
 // }
-// .sub-search .c-card__text{
+// .sub-search .p-card__text{
 //   margin-top: rem(8);
 //   font-size: rem(16);
 //   line-height: calc(30 / 16);

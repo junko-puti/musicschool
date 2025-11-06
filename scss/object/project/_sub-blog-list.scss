@@ -38,21 +38,21 @@ blog-list
 /**************
 card
 **************/
-// .sub-blog-list .c-card{
+// .sub-blog-list .p-card{
 //   transition: opacity 0.3s ease;
 //   // transition: color 0.3s opacity 0.3s;
 // }
-// .sub-blog-list .c-card:hover{
+// .sub-blog-list .p-card:hover{
 //   opacity: 0.7;
 //   // color: #CB0000;
 // }
 
-// .sub-blog-list .c-card--horizontal {
+// .sub-blog-list .p-card--horizontal {
 //   @include pc {
 //     column-gap: rem(50);
 //   }
 // }
-// .sub-blog-list .c-card__img{
+// .sub-blog-list .p-card__img{
 //   aspect-ratio: 335 / 200;
 //   @include pc{
 //     flex: 0 0 rem(260); // 幅
@@ -60,7 +60,7 @@ card
 //     overflow: hidden;
 //   }
 // }
-// .sub-blog-list .c-card__img::before{
+// .sub-blog-list .p-card__img::before{
 //   width: rem(90);
 //   height:  rem(30);
 //   padding-top: rem(2);
@@ -71,30 +71,30 @@ card
 //   height:  rem(30);
 //   }
 // }
-// .sub-blog-list .card-lists li:nth-child(1) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(4) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(7) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(10) .c-card__img::before{
+// .sub-blog-list .card-lists li:nth-child(1) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(4) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(7) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(10) .p-card__img::before{
 //   content: 'ギター';
 // }
-// .sub-blog-list .card-lists li:nth-child(2) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(5) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(8) .c-card__img::before{
+// .sub-blog-list .card-lists li:nth-child(2) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(5) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(8) .p-card__img::before{
 //   content: '集客方法';
 // }
-// .sub-blog-list .card-lists li:nth-child(3) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(6) .c-card__img::before,
-// .sub-blog-list .card-lists li:nth-child(9) .c-card__img::before{
+// .sub-blog-list .card-lists li:nth-child(3) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(6) .p-card__img::before,
+// .sub-blog-list .card-lists li:nth-child(9) .p-card__img::before{
 //   content: 'SNS';
 // }
-// .sub-blog-list .c-card__body{
+// .sub-blog-list .p-card__body{
 //   margin-top: rem(30);
 //   @include pc{
 //     flex: 1;
 //     margin-top: 0;
 //   }
 // }
-// .sub-blog-list .c-card__title{
+// .sub-blog-list .p-card__title{
 //   font-size: rem(20);
 //   line-height: calc(30 / 20);
 //   @include pc{
@@ -102,7 +102,7 @@ card
 //     line-height: calc(25 / 20);
 //   }
 // }
-// .sub-blog-list .c-card__date{
+// .sub-blog-list .p-card__date{
 //   margin-top: rem(6);
 //   text-align: right;
 //   font-size: rem(17);
@@ -112,7 +112,7 @@ card
 //     text-align: left;
 //   }
 // }
-// .sub-blog-list .c-card__text{
+// .sub-blog-list .p-card__text{
 //   margin-top: rem(8);
 //   font-size: rem(16);
 //   line-height: calc(30 / 16);

@@ -183,21 +183,21 @@ contact-form
   content: '';
   position: absolute;
   left: 0;
-  top:42%;
-  // top: 50%;
+  // top:42%;
+  top: 50%;
   transform: translateY(-50%);
   width: rem(20);
   height: rem(20);
   border: rem(0.5) solid #000000;
   box-sizing: border-box;
-  @include pc{
-    top: 39%;
-  }
+  // @include pc{
+  //   top: 39%;
+  // }
 }
 .form__checkbox-custom input:checked + span::after {
   content: '';
   position: absolute;
-  top: 30%;
+  top: 45%;
   left: rem(10); // ::before の left + width / 2
   transform: translate(-50%, -50%) rotate(45deg);
   width: rem(8);

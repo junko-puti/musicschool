@@ -74,12 +74,18 @@
 /*****************
 card
 *****************/
-.top-voice__list a{
+.top-voice__list{
   transition: opacity 0.3s;
 }
-.top-voice__list a:hover{
-  opacity: 0.8;
+.top-voice__list:hover{
+  opacity: 0.9;
 }
+// .top-voice__list a{
+//   transition: opacity 0.3s;
+// }
+// .top-voice__list a:hover{
+//   opacity: 0.9;
+// }
 
 .top-voice-list__img{
   width: 100%;

@@ -22,15 +22,21 @@
 /*メイン*/
 
 //メイン記事
-.sub-blog-details .article__core .sns-btn{
+.sub-blog-details .sns-btn{
   margin-top: rem(22);//  微調整
   // margin-top: rem(25);
 }
-.sub-blog-details .sns-btn__img img{
-  width: auto;
-  height: rem(40);
-  display: block;
-}
+// .sub-blog-details .sns-btn a{
+//   transition: opacity 0.3s ease;
+// }
+// .sub-blog-details .sns-btn a:hover{
+//   opacity: 0.7; 
+// }
+// .sub-blog-details .sns-btn__img img{
+//   width: auto;
+//   height: rem(40);
+//   display: block;
+// }
 .sub-blog-details .article-core__list{
   position: relative;
   padding-bottom: rem(38.5);
@@ -109,7 +115,7 @@
   transition: opacity 0.3s ease;
 }
 .sidebar-newsletter__container a:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .sidebar-newsletter__container p{
   position: absolute;
@@ -139,7 +145,7 @@
   transition: opacity 0.3s ease;
 }
 .sidebar-recommend__list a:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .sidebar-recommend__list li{
   margin-top: rem(20.5);
@@ -178,5 +184,5 @@
   transition: opacity 0.3s ease;
 }
 .sidebar-category__list li a:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
