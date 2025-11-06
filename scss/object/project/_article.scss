@@ -5,7 +5,7 @@
 
 
 //メイン記事
-.article__core .c-card__img::before{
+.article__core .p-card__img::before{
   // content: '';
   // width: rem(80);
   // height:  rem(30);
@@ -45,16 +45,16 @@
   transition: opacity 0.3s ease;
 }
 .article__related .card-lists a:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
-.article__related .c-card{
+.article__related .p-card{
   flex-direction: row;//spで横並び
   column-gap: rem(20);
   @include pc{
     column-gap: rem(30);
   }
 }
-// .article__related .c-card__img{
+// .article__related .p-card__img{
 //   aspect-ratio: 160 / 110;
 //   flex: 0 0 rem(160); // 幅
 //   // width: rem(160);
@@ -65,7 +65,7 @@
 //     // width: rem(200);
 //   }
 // }
-// .article__related .c-card__img img {
+// .article__related .p-card__img img {
 //   display: block;
 //   width: 100%;
 //   // height: auto;
@@ -74,7 +74,7 @@
 //   object-fit: cover;
 // }
 
-// .article__related .c-card__img::before{
+// .article__related .p-card__img::before{
 //   content: 'ギター';
 //   width: rem(80);
 //   height:  rem(30);

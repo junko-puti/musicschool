@@ -2,14 +2,21 @@
 @use '../../foundation/mixin' as *;
 
 
-.c-card {
+//【命名ポリシー：『card』における例外的な 『p-』 プレフィックス使用について】
+//当プロジェクトでは、クラス名に 『p-』を原則使用しない方針ですが
+//ブログ記事・レビュー・声・紹介など、カード型UIが大量に登場し、Modifierも多岐にわたり
+//また、『card』という命名 は汎用性が高く、他ライブラリ（例：Bootstrap）やCMSテンプレートと命名衝突する可能性がある為
+//『card』 だけは例外的に 『p-card』 と命名し、プロジェクト固有のカードコンポーネントであることを明示します。
+
+
+.p-card {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 /*横並び対応 (Modifier）*/
-.c-card--horizontal {
+.p-card--horizontal {
   flex-direction: column;
   @include pc {
     flex-direction: row;
@@ -18,18 +25,18 @@
 /********
 card 共通
 ********/
-.c-card__img{
+.p-card__img{
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-.c-card__img img {
+.p-card__img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.c-card__img::before{
+.p-card__img::before{
   position: absolute;
   content: ''; //(仮)プロジェクト側で調整
   left: 0;
@@ -41,19 +48,19 @@ card 共通
   color: #FFFFFF;
   background-color: #CB0000;
 }
-.c-card__img--nolabel::before{//!important使用
+.p-card__img--nolabel::before{//!important使用
   display: none !important;
 }
 
-// .c-card__body{
+// .p-card__body{
 // }
-.c-card__title{
+.p-card__title{
   text-align: left;
 }
-.c-card__date{
+.p-card__date{
   font-weight: 500;
 }
-.c-card__text{
+.p-card__text{
   text-align: left;
   font-weight: 500;
 }
@@ -61,11 +68,11 @@ card 共通
 /*--------------
 hover 
 ---------------*/
-.c-card{
+.p-card{
   transition: opacity 0.3s ease;
   // transition: color 0.3s opacity 0.3s;
 }
-.c-card:hover{
+.p-card:hover{
   opacity: 0.7;
   // color: #CB0000;
 }
@@ -74,7 +81,7 @@ hover
 label 
 ---------------*/
 /*共通*/
-// .c-card--label .c-card__img::before{
+// .p-card--label .p-card__img::before{
 //   height:  rem(30);
 //   padding-top: rem(2);
 //   font-size: rem(15);
@@ -83,7 +90,7 @@ label
 //   height:  rem(30);
 //   }
 // }
-.c-card--label-responsive-s .c-card__img::before{
+.p-card--label-responsive-s .p-card__img::before{
   width: rem(90);
   height:  rem(30);
   padding-top: rem(2);
@@ -94,7 +101,18 @@ label
   height:  rem(30);
   }
 }
-.c-card--label-responsive-l .c-card__img::before{
+.p-card--label-responsive-m .p-card__img::before{
+  width: rem(80);
+  height:  rem(30);
+  padding-top: rem(2);
+  font-size: rem(15);
+  line-height: calc(25 / 15);
+  @include pc{
+  width: rem(100);
+  height:  rem(30);
+  }
+}
+.p-card--label-responsive-l .p-card__img::before{
   width: rem(90);
   height:  rem(30);
   padding-top: rem(2);
@@ -105,42 +123,42 @@ label
   height:  rem(30);
   }
 }
-.c-card--label-s .c-card__img::before{
+.p-card--label-s .p-card__img::before{
   width: rem(80);
   height:  rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
 }
-.c-card--label-l .c-card__img::before{
+.p-card--label-l .p-card__img::before{
   width: rem(100);
   height:  rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
 }
-[data-label="sns"] .c-card__img::before {
+[data-label="sns"] .p-card__img::before {
   content: 'SNS';
 }
-[data-label="shukyaku"] .c-card__img::before {
+[data-label="shukyaku"] .p-card__img::before {
   content: '集客方法';
 }
-[data-label="guitar"] .c-card__img::before {
+[data-label="guitar"] .p-card__img::before {
   content: 'ギター';
 }
-[data-label="pops"] .c-card__img::before {
+[data-label="pops"] .p-card__img::before {
   content: 'ポップス';
 }
-[data-label="rock"] .c-card__img::before {
+[data-label="rock"] .p-card__img::before {
   content: 'ロック';
 }
-[data-label="jazz"] .c-card__img::before {
+[data-label="jazz"] .p-card__img::before {
   content: 'ジャズ';
 }
-[data-label="latin"] .c-card__img::before {
+[data-label="latin"] .p-card__img::before {
   content: 'ラテン';
 }
-[data-label="classic"] .c-card__img::before {
+[data-label="classic"] .p-card__img::before {
   content: 'クラシック';
 }
 
@@ -154,22 +172,28 @@ label
 /***************
 card 選ばれる理由
 ***************/
-.c-card--reason{
+.p-card--reason{
+  transition: none;
+}
+.p-card--reason:hover{
+  opacity: 1;
+}
+.p-card--reason{
   @include pc {
     column-gap: rem(50);
   }
 }
-.c-card--reason .c-card__img{
+.p-card--reason .p-card__img{
   aspect-ratio: 335 / 200;
   @include pc {
     width: 39.772%;
     aspect-ratio: 350 / 247;
   }
 }
-.c-card--reason .c-card__img::before{
+.p-card--reason .p-card__img::before{
   content: none;
 }
-.c-card--reason  .c-card__body{
+.p-card--reason  .p-card__body{
   margin-top: rem(30);
   text-align: left;
   @include pc {
@@ -177,7 +201,7 @@ card 選ばれる理由
     margin-top: rem(-3);
   }
 }
-.c-card--reason .c-card__title{
+.p-card--reason .p-card__title{
   position: relative;
   padding-bottom: rem(10);
   font-size: rem(20);
@@ -188,7 +212,7 @@ card 選ばれる理由
     line-height: calc(33 / 22);
   }
 }
-.c-card--reason .c-card__title::after{
+.p-card--reason .p-card__title::after{
   position: absolute;
   content: '';
   width:  100%;
@@ -201,7 +225,7 @@ card 選ばれる理由
     left: rem(-50);
   }
 }
-.c-card--reason .c-card__text{
+.p-card--reason .p-card__text{
   margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
@@ -212,17 +236,23 @@ card 選ばれる理由
     line-height: calc(33 / 18);
   }
 }
+// .p-card--reason .p-card__text span{
+//   display: inline-block;
+//   @include pc {
+//     display: inline;
+//   }
+// }
 
 /*******************
 card TOPページ-ブログ
 *******************/
-.c-card--top-blog{
+.p-card--top-blog{
   transition: opacity 0.3s ease;
 }
-.c-card--top-blog .c-card:hover{
+.p-card--top-blog .p-card:hover{
   opacity: 0.7;
 }
-.c-card--top-blog .c-card__img{
+.p-card--top-blog .p-card__img{
   position: relative;
   width: 100%;
   aspect-ratio: 335 / 200; //
@@ -231,19 +261,19 @@ card TOPページ-ブログ
     aspect-ratio: 260 / 200;
   }
 }
-.c-card--top-blog .c-card__img img {
+.p-card--top-blog .p-card__img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.c-card--top-blog .c-card__body{
+.p-card--top-blog .p-card__body{
   margin-top: rem(30);
   @include pc{
     margin-top: rem(20);
   }
 }
-.c-card--top-blog .c-card__title{
+.p-card--top-blog .p-card__title{
   font-size: rem(20);
   line-height: calc(30 / 20);
   text-align: left;
@@ -252,7 +282,7 @@ card TOPページ-ブログ
     line-height: calc(25 / 20);
   }
 }
-.c-card--top-blog .c-card__date{
+.p-card--top-blog .p-card__date{
   margin-top: rem(6);
   text-align: right;
   font-size: rem(17);
@@ -261,7 +291,7 @@ card TOPページ-ブログ
     margin-top: rem(11);
   }
 }
-.c-card--top-blog .c-card__text{
+.p-card--top-blog .p-card__text{
   font-size: rem(20);
   line-height: calc(30 / 20);
   text-align: left;
@@ -274,27 +304,28 @@ card TOPページ-ブログ
 /************************
 card ブログ一覧/検索ページ
 ************************/
-.c-card--blog-list {
+.p-card--blog-list {
   @include pc {
     column-gap: rem(50);
   }
 }
-.c-card--blog-list .c-card__img{
+.p-card--blog-list .p-card__img{
   aspect-ratio: 335 / 200;
+  overflow: hidden;
   @include pc{
     flex: 0 0 rem(260); // 幅
     aspect-ratio: 260 / 184;
-    overflow: hidden;
+    max-height: calc(260 / 260 * 184px); // アスペクト比から導いた高さ
   }
 }
-.c-card--blog-list .c-card__body{
+.p-card--blog-list .p-card__body{
   margin-top: rem(30);
   @include pc{
     flex: 1;
     margin-top: 0;
   }
 }
-.c-card--blog-list .c-card__title{
+.p-card--blog-list .p-card__title{
   font-size: rem(20);
   line-height: calc(30 / 20);
   @include pc{
@@ -302,7 +333,7 @@ card ブログ一覧/検索ページ
     line-height: calc(25 / 20);
   }
 }
-.c-card--blog-list .c-card__date{
+.p-card--blog-list .p-card__date{
   margin-top: rem(6);
   text-align: right;
   font-size: rem(17);
@@ -312,7 +343,7 @@ card ブログ一覧/検索ページ
     text-align: left;
   }
 }
-.c-card--blog-list .c-card__text{
+.p-card--blog-list .p-card__text{
   margin-top: rem(8);
   font-size: rem(16);
   line-height: calc(30 / 16);
@@ -320,7 +351,8 @@ card ブログ一覧/検索ページ
   @include pc{
     margin-top: rem(11);
     font-size: rem(18);
-    line-height: calc(30 / 18);
+    line-height: calc(29 / 18);//微調整
+    // line-height: calc(30 / 18);
     letter-spacing: -0.02em;
   }
 }
@@ -328,7 +360,14 @@ card ブログ一覧/検索ページ
 /******************
 card ブログ-details
 ******************/
-.c-card--blog-details .c-card__text{
+.p-card--blog-details{
+  transition: none;
+}
+.p-card--blog-details:hover{
+  opacity: 1;
+}
+
+.p-card--blog-details .p-card__text{
   font-size: rem(16);
   line-height: calc(30 / 16);
   // font-weight: 500;
@@ -337,7 +376,7 @@ card ブログ-details
     line-height: calc(30 / 18);
   }
 }
-.c-card--blog-details .c-card__title{
+.p-card--blog-details .p-card__title{
   font-size: rem(20);
   line-height: calc(30 / 20);
   @include pc{
@@ -345,15 +384,15 @@ card ブログ-details
     line-height: calc(40 / 25);
   }
 }
-.c-card--blog-details h1.c-card__title{
-// .sub-blog-details h1.c-card__title{
+.p-card--blog-details h1.p-card__title{
+// .sub-blog-details h1.p-card__title{
   margin-top: rem(30);
   @include pc{
     margin-top: rem(46);
     letter-spacing: 0.02em;//微調整
   }
 }
-.c-card--blog-details .c-card__date{
+.p-card--blog-details .p-card__date{
   margin-top: rem(6);
   font-size: rem(17);
   line-height: calc(30 / 17);
@@ -363,14 +402,14 @@ card ブログ-details
   }
 }
 
-.c-card--blog-details .c-card__text--first{
+.p-card--blog-details .p-card__text--first{
   margin-top: rem(27);
   letter-spacing: -0.01em;
   @include pc{
     margin-top: rem(48);
   }
 }
-.c-card--blog-details h2.c-card__title{
+.p-card--blog-details h2.p-card__title{
   margin-top: rem(39);
   @include pc{
     margin-top: rem(33);
@@ -378,14 +417,14 @@ card ブログ-details
     line-height: calc(40 / 20);
   }
 }
-.c-card--blog-details .c-card__text--second{
+.p-card--blog-details .p-card__text--second{
   margin-top: rem(17);
   letter-spacing: -0.01em;
   @include pc{
     margin-top: rem(15);
   }
 }
-.c-card--blog-details .c-card__img--second{
+.p-card--blog-details .p-card__img--second{
   margin-top: rem(39);
   aspect-ratio: 335 / 200;
   overflow: hidden;
@@ -394,7 +433,7 @@ card ブログ-details
     margin-top: rem(17);
   }
 }
-.c-card--blog-details h3.c-card__title{
+.p-card--blog-details h3.p-card__title{
   position: relative;
   padding-left: rem(9.5);
   margin-top: rem(50);
@@ -404,7 +443,7 @@ card ブログ-details
     line-height: calc(40 / 20);
   }
 }
-.c-card--blog-details h3.c-card__title:before{
+.p-card--blog-details h3.p-card__title:before{
   position: absolute;
   content: '';
   width: rem(3);
@@ -418,7 +457,7 @@ card ブログ-details
     height: rem(20);
   }
 }
-.c-card--blog-details .c-card__text--third{
+.p-card--blog-details .p-card__text--third{
   position: relative;
   padding: rem(14) rem(20) rem(14) rem(70);
   margin-top: rem(19.5);
@@ -430,7 +469,7 @@ card ブログ-details
     letter-spacing: -0.01em;//微調整
   }
 }
-.c-card--blog-details .c-card__text--third::before{
+.p-card--blog-details .p-card__text--third::before{
   position: absolute;
   content: '';
   display: inline-block;
@@ -449,14 +488,14 @@ card ブログ-details
 /*********************************
 card 関連記事 サイドバーあり(ブログ）
 *********************************/
-.c-card--related-compact .c-card{
+.p-card--related-compact{
   align-items: center;
   @include pc{
     align-items: flex-start;
   }
 }
 
-.c-card--related-compact .card-lists{
+.p-card--related-compact .card-lists{
   margin-top: rem(19);//微調整
   row-gap: rem(21);
   @include pc{
@@ -464,7 +503,7 @@ card 関連記事 サイドバーあり(ブログ）
     row-gap: rem(30);
   }
 }
-.c-card--related-compact .c-card__img{
+.p-card--related-compact .p-card__img{
   aspect-ratio: 160 / 110;
   flex: 0 0 rem(160); // 幅
   // width: rem(160);
@@ -475,7 +514,7 @@ card 関連記事 サイドバーあり(ブログ）
     // width: rem(200);
   }
 }
-.c-card--related-compact .c-card__img img {
+.p-card--related-compact .p-card__img img {
   display: block;
   width: 100%;
   // height: auto;
@@ -484,7 +523,7 @@ card 関連記事 サイドバーあり(ブログ）
   object-fit: cover;
 }
 
-.c-card--related-compact .c-card__text{
+.p-card--related-compact .p-card__text{
   font-size: rem(17);
   line-height: calc(28 / 17);
   font-weight: 700;
@@ -495,13 +534,13 @@ card 関連記事 サイドバーあり(ブログ）
     line-height: calc(25 / 20);
   }
 }
-.c-card--related-compact .c-card__text span{
+.p-card--related-compact .p-card__text span{
   display: inline-block;
   @include pc{
     display: inline;
   }
 }
-.c-card--related-compact .c-card__date{
+.p-card--related-compact .p-card__date{
   margin-top: rem(3);//微調整
   font-size: rem(17);
   line-height: calc(30 / 17);
@@ -515,51 +554,93 @@ card 関連記事 サイドバーあり(ブログ）
 /***************
 card 卒業実績一覧
 ***************/
-.c-card--result-list {
+.p-card--result-list {
   @include pc {
     column-gap: rem(50);
   }
 }
-.c-card--result-list .c-card__img{
-  aspect-ratio: 335 / 200;
+.p-card--result-list .p-card__img{
+  aspect-ratio: 335 / 236;
   @include pc{
     aspect-ratio: 387 / 273;
     overflow: hidden;
   }
 }
-.c-card--result-list .c-card__body{
-  margin-top: rem(30);
+.p-card--result-list .p-card__body{
+  margin-top: rem(20);
   @include pc{
     // flex: 1;
     margin-top: rem(20);
   }
 }
-.c-card--result-list .c-card__title{
+.p-card--result-list .p-card__title{
   font-size: rem(20);
-  line-height: calc(30 / 20);
+  line-height: calc(25 / 20);
   @include pc{
     line-height: calc(25 / 20);
   }
 }
-.c-card--result-list .c-card__date{
-  margin-top: rem(6);
+.p-card--result-list .p-card__date{
+  margin-top: rem(10);
   text-align: right;
-  font-size: rem(17);
-  line-height: calc(30 / 17);
+  font-size: rem(18);
+  line-height: calc(32 / 18);
   @include pc{
     margin-top: rem(10);
   }
 }
+// .p-card--result-list {
+//   @include pc {
+//     column-gap: rem(50);
+//   }
+// }
+// .p-card--result-list .p-card__img{
+//   aspect-ratio: 335 / 200;
+//   @include pc{
+//     aspect-ratio: 387 / 273;
+//     overflow: hidden;
+//   }
+// }
+// .p-card--result-list .p-card__body{
+//   margin-top: rem(30);
+//   @include pc{
+//     // flex: 1;
+//     margin-top: rem(20);
+//   }
+// }
+// .p-card--result-list .p-card__title{
+//   font-size: rem(20);
+//   line-height: calc(30 / 20);
+//   @include pc{
+//     line-height: calc(25 / 20);
+//   }
+// }
+// .p-card--result-list .p-card__date{
+//   margin-top: rem(6);
+//   text-align: right;
+//   font-size: rem(17);
+//   line-height: calc(30 / 17);
+//   @include pc{
+//     margin-top: rem(10);
+//   }
+// }
 
 /*******************
 card 卒業実績-details
 *******************/
-.c-card--result-details .c-card__img{
+.p-card--result-details{
+  transition: none;
+}
+.p-card--result-details:hover{
+  opacity: 1;
+}
+
+.p-card--result-details .p-card__img{
   @include pc{
     aspect-ratio: 22 / 10; //880/400
   }
 }
-.c-card--result-details h1.c-card__title{
+.p-card--result-details h1.p-card__title{
   margin-top: rem(30);
   font-size: rem(20);
   line-height: calc(30 / 20);
@@ -570,7 +651,7 @@ card 卒業実績-details
     letter-spacing: -0.02em;//微調整
   }
 }
-.c-card--result-details .c-card__date{
+.p-card--result-details .p-card__date{
   margin-top: rem(12);
   font-size: rem(17);
   line-height: calc(30 / 17);
@@ -579,14 +660,14 @@ card 卒業実績-details
     margin-top: rem(15);
   }
 }
-.c-card--result-details .c-table{
+.p-card--result-details .c-table{
   margin-top: rem(13);
   @include pc{
     width: rem(400);
     margin-top: 0;
   }
 }
-.c-card--result-details .c-card__text{
+.p-card--result-details .p-card__text{
   margin-top: rem(28);
   font-size: rem(18);
   line-height: calc(30 / 18);
@@ -595,20 +676,20 @@ card 卒業実績-details
     margin-top: 0;
   }
 }
-.c-card--result-details .c-card__text span{
+.p-card--result-details .p-card__text span{
 display:  inline-block
 }
 
 /*************************
 card 関連記事 全幅(卒業実績）
 *************************/
-.c-card--related-full{
+.p-card--related-full{
   align-items: flex-start;
 }
-.c-card--related-full .c-card__text{
+.p-card--related-full .p-card__text{
   margin-top: 0;
 }
-.c-card--related-full .c-card__img{
+.p-card--related-full .p-card__img{
   aspect-ratio: 160 / 113;
   flex: 0 0 rem(160); // 幅
   overflow: hidden;
@@ -617,7 +698,7 @@ card 関連記事 全幅(卒業実績）
     aspect-ratio: 260 / 183;
   }
 }
-.c-card--related-full .c-card__img img {
+.p-card--related-full .p-card__img img {
   display: block;
   width: 100%;
   // height: auto;
@@ -625,7 +706,7 @@ card 関連記事 全幅(卒業実績）
   object-fit: cover;
 }
 
-.c-card--related-full .c-card__text{
+.p-card--related-full .p-card__text{
   font-size: rem(17);
   line-height: calc(28 / 17);
   font-weight: 700;
@@ -636,13 +717,13 @@ card 関連記事 全幅(卒業実績）
     line-height: calc(25 / 20);
   }
 }
-.c-card--related-full .c-card__text span{
+.p-card--related-full .p-card__text span{
   display: inline-block;
   @include pc{
     display: inline;
   }
 }
-.c-card--related-full .c-card__date{
+.p-card--related-full .p-card__date{
   margin-top: rem(3);//微調整
   font-size: rem(17);
   line-height: calc(30 / 17);
@@ -655,7 +736,7 @@ card 関連記事 全幅(卒業実績）
 /***************
 card おすすめ記事
 ***************/
-.c-card--recommend .c-card__text{
+.p-card--recommend .p-card__text{
   margin-top: rem(8.54);
   font-size: rem(17);
   line-height: calc(28 / 17);
@@ -664,18 +745,18 @@ card おすすめ記事
     margin-top: 0;
   }
 }
-.c-card--recommend .card-lists{
+.p-card--recommend .card-lists{
   row-gap: rem(21);
   margin-top: rem(30);
 }
-.c-card--recommend{
+.p-card--recommend{
   flex-direction: row;//spで横並び
   column-gap: rem(20);
   @include pc{
     column-gap: rem(15);
   }
 }
-.c-card--recommend .c-card__img{
+.p-card--recommend .p-card__img{
   aspect-ratio: 160 / 110;
   flex: 0 0 rem(160); // 幅
   @include pc{
@@ -685,21 +766,21 @@ card おすすめ記事
   }
 }
 
-.c-card--recommend .c-card__img::before{
+.p-card--recommend .p-card__img::before{
   content: '';
 }
 
 /***************
 card 前後ページへ
 ***************/
-.c-card--page-nav{
+.p-card--page-nav{
   margin-top: rem(16);
   @include pc{
     margin-top: rem(16);
     column-gap: rem(15);
   }
 }
-.c-card--page-nav .c-card__img{
+.p-card--page-nav .p-card__img{
   aspect-ratio: auto;
   @include pc{
     width: 100%;
@@ -707,7 +788,7 @@ card 前後ページへ
     overflow: hidden;
   }
 }
-.c-card--page-nav .c-card__img img{
+.p-card--page-nav .p-card__img img{
   display: none;
   @include pc{
     display: block;
@@ -716,7 +797,7 @@ card 前後ページへ
     object-fit: cover;
   };
 }
-.c-card--page-nav .c-card__title{
+.p-card--page-nav .p-card__title{
   font-size: rem(16);
   font-weight: 700;
   @include pc{
@@ -729,89 +810,3 @@ card 前後ページへ
 
 
 
-
-
-
-///////////////////////////////////////////////////////////////////////////////////
-
-// /*****************
-// card
-// *****************/
-// .c-card__img{
-//   position: relative;
-//   width: 100%;
-//   // aspect-ratio: 335 / 200; //(仮)プロジェクト側で調整
-//   overflow: hidden;
-//   // @include pc{
-//   //   aspect-ratio: 260 / 200; //(仮)プロジェクト側で調整
-//   // }
-// }
-// .c-card__img img {
-//   display: block;
-//   width: 100%;
-//   // height: auto;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .c-card__img::before{
-//   position: absolute;
-//   content: 'common'; //(仮)プロジェクト側で調整
-//   // width: rem(90); //(仮)プロジェクト側で調整
-//   // height:  rem(30); //(仮)プロジェクト側で調整
-//   // padding-top: rem(2); //(仮)プロジェクト側で調整
-//   left: 0;
-//   top: 0;
-//   z-index: 10;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   // font-size: rem(15); //(仮)プロジェクト側で調整
-//   // line-height: calc(25 / 15); //(仮)プロジェクト側で調整
-//   color: #FFFFFF;
-//   background-color: #CB0000;
-//   // @include pc{
-//   // width: rem(80); //(仮)プロジェクト側で調整
-//   // height:  rem(30); //(仮)プロジェクト側で調整
-//   // }
-// }
-// .c-card__img--nolabel::before{//!important使用
-//   // content: '' !important;
-//   display: none !important;
-// }
-
-// // .c-card__body{
-// //   margin-top: rem(30); //(仮)プロジェクト側で調整
-// //   @include pc{
-// //     margin-top: rem(20); //(仮)プロジェクト側で調整
-// //   }
-// // }
-// .c-card__title{
-//   // font-size: rem(20); //(仮)プロジェクト側で調整
-//   // line-height: calc(30 / 20); //(仮)プロジェクト側で調整
-//   text-align: left;
-//   // @include pc{
-//   //   font-size: rem(20); //(仮)プロジェクト側で調整
-//   //   line-height: calc(25 / 20); //(仮)プロジェクト側で調整
-//   // }
-// }
-// .c-card__date{
-//   // margin-top: rem(6); //(仮)プロジェクト側で調整
-//   // text-align: right;
-//   // font-size: rem(17); //(仮)プロジェクト側で調整
-//   // line-height: calc(30 / 17); //(仮)プロジェクト側で調整
-//   font-weight: 500;
-//   // @include pc{
-//   //   margin-top: rem(11); //(仮)プロジェクト側で調整
-//   // }
-// }
-// .c-card__text{
-//   // font-size: rem(20); //(仮)プロジェクト側で調整
-//   // line-height: calc(30 / 20); //(仮)プロジェクト側で調整
-//   text-align: left;
-//   font-weight: 500;
-//   // @include pc{
-//   //   font-size: rem(20); //(仮)プロジェクト側で調整
-//   //   line-height: calc(25 / 20); //デフォルト
-//   // }
-// }

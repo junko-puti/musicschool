@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
   column-gap: rem(5);
+  @include pc{
+    column-gap: rem(10);
+  }
 }
 .c-pager__item {
   display: flex;
@@ -21,20 +24,49 @@
   color: #000000;
   background-color: #FFFFFF;
   @include pc{
+    font-size: rem(18);
+    line-height: calc(30 / 18);
     width: rem(50);
     height: rem(50);
   }
 }
+/*--- SPでも50×50 ---*/
+.c-pager--l .c-pager__list{
+  column-gap: rem(10);
+}
+.c-pager--l .c-pager__item{
+  width: rem(50);
+  height: rem(50);
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+}
+/*--- 44×44 ---*/
+// .c-pager--s .c-pager__list{
+//   column-gap: rem(5);
+// }
+// .c-pager--s .c-pager__item{
+//   width: rem(44);
+//   height: rem(44);
+//     @include pc{
+//     width: rem(50);
+//     height: rem(50);
+//   }
+// }
 .c-pager__item.is-current {
   border: rem(1) #000000 solid;
   color: #FFFFFF;
   background-color: #000000;
 }
+
+/*--- 『...』 ---*/
 .c-pager__item--ellipsis{
   padding: 0 rem(12);
+  width: rem(38)!important;
   border: none;
   pointer-events: none;
 }
+
+
 .c-pager__link{
   display: flex;
   justify-content: center;
@@ -48,8 +80,6 @@
   background-color: #000000;
   color: #FFFFFF;
 }
-
-
 
 
 .c-pager__item.is-current a{

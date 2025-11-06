@@ -4,5 +4,24 @@
 .sns-btn{
   display: flex;
   flex-direction: row;
-  column-gap: rem(3);
+  column-gap: rem(2.5);
+}
+.sns-btn a{
+  transition: opacity 0.3s ease;
+}
+.sns-btn a:hover{
+  opacity: 0.7; 
+}
+.sns-btn__img img{
+  width: rem(65);
+  height: auto;
+  display: block;
+  @include pc{
+    width: auto;
+    height: rem(40);
+  }
+  @include media(360px) {
+    width: rem(60);
+    height: auto;
+  }
 }

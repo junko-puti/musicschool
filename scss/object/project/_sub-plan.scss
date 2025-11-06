@@ -80,16 +80,18 @@ plan__detail
   }
 }
 .sub-plan__table-wrapper{
+  display: block;
+  max-width: 100%;//11.3
   padding-bottom: rem(18.5);/*テーブルとスクロールバーとの余白*/
   margin-top: rem(36);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  display: block;
   @include pc {
     max-width: rem(880);
-    margin: 0 auto;
     padding-bottom: 0;
+    margin: 0 auto;
     margin-top: rem(48);
+    overflow-x: visible;
   }
 }
 
@@ -107,17 +109,23 @@ plan__detail
 }
 
 .sub-plan__table{
-  min-width: rem(670); // SP幅
-  width: 100%;
+  // min-width: rem(670); // SP幅11.5
+  width: rem(670); // SP幅
+  margin: 0 auto;//11.5
+  table-layout: fixed;
+  // width: 100%;
+  // width: max-content;//11.3
   font-size: rem(16);
   line-height: calc(25 / 16);
   font-weight: 500;
-  table-layout: fixed;
   border-collapse: collapse;
   @include pc {
-    min-width: rem(880); // PC幅
+    width: 100%;
+    // min-width: rem(880); // PC幅11.5
+    max-width: rem(880);//11.5
     font-size: rem(17);
     line-height: calc(25 / 17);
+    box-sizing: border-box;//11.5
   }
 }
 .sub-plan__table th{
@@ -194,8 +202,11 @@ plan__detail
 
 /*table tbody*/
 .sub-plan__class{/*上下横罫線*/
-  border-top: rem(0.5) solid #000000;
-  border-bottom: rem(0.5) solid #000000;
+  border-bottom: rem(1) solid rgba(0, 0, 0, 0.2);
+  // border-bottom: rem(0.5) solid #000000;
+}
+.sub-plan__price th{
+  border-top: rem(1) solid rgba(0, 0, 0, 0.2);
 }
 .sub-plan__class tr:nth-child(even){/*偶数業背景グレイ*/
   background-color: rgba(80, 80, 80, 0.15);
@@ -211,7 +222,9 @@ plan__detail
 }
 .sub-plan__class th,
 .sub-plan__class td{/*アイテム間に縦罫線*/
-  border-right: rem(0.5) solid #000000;
+  border-right: rem(1) solid rgba(0, 0, 0, 0.2);
+  // border-right: rem(0.5) solid #000000;
+  box-sizing: border-box;//11.5
 }
 .sub-plan__class tr td:last-child{/*右罫線消す*/
   border-right: none;
@@ -261,6 +274,7 @@ plan__detail
     margin-top: rem(28.5);
     font-size: rem(17);
     line-height: calc(25 / 17);
+    letter-spacing: -0.01em;
   }
 }
 

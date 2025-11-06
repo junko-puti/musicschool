@@ -15,7 +15,7 @@
   transition: opacity 0.3s ease;
 }
 .page-nav a:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .page-nav > * {
   width: 50%;
@@ -47,7 +47,7 @@
     padding: rem(3.5) rem(20) rem(3.5) 0;//微調整
   }
 }
-// .page-nav .c-card{
+// .page-nav .p-card{
 //   margin-top: rem(16);
 //   // margin-top: rem(15);
 //   @include pc{
@@ -55,7 +55,7 @@
 //     column-gap: rem(15);
 //   }
 // }
-// .page-nav .c-card__img{
+// .page-nav .p-card__img{
 //   aspect-ratio: auto;
 //   @include pc{
 //     width: 100%;
@@ -63,7 +63,7 @@
 //     overflow: hidden;
 //   }
 // }
-// .page-nav .c-card__img img{
+// .page-nav .p-card__img img{
 //   display: none;
 //   @include pc{
 //     display: block;
@@ -73,12 +73,12 @@
 //   };
 // }
 
-// // .page-nav .c-card__body{
+// // .page-nav .p-card__body{
 // //   @include pc{
 // //     flex: 1;
 // //   }
 // // }
-// .page-nav .c-card__title{
+// .page-nav .p-card__title{
 //   // margin-top: rem(18);
 //   font-size: rem(16);
 //   // line-height: calc(25 / 16);
